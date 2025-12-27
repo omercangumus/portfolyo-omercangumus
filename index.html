@@ -344,73 +344,115 @@
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
                 Yetenekler
             </h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Cloud & DevOps -->
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.1s">
-                    <i class="fab fa-aws text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">AWS</p>
+            <!-- Tech Stack Grid with Categories -->
+            <div class="glass-card p-8 rounded-3xl slide-up">
+                <!-- Row 1: Cloud, DevOps, IaC -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <!-- Cloud -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-cloud text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">Cloud</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-aws text-3xl text-purple-400"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-cloud text-3xl text-purple-400" title="Azure"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-docker text-3xl text-purple-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DevOps -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-cogs text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">DevOps</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-docker text-3xl text-purple-400"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-dharmachakra text-3xl text-purple-400" title="Kubernetes"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-linux text-3xl text-purple-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IaC -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-cube text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">IaC</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-cube text-3xl text-purple-400" title="Terraform"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-cogs text-3xl text-purple-400" title="Ansible"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.12s">
-                    <i class="fab fa-docker text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Docker</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.14s">
-                    <i class="fas fa-dharmachakra text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Kubernetes</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.16s">
-                    <i class="fas fa-cube text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Terraform</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.18s">
-                    <i class="fab fa-linux text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Linux</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.2s">
-                    <i class="fab fa-git-alt text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Git</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.22s">
-                    <i class="fab fa-github text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">GitHub Actions</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.24s">
-                    <i class="fab fa-jenkins text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Jenkins</p>
-                </div>
-                <!-- Monitoring -->
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.26s">
-                    <i class="fas fa-fire text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Prometheus</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.28s">
-                    <i class="fas fa-chart-area text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Grafana</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.3s">
-                    <i class="fas fa-search text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">ELK Stack</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.32s">
-                    <i class="fas fa-robot text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">AIOps</p>
-                </div>
-                <!-- Programming -->
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.34s">
-                    <i class="fab fa-python text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Python</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.36s">
-                    <i class="fas fa-terminal text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">Bash</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.38s">
-                    <i class="fab fa-js text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">JavaScript</p>
-                </div>
-                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.4s">
-                    <i class="fas fa-database text-4xl mb-2 text-purple-400"></i>
-                    <p class="font-semibold">PostgreSQL</p>
+
+                <hr class="border-gray-700 my-6">
+
+                <!-- Row 2: Languages, CI/CD, Monitoring -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Languages -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-code text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">Languages</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-python text-3xl text-purple-400"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-java text-3xl text-purple-400"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-terminal text-3xl text-purple-400" title="Bash"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CI/CD -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-rocket text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">CI/CD</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-gitlab text-3xl text-purple-400"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fab fa-github text-3xl text-purple-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Monitoring -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <i class="fas fa-chart-bar text-purple-400"></i>
+                            <span class="text-gray-400 font-semibold">Monitoring</span>
+                        </div>
+                        <div class="flex justify-center gap-4">
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-fire text-3xl text-purple-400" title="Prometheus"></i>
+                            </div>
+                            <div class="skill-badge p-3 rounded-xl">
+                                <i class="fas fa-chart-area text-3xl text-purple-400" title="Grafana"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
