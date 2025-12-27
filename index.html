@@ -160,12 +160,20 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold gradient-text">ÖCG</div>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white">Ana Sayfa</a>
-                <a href="#about" class="nav-link text-gray-300 hover:text-white">Hakkımda</a>
-                <a href="#experience" class="nav-link text-gray-300 hover:text-white">Deneyim</a>
-                <a href="#skills" class="nav-link text-gray-300 hover:text-white">Yetenekler</a>
-                <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projeler</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-white">İletişim</a>
+                <a href="#home" class="nav-link text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
+                    Sayfa</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white" data-tr="Hakkımda"
+                    data-en="About">Hakkımda</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-white" data-tr="Deneyim"
+                    data-en="Experience">Deneyim</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white" data-tr="Yetenekler"
+                    data-en="Skills">Yetenekler</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white" data-tr="Projeler"
+                    data-en="Projects">Projeler</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white" data-tr="İletişim"
+                    data-en="Contact">İletişim</a>
+                <button id="lang-switch"
+                    class="ml-4 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
@@ -173,12 +181,20 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-300 hover:text-white">Ana Sayfa</a>
-            <a href="#about" class="block py-2 text-gray-300 hover:text-white">Hakkımda</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Deneyim</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Yetenekler</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projeler</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-white">İletişim</a>
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
+                Sayfa</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white" data-tr="Hakkımda"
+                data-en="About">Hakkımda</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white" data-tr="Deneyim"
+                data-en="Experience">Deneyim</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white" data-tr="Yetenekler"
+                data-en="Skills">Yetenekler</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white" data-tr="Projeler"
+                data-en="Projects">Projeler</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white" data-tr="İletişim"
+                data-en="Contact">İletişim</a>
+            <button id="lang-switch-mobile"
+                class="mt-2 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
         </div>
     </nav>
 
@@ -200,13 +216,26 @@
                     AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon
                 </p>
             </div>
-            <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.8s">
-                <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white">
-                    <i class="fas fa-envelope mr-2"></i>İletişime Geç
+            <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
+                style="animation-delay: 0.8s">
+                <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white"
+                    data-tr="İletişime Geç" data-en="Get in Touch">
+                    <i class="fas fa-envelope mr-2"></i><span>İletişime Geç</span>
                 </a>
                 <a href="https://github.com/omercangumus" target="_blank"
-                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400">
-                    <i class="fab fa-github mr-2"></i>GitHub Profilim
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
+                    data-tr="GitHub Profilim" data-en="GitHub Profile">
+                    <i class="fab fa-github mr-2"></i><span>GitHub Profilim</span>
+                </a>
+                <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank"
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
+                    data-tr="LinkedIn" data-en="LinkedIn">
+                    <i class="fab fa-linkedin mr-2"></i><span>LinkedIn</span>
+                </a>
+                <a href="resume.pdf" target="_blank"
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
+                    data-tr="CV İndir" data-en="Download CV">
+                    <i class="fas fa-file-pdf mr-2"></i><span>CV İndir</span>
                 </a>
             </div>
         </div>
@@ -423,20 +452,29 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Project 4 - SiberMiras -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.4s">
                     <div
                         class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-cloud text-6xl text-white opacity-50"></i>
+                        <i class="fas fa-shield-alt text-6xl text-white opacity-50"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-2">SiberMiras</h3>
-                    <p class="text-gray-400 mb-4">AWS üzerinde tamamen cloud-native platform. EC2, Lambda, S3, RDS ve
-                        Load Balancer kullanımı.</p>
-                    <div class="flex flex-wrap gap-2">
+                    <p class="text-gray-400 mb-4"
+                        data-tr="AWS üzerinde tamamen cloud-native dijital miras platformu. EC2, Docker, PostgreSQL ve modern web teknolojileri kullanımı."
+                        data-en="A fully cloud-native digital inheritance platform on AWS. Using EC2, Docker, PostgreSQL, and modern web technologies.">
+                        AWS üzerinde tamamen cloud-native dijital miras platformu. EC2, Docker, PostgreSQL ve modern web
+                        teknolojileri kullanımı.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">AWS</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Python</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Cloud</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">React</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Node.js</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Docker</span>
                     </div>
+                    <a href="http://ec2-35-159-172-162.eu-central-1.compute.amazonaws.com" target="_blank"
+                        class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-semibold"
+                        data-tr="Canlı Siteyi Gör" data-en="View Live Site">
+                        <i class="fas fa-external-link-alt"></i><span>Canlı Siteyi Gör</span>
+                    </a>
                 </div>
 
                 <!-- Project 5 -->
@@ -501,4 +539,156 @@
                         class="social-icon text-4xl text-gray-400">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ömer-can-gümüş-a76950258" target="_blank"
+                    <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank"
+                        class="social-icon text-4xl text-gray-400">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Language Switching
+        let currentLang = 'tr';
+
+        const translations = {
+            en: {
+                // Page title
+                title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
+                // Hero
+                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
+                heroTech: 'AWS & Python | Docker & Container Technologies | AI and Automation',
+                // About
+                aboutTitle: 'About Me',
+                aboutP1: 'I am a 3rd year Software Engineering student at Fırat University and currently working as a Part-Time AIOps Engineer at Beko Corporate. I am a technology-passionate developer focused on specializing in cloud computing, artificial intelligence, and AIOps.',
+                aboutP2: 'I develop intelligent and automated cloud solutions using AWS, Docker, and Python. My technical approach focuses on integrating artificial intelligence into IT operations to increase efficiency, reliability, and scalability.',
+                aboutP3: 'With my adaptability and attention to detail, I am committed to continuous learning and delivering high-quality results. My goal is to develop my expertise in containerization, cloud orchestration, and AIOps and build a strong career in enterprise-scale, intelligent cloud systems.',
+                // Experience
+                expTitle: 'Experience',
+                // Skills
+                skillsTitle: 'Skills',
+                // Projects
+                projectsTitle: 'Featured Projects',
+                // Contact
+                contactTitle: 'Get in Touch',
+                contactDesc: 'Feel free to reach out for projects or job opportunities.',
+            },
+            tr: {
+                title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
+                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
+                heroTech: 'AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon',
+                aboutTitle: 'Hakkımda',
+                aboutP1: 'Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate\'te Part-Time AIOps Engineer olarak görev yapıyorum. Bulut bilişim, yapay zeka ve AIOps alanlarında uzmanlaşmaya odaklanmış, teknolojiye tutkulu bir geliştiriciyim.',
+                aboutP2: 'AWS, Docker ve Python kullanarak akıllı ve otomatik bulut çözümleri geliştiriyorum. Teknik yaklaşımım, yapay zekayı IT operasyonlarına entegre ederek verimliliği, güvenilirliği ve ölçeklenebilirliği artırmaya odaklanıyor.',
+                aboutP3: 'Uyum yeteneğim ve detaylara gösterdiğim özen ile sürekli öğrenmeye ve yüksek kaliteli sonuçlar sunmaya kararlıyım. Hedefim, konteynerizasyon, bulut orkestrasyon ve AIOps alanlarında uzmanlığımı geliştirmek ve kurumsal ölçekli, akıllı bulut sistemlerinde güçlü bir kariyer inşa etmek.',
+                expTitle: 'Deneyim',
+                skillsTitle: 'Yetenekler',
+                projectsTitle: 'Öne Çıkan Projeler',
+                contactTitle: 'İletişime Geçin',
+                contactDesc: 'Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz.',
+            }
+        };
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Update data-tr/data-en elements
+            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (el.querySelector('span')) {
+                    el.querySelector('span').textContent = text;
+                } else if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.tagName === 'P') {
+                    // For elements with icons, preserve the icon
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.innerHTML = '';
+                        el.appendChild(icon);
+                        el.appendChild(document.createTextNode(' '));
+                        const span = document.createElement('span');
+                        span.textContent = text;
+                        el.appendChild(span);
+                    } else {
+                        el.textContent = text;
+                    }
+                } else {
+                    el.textContent = text;
+                }
+            });
+
+            // Update section titles
+            const t = translations[lang];
+            document.getElementById('about').querySelector('h2').textContent = t.aboutTitle;
+            document.getElementById('experience').querySelector('h2').textContent = t.expTitle;
+            document.getElementById('skills').querySelector('h2').textContent = t.skillsTitle;
+            document.getElementById('projects').querySelector('h2').textContent = t.projectsTitle;
+            document.getElementById('contact').querySelector('h2').textContent = t.contactTitle;
+
+            // Update about section paragraphs
+            const aboutParagraphs = document.querySelectorAll('#about .glass-card p');
+            if (aboutParagraphs.length >= 3) {
+                aboutParagraphs[0].textContent = t.aboutP1;
+                aboutParagraphs[1].textContent = t.aboutP2;
+                aboutParagraphs[2].textContent = t.aboutP3;
+            }
+
+            // Update hero subtitles
+            document.querySelector('#home .text-xl.md\\:text-2xl').textContent = t.heroJob;
+            document.querySelector('#home .text-lg.text-gray-500').textContent = t.heroTech;
+
+            // Update contact description
+            document.querySelector('#contact .glass-card > p').textContent = t.contactDesc;
+
+            // Update button text
+            const langBtn = document.getElementById('lang-switch');
+            const langBtnMobile = document.getElementById('lang-switch-mobile');
+            if (lang === 'en') {
+                langBtn.textContent = 'TR';
+                langBtnMobile.textContent = 'TR';
+            } else {
+                langBtn.textContent = 'EN';
+                langBtnMobile.textContent = 'EN';
+            }
+        }
+
+        document.getElementById('lang-switch').addEventListener('click', () => {
+            switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
+        });
+
+        document.getElementById('lang-switch-mobile').addEventListener('click', () => {
+            switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
