@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömer Can Gümüş - AIOps Engineer & Cloud Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #8a2be2, #00d4ff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #8a2be2, #00d4ff);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 12px;
+            width: 18px;
+            height: 18px;
+            background: #8a2be2;
+            border: 3px solid #0a0a0f;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 212, 255, 0.2));
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.4), rgba(0, 212, 255, 0.4));
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8a2be2, #00d4ff);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            color: #8a2be2;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8a2be2, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body class="text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">ÖCG</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-300 hover:text-white">Ana Sayfa</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white">Hakkımda</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-white">Deneyim</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white">Yetenekler</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projeler</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white">İletişim</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white">Ana Sayfa</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white">Hakkımda</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Deneyim</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Yetenekler</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projeler</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="container mx-auto text-center">
+            <div class="fade-in" style="animation-delay: 0.2s">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 glow-text">
+                    Ömer Can <span class="gradient-text">Gümüş</span>
+                </h1>
+            </div>
+            <div class="slide-up" style="animation-delay: 0.4s">
+                <p class="text-xl md:text-2xl text-gray-400 mb-4">
+                    AIOps Engineer | Cloud Computing Specialist
+                </p>
+            </div>
+            <div class="slide-up" style="animation-delay: 0.6s">
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+                    AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon
+                </p>
+            </div>
+            <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.8s">
+                <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white">
+                    <i class="fas fa-envelope mr-2"></i>İletişime Geç
+                </a>
+                <a href="https://github.com/omercangumus" target="_blank"
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400">
+                    <i class="fab fa-github mr-2"></i>GitHub Profilim
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+                Hakkımda
+            </h2>
+            <div class="glass-card p-8 md:p-12 rounded-3xl slide-up" style="animation-delay: 0.2s">
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate'te Part-Time AIOps
+                    Engineer olarak görev yapıyorum. Bulut bilişim, yapay zeka ve AIOps alanlarında uzmanlaşmaya
+                    odaklanmış, teknolojiye tutkulu bir geliştiriciyim.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    AWS, Docker ve Python kullanarak akıllı ve otomatik bulut çözümleri geliştiriyorum. Teknik
+                    yaklaşımım, yapay zekayı IT operasyonlarına entegre ederek verimliliği, güvenilirliği ve
+                    ölçeklenebilirliği artırmaya odaklanıyor.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Uyum yeteneğim ve detaylara gösterdiğim özen ile sürekli öğrenmeye ve yüksek kaliteli sonuçlar
+                    sunmaya kararlıyım. Hedefim, konteynerizasyon, bulut orkestrasyon ve AIOps alanlarında uzmanlığımı
+                    geliştirmek ve kurumsal ölçekli, akıllı bulut sistemlerinde güçlü bir kariyer inşa etmek.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+                Deneyim
+            </h2>
+            <div class="relative pl-16 space-y-12">
+                <div class="timeline-line"></div>
+
+                <!-- Beko Corporate -->
+                <div class="slide-up" style="animation-delay: 0.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card p-6 rounded-2xl ml-8">
+                        <span class="text-purple-400 font-semibold">Aralık 2025 - Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Junior AIOps Engineer</h3>
+                        <p class="text-gray-400 mb-4">Beko Corporate - PREP Program</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Docker tabanlı ve konteynerize uygulamalardan log analizi</li>
+                            <li>• Temel olay inceleme ve kök neden analizi</li>
+                            <li>• Anomali paternleri ve operasyonel sorunların anlaşılması</li>
+                            <li>• AIOps, monitoring ve observability uygulamaları</li>
+                            <li>• DevOps ekipleri ile kurumsal iş akışlarında işbirliği</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Habitat Derneği -->
+                <div class="slide-up" style="animation-delay: 0.2s">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card p-6 rounded-2xl ml-8">
+                        <span class="text-purple-400 font-semibold">Aralık 2025 - Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Gönüllü Eğitmen</h3>
+                        <p class="text-gray-400 mb-4">Habitat Derneği</p>
+                    </div>
+                </div>
+
+                <!-- QNB Türkiye -->
+                <div class="slide-up" style="animation-delay: 0.3s">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card p-6 rounded-2xl ml-8">
+                        <span class="text-purple-400 font-semibold">Ağustos 2025</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">QNB 101 Online Staj</h3>
+                        <p class="text-gray-400 mb-4">QNB Türkiye</p>
+                    </div>
+                </div>
+
+                <!-- Elmar Yazılım -->
+                <div class="slide-up" style="animation-delay: 0.4s">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card p-6 rounded-2xl ml-8">
+                        <span class="text-purple-400 font-semibold">Ekim 2024</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Yazılım Mühendisi</h3>
+                        <p class="text-gray-400 mb-4">Elmar Yazılım - Elazığ</p>
+                    </div>
+                </div>
+
+                <!-- Freelance -->
+                <div class="slide-up" style="animation-delay: 0.5s">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card p-6 rounded-2xl ml-8">
+                        <span class="text-purple-400 font-semibold">Haziran 2023 - Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Software Developer</h3>
+                        <p class="text-gray-400 mb-4">Freelance - Bursa</p>
+                        <p class="text-gray-300">Cloud-native çözümler, AIOps projeleri ve DevOps otomasyonları üzerine
+                            çalışmalar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+                Yetenekler
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.1s">
+                    <i class="fab fa-python text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Python</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.15s">
+                    <i class="fab fa-aws text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">AWS</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.2s">
+                    <i class="fab fa-docker text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Docker</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.25s">
+                    <i class="fas fa-code text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">C#</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.3s">
+                    <i class="fas fa-network-wired text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">.NET</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.35s">
+                    <i class="fas fa-cloud text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Cloud Architecture</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.4s">
+                    <i class="fas fa-brain text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Machine Learning</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.45s">
+                    <i class="fas fa-robot text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">AIOps</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.5s">
+                    <i class="fas fa-server text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Terraform</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.55s">
+                    <i class="fab fa-github text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">GitHub Actions</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.6s">
+                    <i class="fas fa-database text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">MSSQL</p>
+                </div>
+                <div class="skill-badge p-4 rounded-2xl text-center slide-up" style="animation-delay: 0.65s">
+                    <i class="fab fa-java text-4xl mb-2 text-purple-400"></i>
+                    <p class="font-semibold">Java</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+                Öne Çıkan Projeler
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.1s">
+                    <div
+                        class="bg-gradient-to-br from-purple-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">AIOps Anomaly Detection System</h3>
+                    <p class="text-gray-400 mb-4">Python, Prometheus, Machine Learning ile gerçek zamanlı sistem
+                        metriklerini analiz eden tahminsel monitoring modülü.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Python</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">ML</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Prometheus</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.2s">
+                    <div
+                        class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-server text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">AIOps Infrastructure Automation</h3>
+                    <p class="text-gray-400 mb-4">Terraform, AWS Lambda ve Docker ile Infrastructure as Code (IaC)
+                        ortamı.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Terraform</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">AWS Lambda</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.3s">
+                    <div
+                        class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-sync-alt text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">AWS CI/CD Pipeline Automation</h3>
+                    <p class="text-gray-400 mb-4">AWS CodePipeline, Docker ve GitHub Actions ile tam otomatik CI/CD
+                        pipeline.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">AWS</span>
+                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">Docker</span>
+                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.4s">
+                    <div
+                        class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-cloud text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">SiberMiras</h3>
+                    <p class="text-gray-400 mb-4">AWS üzerinde tamamen cloud-native platform. EC2, Lambda, S3, RDS ve
+                        Load Balancer kullanımı.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">AWS</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Python</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Cloud</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.5s">
+                    <div
+                        class="bg-gradient-to-br from-orange-600 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Serverless Log Analyzer</h3>
+                    <p class="text-gray-400 mb-4">AWS Lambda, S3 ve CloudWatch ile tamamen serverless log toplama ve
+                        analiz sistemi.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">Lambda</span>
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">S3</span>
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">CloudWatch</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.6s">
+                    <div
+                        class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-university text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Banka-NTP</h3>
+                    <p class="text-gray-400 mb-4">C# ve OOP prensipleri ile güvenli bankacılık simülasyonu. MSSQL
+                        veritabanı.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">C#</span>
+                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">OOP</span>
+                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">MSSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 mb-20">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+                İletişime Geçin
+            </h2>
+            <div class="glass-card p-8 md:p-12 rounded-3xl slide-up text-center" style="animation-delay: 0.2s">
+                <p class="text-xl text-gray-300 mb-8">
+                    Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz.
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-8">
+                    <a href="mailto:omercangumus3@gmail.com"
+                        class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-envelope text-2xl"></i>
+                        <span>omercangumus3@gmail.com</span>
+                    </a>
+                    <a href="tel:+905550546235"
+                        class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
+                        <i class="fas fa-phone text-2xl"></i>
+                        <span>+90 555 054 6235</span>
+                    </a>
+                </div>
+                <div class="flex gap-6 justify-center">
+                    <a href="https://github.com/omercangumus" target="_blank"
+                        class="social-icon text-4xl text-gray-400">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ömer-can-gümüş-a76950258" target="_blank"
