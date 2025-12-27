@@ -151,6 +151,100 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .glass-card:hover {
+                transform: none;
+            }
+
+            .project-card:hover {
+                transform: none;
+            }
+
+            h1 {
+                font-size: 2.5rem !important;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            .text-6xl {
+                font-size: 3rem !important;
+            }
+
+            /* Skills section mobile */
+            #skills .glass-card {
+                padding: 1.5rem !important;
+            }
+
+            #skills .grid-cols-1 {
+                gap: 1.5rem !important;
+            }
+
+            #skills .skill-badge {
+                padding: 0.5rem !important;
+            }
+
+            #skills .skill-badge i {
+                font-size: 1.5rem !important;
+            }
+
+            #skills .skill-badge p {
+                font-size: 0.65rem !important;
+            }
+
+            /* About section mobile */
+            #about .glass-card p {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+
+            /* Timeline mobile fix */
+            .timeline-line {
+                left: 10px;
+            }
+
+            .timeline-dot {
+                left: 2px;
+                width: 16px;
+                height: 16px;
+            }
+
+            #experience .pl-16 {
+                padding-left: 2.5rem !important;
+            }
+
+            /* Footer social icons mobile */
+            #contact .flex.gap-8 {
+                gap: 1.5rem !important;
+            }
+
+            #contact .social-icon {
+                font-size: 1.5rem !important;
+            }
+
+            /* Hero buttons mobile */
+            #home .flex-wrap a {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.875rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            .text-xl.md\:text-2xl {
+                font-size: 1rem !important;
+            }
+
+            #skills .flex.justify-center.gap-3 {
+                gap: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 
