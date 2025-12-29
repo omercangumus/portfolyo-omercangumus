@@ -16,12 +16,28 @@
     <title>Ömer Can Gümüş - AIOps Engineer & Cloud Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
+        :root {
+            --neon-cyan: #00d4ff;
+            --neon-purple: #8a2be2;
+            --neon-pink: #ff006e;
+            --bg-dark: #0a0a0f;
+            --bg-darker: #050508;
+        }
+
         * {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
         }
 
         html {
@@ -197,38 +213,128 @@
         }
 
         .skill-badge {
-            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(0, 212, 255, 0.2));
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(0, 212, 255, 0.15));
             border: 1px solid rgba(138, 43, 226, 0.3);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-badge::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 212, 255, 0.3), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .skill-badge:hover {
             background: linear-gradient(135deg, rgba(138, 43, 226, 0.4), rgba(0, 212, 255, 0.4));
-            transform: scale(1.05);
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5), 0 0 60px rgba(138, 43, 226, 0.3);
+            border-color: rgba(0, 212, 255, 0.6);
+            z-index: 10;
+        }
+
+        .skill-badge:hover::before {
+            opacity: 1;
+        }
+
+        /* Skills container - diğer badge'ler silikleşsin */
+        .skills-container:hover .skill-badge:not(:hover) {
+            opacity: 0.4;
+            filter: blur(1px);
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #8a2be2, #00d4ff);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
             overflow: hidden;
         }
 
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #8a2be2, #00d4ff, #ff006e, #8a2be2);
+            background-size: 400% 400%;
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            animation: neonBorder 3s linear infinite;
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes neonBorder {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow:
+                0 0 20px rgba(0, 212, 255, 0.6),
+                0 0 40px rgba(138, 43, 226, 0.4),
+                0 0 60px rgba(0, 212, 255, 0.2),
+                0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
         .project-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow:
+                0 0 30px rgba(138, 43, 226, 0.3),
+                0 0 60px rgba(0, 212, 255, 0.2),
+                0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card .project-image {
+            transition: transform 0.5s ease;
+            overflow: hidden;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-card .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.9), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
         }
 
         .social-icon {
@@ -586,13 +692,17 @@
                 </h1>
             </div>
             <div class="slide-up" style="animation-delay: 0.4s">
-                <p class="text-xl md:text-2xl text-gray-400 mb-4">
-                    AIOps Engineer | Cloud Computing Specialist
+                <p class="text-xl md:text-2xl text-gray-400 mb-4 h-8">
+                    <span id="typewriter" class="typewriter-text"></span><span class="typing-cursor"></span>
                 </p>
             </div>
             <div class="slide-up" style="animation-delay: 0.6s">
-                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                    AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto code-font">
+                    <span class="text-cyan-400">&lt;</span><span class="text-purple-400">skills</span><span
+                        class="text-cyan-400">&gt;</span>
+                    AWS & Python | Docker & Kubernetes | Yapay Zeka ve Otomasyon
+                    <span class="text-cyan-400">&lt;/</span><span class="text-purple-400">skills</span><span
+                        class="text-cyan-400">&gt;</span>
                 </p>
             </div>
             <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
@@ -731,7 +841,7 @@
                 Yetenekler
             </h2>
             <!-- Tech Stack Grid with Categories -->
-            <div class="glass-card p-8 rounded-3xl slide-up">
+            <div class="glass-card p-8 rounded-3xl slide-up skills-container">
                 <!-- Row 1: Cloud, Containers, IaC -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <!-- Cloud -->
@@ -1098,63 +1208,190 @@
         </div>
     </section>
 
-    <!-- JavaScript -->
     <script>
-        // ===== STAR PARTICLES ANIMATION =====
+        // ===== INTERACTIVE PARTICLE NETWORK =====
         const canvas = document.getElementById('stars-canvas');
         const ctx = canvas.getContext('2d');
+        let mouseX = 0, mouseY = 0;
+        let particles = [];
+        const numParticles = 100;
+        const connectionDistance = 150;
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            initParticles();
         }
+
+        function initParticles() {
+            particles = [];
+            for (let i = 0; i < numParticles; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1,
+                    opacity: Math.random() * 0.5 + 0.3,
+                    color: Math.random() > 0.5 ? '#8a2be2' : '#00d4ff'
+                });
+            }
+        }
+
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        const stars = [];
-        const numStars = 150;
+        // Track mouse movement
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
-        for (let i = 0; i < numStars; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 2,
-                speed: Math.random() * 0.5 + 0.1,
-                opacity: Math.random(),
-                twinkleSpeed: Math.random() * 0.02 + 0.01
-            });
-        }
-
-        function animateStars() {
+        function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            stars.forEach(star => {
-                star.opacity += star.twinkleSpeed;
-                if (star.opacity > 1 || star.opacity < 0.3) {
-                    star.twinkleSpeed = -star.twinkleSpeed;
+            particles.forEach((particle, i) => {
+                // Mouse attraction
+                const dx = mouseX - particle.x;
+                const dy = mouseY - particle.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 200) {
+                    particle.vx += dx * 0.00005;
+                    particle.vy += dy * 0.00005;
                 }
 
-                star.y -= star.speed;
-                if (star.y < 0) {
-                    star.y = canvas.height;
-                    star.x = Math.random() * canvas.width;
+                // Update position
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+
+                // Boundary check
+                if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+                // Draw particle
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                ctx.fillStyle = particle.color;
+                ctx.globalAlpha = particle.opacity;
+                ctx.fill();
+
+                // Glow effect
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+                ctx.fillStyle = particle.color;
+                ctx.globalAlpha = particle.opacity * 0.2;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+
+                // Draw connections
+                for (let j = i + 1; j < particles.length; j++) {
+                    const other = particles[j];
+                    const cdx = particle.x - other.x;
+                    const cdy = particle.y - other.y;
+                    const cdist = Math.sqrt(cdx * cdx + cdy * cdy);
+
+                    if (cdist < connectionDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(particle.x, particle.y);
+                        ctx.lineTo(other.x, other.y);
+                        const gradient = ctx.createLinearGradient(particle.x, particle.y, other.x, other.y);
+                        gradient.addColorStop(0, particle.color);
+                        gradient.addColorStop(1, other.color);
+                        ctx.strokeStyle = gradient;
+                        ctx.globalAlpha = (1 - cdist / connectionDistance) * 0.3;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
                 }
-
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity})`;
-                ctx.fill();
-
-                // Add glow effect
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity * 0.3})`;
-                ctx.fill();
             });
 
-            requestAnimationFrame(animateStars);
+            requestAnimationFrame(animateParticles);
         }
-        animateStars();
+        animateParticles();
+
+        // ===== TYPEWRITER EFFECT =====
+        const typewriterElement = document.getElementById('typewriter');
+        const phrases = [
+            'AIOps Engineer',
+            'Cloud Computing Specialist',
+            'DevOps Enthusiast',
+            'AWS & Docker Expert',
+            'Automation Architect'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function typeWriter() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause before deleting
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500; // Pause before new phrase
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        setTimeout(typeWriter, 1000);
+
+        // ===== 3D TILT EFFECT FOR PROJECT CARDS =====
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // ===== SCROLL REVEAL ANIMATION =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.slide-up, .glass-card, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
 
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
