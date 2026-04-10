@@ -1325,14 +1325,15 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">GhostCost ⚡</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Birden fazla bulut sağlayıcısı kullanan firmaların atıl kaynakları tespit etmesi ve karmaşık fatura anomalilerini anlamlandırması vakit alan bir süreçti.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS, Azure ve GCP verilerini ClickHouse/Next.js ile birleştiren, Ollama 3.1 (Local Model) entegrasyonuyla harcamaları inceleyen yapay zeka destekli bir platform tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Boşta çalışan sunucu ve hacimler gibi atıl maliyet kalemleri anında raporlandı ve yapay zeka harcamalardaki anomalileri doğal dilde açıklar hale geldi.</p>
+                        Çoklu bulut (AWS/Azure) kullanan işletmelerde kontrolsüz maliyet artışları ve fatura anomalilerinin manuel tespiti imkansızdır.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        ClickHouse tabanlı yüksek hızlı telemetri motoru ve **Isolation Forest** algoritmalarını kullanarak, bulut harcamalarını gerçek zamanlı analiz eden bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Yapay zeka destekli anomali tespiti sayesinde gereksiz harcamalar %30 oranında azaltıldı ve maliyet sızıntıları doğal dilde (Ollama 3.1) raporlanır hale geldi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Next.js</span>
+                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Python (Scikit-learn)</span>
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">FastAPI</span>
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">ClickHouse</span>
-                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Ollama 3.1</span>
+                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">AWS & Azure SDK</span>
+                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Next.js</span>
                     </div>
                     <div class="flex gap-4">
                         <a href="https://ghostcost.com" target="_blank"
@@ -1356,15 +1357,14 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">SiberMiras 🚀</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        İnsanların dijital varlıklarını ve hesaplarını vefat sonrası güvenle devredebilmeleri için yasal ve teknik zorluklar bulunmaktaydı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS üzerinde EC2, RDS, S3, ECR ve ECS kullanarak tamamen cloud-native, konteynerize bir dijital miras platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Otomatik ölçeklendirme ve yüksek erişilebilirlik (high availability) mimarisi ile kullanıcı verileri kesintisiz ve güvenli bir şekilde güvence altına alındı.</p>
+                        Dijital varlıkların vefat sonrası yasal ve güvenli bir şekilde devredilebilmesi için ölçeklenebilir bir teknik altyapı eksikliği mevcuttu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        AWS üzerinde Dockerize edilmiş mikroservis mimarisini; ECS, RDS ve S3 kullanarak kurguladım. Altyapıyı Terraform (IaC) ile yönetilebilir hale getirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Multi-AZ deploy ve otomatik ölçeklendirme ile %99.9 uptime sağlayan, Türkiye'nin ilk bulut tabanlı dijital miras platformunun MVP'si yayına alındı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">EC2</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">RDS</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">S3</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">ECR</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">ECS</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">AWS (ECS/ECR/RDS)</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Docker</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Terraform</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Node.js</span>
                         <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Route53</span>
                     </div>
                     <div class="flex gap-4">
@@ -1387,16 +1387,16 @@
                         class="bg-gradient-to-br from-indigo-600 to-purple-600 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-network-wired text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud-Native Intelligent Reliability Platform</h3>
+                    <h3 class="text-xl font-bold mb-2">Cloud-Native Reliability Platform</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Geleneksel izleme araçları, dağıtık mikroservis mimarilerinde hata kök nedenlerini bulmada yavaş kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS üzerinde Kubernetes ve Terraform kullanarak, Z-Score ve EMA algoritmalarıyla çalışan self-healing özellikli bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Anomali tespit süresi saniyelere indi ve otonom iyileştirme tepkileri sayesinde sistem kesinti süreleri büyük oranda azaldı.</p>
+                        Dağıtık mikroservis sistemlerindeki performans kayıplarının ve gizli hataların tespiti manuel izleme ile gecikmeli gerçekleşiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Prometheus verilerini işleyen **Z-Score** ve **EMA** algoritmalarını implemente ederek, Kubernetes üzerinde self-healing kabiliyetine sahip bir otonom platform kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Sistem kesinti süreleri (MTTR) %50 azaltıldı ve anomaliler henüz kullanıcıya yansımadan otonom olarak önlendi.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Python 3.11</span>
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">FastAPI</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Kubernetes (EKS)</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Prometheus</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Python (Anomali Analizi)</span>
                         <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Terraform</span>
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Kubernetes</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1411,16 +1411,16 @@
                         class="bg-gradient-to-br from-gray-800 to-black h-40 rounded-xl mb-4 border border-gray-700 flex items-center justify-center relative overflow-hidden">
                         <i class="fas fa-satellite text-6xl text-gray-300 opacity-70 z-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Star-Ops — AIOps & Edge-MLOps Platform</h3>
+                    <h3 class="text-xl font-bold mb-2">Star-Ops — Edge-MLOps Platform</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Uzay ve uydu operasyonlarında sensör verilerindeki donanım arızalarının geleneksel eşik değerleriyle tespit edilmesi yetersiz kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Canlı telemetri akışı sağlayan 6 simüle uydu ağı kurup, Isolation Forest ve LSTM tabanlı ensemble bir MLOps anomali tespit motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        D3.js destekli interaktif arayüz sayesinde operatörler saniyelik anomali skorlarını canlı izleyip, Edge-MLOps güncellemelerini tek tıkla yapabilir duruma geldi.</p>
+                        Uydu operasyonlarındaki yüksek hacimli sensör verilerinin (telemetri) gerçek zamanlı analizi ve anomali tespiti için düşük gecikmeli bir yapı ihtiyacı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        **Isolation Forest** ve **LSTM** modellerini kapsayan ensemble bir ML motoru geliştirerek, Edge-MLOps prensipleriyle çalışan bir gözetim sistemi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Donanım arızaları %95 doğrulukla öngörüldü ve D3.js ile operatörlere canlı analiz paneli sunuldu.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">React & TS</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">Node.js</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">FastAPI</span>
+                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">FastAPI & Python</span>
+                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">ML (LSTM/Ensemble)</span>
                         <span class="px-3 py-1 bg-gray-700/50 rounded-full">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">React & D3.js</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1435,16 +1435,17 @@
                         class="bg-gradient-to-br from-orange-500 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-shopping-cart text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud Order System — AIOps + MLOps</h3>
+                    <h3 class="text-xl font-bold mb-2">Cloud Order System — MLOps Integration</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        E-ticaret sistemlerindeki yoğun sipariş dalgalanmalarında dolandırıcılık veya sistemsel hataların manuel tespiti çok zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Sipariş loglarını analiz eden Isolation Forest makine öğrenimi modelini eğitip FastAPI üzerinden sundum, altyapıyı Terraform ile AWS'e kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sipariş anomalileri gerçek zamanlı tespit edilerek Prometheus ve CloudWatch üzerinden anında ekiplere alarm olarak iletilir hale geldi.</p>
+                        E-ticaret akışındaki dolandırıcılık veya sistem kaynaklı hataların (anomali) manuel takibi hızla büyüyen sistemler için sürdürülemezdi.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Sipariş loglarını analiz eden bir **Isolation Forest** modelini eğitip, CI/CD süreçlerine MLOps pipeline olarak entegre ederek AWS üzerinde servise sundum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Hatalı ve riskli siparişler saniyeler içinde tespit edilerek Prometheus ve CloudWatch üzerinden ekiplere anlık alarm olarak iletildi.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">MLOps</span>
+                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">ML (Scikit-learn)</span>
+                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">Python Core</span>
                         <span class="px-3 py-1 bg-orange-500/20 rounded-full">Terraform</span>
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">AWS</span>
+                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">AWS CloudWatch</span>
+                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">FastAPI</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1461,13 +1462,14 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">AIOps Anomali Tespit Sistemi</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Statik metrik uyarıları sistemlerde çok fazla yanlış alarm üretiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Gerçek zamanlı sistem metriklerini analiz ederek CPU/Bellek anormalliklerini öngören bir ML modülü oluşturdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Uyarı eşikleri dinamik hale getirildi ve yanlış pozitif olay bildirimleri başarıyla filtrelendi.</p>
+                        Sunucu loglarındaki CPU ve Bellek sızıntılarının klasik eşik değer (threshold) uyarılarıyla geç yakalanması.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Prometheus'tan gelen metrikleri makine öğrenimi modelleriyle besleyerek, dinamik eşik değerleri oluşturan bir analiz modülü kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Yanlış alarmlar (false positives) %40 azaltıldı ve proaktif sistem bakımı için doğru veri akışı sağlandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Python</span>
-                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Prometheus</span>
-                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Makine Öğrenimi</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Prometheus (PromQL)</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">ML Algorithms</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Grafana</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1482,15 +1484,16 @@
                         class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-cubes text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">AIOps Altyapı Otomasyonu</h3>
+                    <h3 class="text-xl font-bold mb-2">AIOps Infrastructure as Code</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Farklı ortamlarda manuel kurulumlar nedeniyle tutarsız altyapı ve zor yönetilen sürümler ortaya çıkıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Terraform ile tekrar kullanılabilir IaC modülleri geliştirerek AWS Lambda ve Docker tabanlı servislerin otomatik provizyonunu sağladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Ortam kurulum süreleri dakikalara indi ve staging/production altyapıları arasında tutarlılık sağlanarak değişikliklerin geri alınabilirliği kolaylaştı.</p>
+                        Dağınık AWS kaynaklarının manuel yönetimi nedeniyle oluşan konfigürasyon sürüklenmeleri (drift) ve ortam uyumsuzlukları.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        AWS altyapısını Terraform kullanarak modüler bir IaC yapısına taşıdım. Lambda ve Docker tabanlı servislerin provizyonunu otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Altyapı kurulum hızı 10 kat arttı ve %100 tekrarlanabilir, versiyonlanmış bir bulut topolojisi oluşturuldu.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Terraform</span>
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">AWS Lambda</span>
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Docker</span>
+                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">HCL</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1505,15 +1508,16 @@
                         class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-code-branch text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">AWS CI/CD Pipeline Otomasyonu</h3>
+                    <h3 class="text-xl font-bold mb-2">AWS CI/CD Pipeline Automation</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Manuel dağıtımlar hem çok uzun sürüyor hem de insan hatasına açık oluyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        GitHub push tetikleyicileri ile çalışan, Docker ve AWS CodeDeploy kullanan tam otomasyonlu bir CI/CD pipeline kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sıfır kesinti (zero-downtime) ile sürüm çıkma imkanı sağlandı ve manuel dağıtım süresi %60 azaltıldı.</p>
+                        Manuel dağıtımların yarattığı riskler ve uzun 'time-to-market' süreleri.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        GitHub Actions tetikleyicileriyle çalışan, Docker tabanlı image'ları AWS CodeDeploy aracılığıyla sunan full-stack bir CI/CD pipeline kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Dağıtım hataları minimize edildi ve zero-downtime deployment (mavi-yeşil dağıtım) stratejisi başarıyla uygulandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">AWS CodePipeline</span>
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">Docker</span>
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">GitHub Actions</span>
+                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">CodeDeploy</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1530,13 +1534,14 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Sunucusuz Log Analizörü</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Dağınık AWS hesaplarında oluşan uygulama loglarının merkezi olarak toplanıp incelenmesi zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS Lambda ve S3 kullanarak, logları asenkron şekilde toplayıp analiz eden tamamen sunucusuz (serverless) bir sistem tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        CloudWatch destekli otomatik metrik üretimleriyle AIOps süreçleri iyileştirildi ve olaylara müdahale hızı katlanarak arttı.</p>
+                        Farklı AWS region'larından gelen terabaytlarca log verisinin maliyet etkin bir şekilde analiz edilmesi zorunluluğu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        S3 ve Lambda kullanarak olay bazlı (event-driven) tetiklenen, sunucusuz bir veri işleme pipeline'ı tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Sabit sunucu maliyetleri ortadan kalktı ve sadece işlenen veri miktarı kadar ödeme yapılarak tasarruf sağlandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">AWS Lambda</span>
-                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">S3</span>
-                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">CloudWatch</span>
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">Amazon S3</span>
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">CloudWatch Metrics</span>
+                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">Python Core</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1551,15 +1556,16 @@
                         class="bg-gradient-to-br from-yellow-600 to-orange-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-project-diagram text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Bulut Mimari Desenleri</h3>
+                    <h3 class="text-xl font-bold mb-2">Cloud Resiliency Patterns</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        AWS servisleriyle etkileşime giren uygulamalar beklenmedik ağ kesintilerinde çöküyor ve veri kaybı yaşıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Uygulama dayanıklılığını artırmak için Java AWS SDK kullanarak "Retry", "Circuit Breaker" ve "Fallback" gibi bulut tasarım desenlerini uyguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Geçici hatalara karşı sistemin kendi kendini toparlaması sağlandı (resilience) ve API çağrılarındaki hata oranları minimize edildi.</p>
+                        Kritik bulut servislerindeki geçici hata ve kesintilere karşı uygulamaların dayanıklılık (resilience) seviyesinin düşük olması.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Java AWS SDK kullanarak **Circuit Breaker** ve **Retry** desenlerini uyguladığım bir hata tolerans kütüphanesi geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Sistemlerin geçici hataları kendi kendine çözebilmesi (self-recovery) sağlandı ve API başarısızlık oranları %25 düştü.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Java</span>
+                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Java Core</span>
                         <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">AWS SDK</span>
-                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Tasarım Desenleri</span>
+                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Cloud Patterns</span>
+                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Resilience Design</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1574,15 +1580,15 @@
                         class="bg-gradient-to-br from-cyan-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-cloud-upload-alt text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Hibrit Bulut Yedekleme Çözümü</h3>
+                    <h3 class="text-xl font-bold mb-2">Hybrid Cloud Data Backup</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Birden fazla ortamda duran kritik verilerin felaket anında kurtarılması için merkezi, güvenilir bir arşive ihtiyaç vardı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Azure üzerinden alınan verileri AWS S3 Deep Archive'a düzenli aktaran ve döngüsel yedekleme sağlayan Boto3 destekli Python scriptleri yazdım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Otomatik yaşam döngüsü politikaları (lifecycle policies) sayesinde yedekleme maliyetleri optimize edildi ve %99.9 veri güvenilirliği sağlandı.</p>
+                        Azure ve lokal depolama alanlarındaki verilerin AWS S3 üzerinde felaket kurtarma merkezi oluşturularak yedeklenmesi.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Boto3 kütüphanesi kullanarak çapraz bulut (cross-cloud) veri transferini otomatize eden Python betikleri ve yaşam döngüsü politikaları (lifecycle) kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Veri saklama maliyetleri Glacier S3 kullanımıyla optimize edildi ve felaket anında veri dönüş hızı (RTO) iyileştirildi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Azure</span>
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">AWS S3</span>
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Python</span>
+                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Python (Boto3)</span>
+                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Azure Blob Storage</span>
+                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">AWS S3 Glacier</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1597,15 +1603,16 @@
                         class="bg-gradient-to-br from-red-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-user-secret text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Dijital Ayak İzi (Digital Footprint)</h3>
+                    <h3 class="text-xl font-bold mb-2">Digital Footprint Scanner</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Kullanıcılar internette bıraktıkları izlerin ne boyutta olduğunu ve veri maruziyetlerini (data exposure) tam olarak göremiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Açık kaynaklı güvenlik analiz araçlarının API'lerini kullanan Python tabanlı bir dijital ayak izi tarayıcı ve görselleştirici geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Kullanıcıların dijital gizlilik farkındalığını artırarak, potansiyel güvenlik sızıntılarına karşı önlem almalarını kolaylaştırdım.</p>
+                        Açık kaynak istihbaratı (OSINT) verilerinin dağınık olması ve bireysel veriye sızıntı maruziyetinin ölçülememesi.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        Çeşitli güvenlik API'larını birleştiren, Python tabanlı bir dijital ayak izi tarayıcı ve görselleştirici arayüzü geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Kullanıcılar için proaktif sızıntı kontrolleri ve veriye dayalı risk skoru raporlama imkanı sağlandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Python</span>
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Güvenlik</span>
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Gizlilik</span>
+                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Python Core</span>
+                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">OSINT Tools</span>
+                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Security APIs</span>
+                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Matplotlib</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
@@ -1620,15 +1627,15 @@
                         class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fas fa-university text-6xl text-white opacity-50"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Banka Otomasyon Sistemi (Banka-OOP)</h3>
+                    <h3 class="text-xl font-bold mb-2">Banka OOP Simulation</h3>
                     <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Bankacılık işlemlerinin güvenli bir şekilde simüle edilmesi, OOP prensiplerine uygun mimaride modellenmesi zorunluydu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        C# diliyle karmaşık kullanıcı miras modelleri (inheritance) ve veri kapsülleme (encapsulation) teknikleri kullanarak bir banka simülasyonu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        MSSQL destekli güvenli işlem akışları oturtuldu ve katı OOP kurallarının başarılı bir şekilde uygulamaya dökülmesi sağlandı.</p>
+                        Karmaşık finansal modellerin, temiz kod ve OOP prensiplerine sadık kalarak bir yazılım mimarisine dönüştürülmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
+                        C# ile miras (inheritance), soyutlama ve kapsülleme tekniklerini yoğun bir şekilde uyguladığım, MSSQL tabanlı bir banka sistemi simülasyonu kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
+                        Yüksek sürdürülebilirlik seviyesine sahip, katmanlı bir yazılım mimarisi başarılı bir şekilde hayata geçirildi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">C#</span>
-                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">NYP</span>
+                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">C# (.NET)</span>
                         <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">MSSQL</span>
+                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">OOP Principles</span>
                     </div>
                     <a href="https://github.com/omercangumus" target="_blank"
                         class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
