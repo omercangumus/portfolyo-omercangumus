@@ -13,6 +13,7 @@
     <!-- End Google Analytics -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ömer Can Gümüş - AIOps Engineer & Cloud Developer. Building observability systems, backend pipelines, and cloud-native automation.">
     <title>Ömer Can Gümüş - AIOps Engineer & Cloud Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,7 +36,6 @@
             position: relative;
         }
 
-        /* Animated background orbs */
         body::before {
             content: '';
             position: fixed;
@@ -65,15 +65,8 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(30px, -30px) scale(1.1);
-            }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
         }
 
         .glass-card {
@@ -89,14 +82,12 @@
         .glass-card:hover {
             background: rgba(255, 255, 255, 0.06);
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.25),
-                0 0 100px rgba(138, 43, 226, 0.1);
+            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.25), 0 0 100px rgba(138, 43, 226, 0.1);
             border-color: rgba(138, 43, 226, 0.3);
         }
 
         .glow-text {
-            text-shadow: 0 0 30px rgba(138, 43, 226, 0.6),
-                0 0 60px rgba(138, 43, 226, 0.3);
+            text-shadow: 0 0 30px rgba(138, 43, 226, 0.6), 0 0 60px rgba(138, 43, 226, 0.3);
         }
 
         .fade-in {
@@ -110,17 +101,10 @@
             animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+        @keyframes fadeIn { to { opacity: 1; } }
 
         @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .nav-link {
@@ -140,13 +124,8 @@
             box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
-        }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { text-shadow: 0 0 20px rgba(138, 43, 226, 0.5); }
 
         .timeline-line {
             position: absolute;
@@ -160,15 +139,8 @@
         }
 
         @keyframes gradientMove {
-
-            0%,
-            100% {
-                background-position: 0% 0%;
-            }
-
-            50% {
-                background-position: 0% 100%;
-            }
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 0% 100%; }
         }
 
         .timeline-dot {
@@ -179,21 +151,13 @@
             background: #8a2be2;
             border: 3px solid #0a0a0f;
             border-radius: 50%;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.8),
-                0 0 40px rgba(138, 43, 226, 0.4);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), 0 0 40px rgba(138, 43, 226, 0.4);
             animation: pulse 2s ease-in-out infinite;
         }
 
         @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
-            }
-
-            50% {
-                box-shadow: 0 0 30px rgba(138, 43, 226, 1), 0 0 60px rgba(138, 43, 226, 0.5);
-            }
+            0%, 100% { box-shadow: 0 0 20px rgba(138, 43, 226, 0.8); }
+            50% { box-shadow: 0 0 30px rgba(138, 43, 226, 1), 0 0 60px rgba(138, 43, 226, 0.5); }
         }
 
         .skill-badge {
@@ -210,279 +174,13 @@
         .btn-primary {
             background: linear-gradient(135deg, #8a2be2, #00d4ff);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
-        }
-
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-5px);
-            color: #8a2be2;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #8a2be2, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            padding-bottom: 0.1em;
-            display: inline-block;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .glass-card:hover {
-                transform: none;
-            }
-
-            .project-card:hover {
-                transform: none;
-            }
-
-            h1 {
-                font-size: 2.5rem !important;
-            }
-
-            h2 {
-                font-size: 2rem !important;
-            }
-
-            .text-6xl {
-                font-size: 3rem !important;
-            }
-
-            /* Skills section mobile */
-            #skills .glass-card {
-                padding: 1.5rem !important;
-            }
-
-            #skills .grid-cols-1 {
-                gap: 1.5rem !important;
-            }
-
-            #skills .skill-badge {
-                padding: 0.5rem !important;
-            }
-
-            #skills .skill-badge i {
-                font-size: 1.5rem !important;
-            }
-
-            #skills .skill-badge p {
-                font-size: 0.65rem !important;
-            }
-
-            /* About section mobile */
-            #about .glass-card p {
-                font-size: 0.95rem !important;
-                line-height: 1.6 !important;
-            }
-
-            /* Timeline mobile fix */
-            .timeline-line {
-                left: 10px;
-            }
-
-            .timeline-dot {
-                left: 2px;
-                width: 16px;
-                height: 16px;
-            }
-
-            #experience .pl-16 {
-                padding-left: 2.5rem !important;
-            }
-
-            /* Footer social icons mobile */
-            #contact .flex.gap-8 {
-                gap: 1.5rem !important;
-            }
-
-            #contact .social-icon {
-                font-size: 1.5rem !important;
-            }
-
-            /* Hero buttons mobile */
-            #home .flex-wrap a {
-                padding: 0.75rem 1.5rem !important;
-                font-size: 0.875rem !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            .text-xl.md\:text-2xl {
-                font-size: 1rem !important;
-            }
-
-            #skills .flex.justify-center.gap-3 {
-                gap: 0.5rem !important;
-            }
-        }
-
-        /* ===== WOW FACTOR EFFECTS ===== */
-
-        /* Typing cursor animation */
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s infinite;
-            color: #8a2be2;
-        }
-
-        @keyframes blink {
-
-            0%,
-            50% {
-                opacity: 1;
-            }
-
-            51%,
-            100% {
-                opacity: 0;
-            }
-        }
-
-        /* 3D Card Tilt on hover */
-        .project-card {
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-
-        .project-card:hover {
-            transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
-        }
-
-        /* Glowing border animation */
-        .glow-border {
-            position: relative;
-        }
-
-        .glow-border::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: linear-gradient(45deg, #8a2be2, #00d4ff, #8a2be2, #00d4ff);
-            background-size: 400% 400%;
-            border-radius: inherit;
-            z-index: -1;
-            animation: borderGlow 3s ease infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .glow-border:hover::before {
-            opacity: 1;
-        }
-
-        @keyframes borderGlow {
-
-            0%,
-            100% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-
-        /* Dramatic scale entrance */
-        .scale-entrance {
-            animation: scaleIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-
-        @keyframes scaleIn {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Floating animation for hero */
-        .hero-float {
-            animation: heroFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes heroFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        /* Shimmer effect on text */
-        .shimmer-text {
-            background: linear-gradient(90deg,
-                    #8a2be2 0%,
-                    #00d4ff 25%,
-                    #fff 50%,
-                    #00d4ff 75%,
-                    #8a2be2 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 6s linear infinite;
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: -200% center;
-            }
-
-            100% {
-                background-position: 200% center;
-            }
-        }
-
-        /* Star particles canvas */
-        #stars-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Button ripple effect */
-        .btn-primary {
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-primary::after {
@@ -498,9 +196,131 @@
             transition: width 0.6s, height 0.6s;
         }
 
-        .btn-primary:hover::after {
-            width: 300px;
-            height: 300px;
+        .btn-primary:hover::after { width: 300px; height: 300px; }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: rotateY(2deg) rotateX(2deg) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+        }
+
+        .featured-card {
+            border-color: rgba(138, 43, 226, 0.3);
+            background: rgba(138, 43, 226, 0.04);
+        }
+
+        .social-icon { transition: all 0.3s ease; }
+        .social-icon:hover { transform: translateY(-5px); color: #8a2be2; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8a2be2, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding-bottom: 0.1em;
+            display: inline-block;
+        }
+
+        /* Show More / Less */
+        .more-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .more-content.expanded {
+            max-height: 9999px;
+        }
+
+        .toggle-btn {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: rgba(138, 43, 226, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Currently badge */
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .status-dot { animation: statusPulse 2s ease-in-out infinite; }
+
+        /* Typing cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: #8a2be2;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Glowing border animation */
+        .glow-border { position: relative; }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #8a2be2, #00d4ff, #8a2be2, #00d4ff);
+            background-size: 400% 400%;
+            border-radius: inherit;
+            z-index: -1;
+            animation: borderGlow 3s ease infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glow-border:hover::before { opacity: 1; }
+
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Shimmer text */
+        .shimmer-text {
+            background: linear-gradient(90deg, #8a2be2 0%, #00d4ff 25%, #fff 50%, #00d4ff 75%, #8a2be2 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Star particles */
+        #stars-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
 
         /* Skill badge shine */
@@ -516,16 +336,38 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg,
-                    transparent 40%,
-                    rgba(255, 255, 255, 0.1) 50%,
-                    transparent 60%);
+            background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
             transform: translateX(-100%);
             transition: transform 0.6s;
         }
 
-        .skill-badge:hover::after {
-            transform: translateX(100%);
+        .skill-badge:hover::after { transform: translateX(100%); }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.3), rgba(0, 212, 255, 0.3), transparent);
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .glass-card:hover { transform: none; }
+            .project-card:hover { transform: none; }
+            h1 { font-size: 2.5rem !important; }
+            h2 { font-size: 2rem !important; }
+            .text-6xl { font-size: 3rem !important; }
+            .timeline-line { left: 10px; }
+            .timeline-dot { left: 2px; width: 16px; height: 16px; }
+            #experience .pl-16 { padding-left: 2.5rem !important; }
+            #contact .flex.gap-8 { gap: 1.5rem !important; }
+            #contact .social-icon { font-size: 1.5rem !important; }
+            #home .flex-wrap a { padding: 0.75rem 1.5rem !important; font-size: 0.875rem !important; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem !important; }
         }
     </style>
 </head>
@@ -536,20 +378,13 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold gradient-text">ÖCG</div>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
-                    Sayfa</a>
-                <a href="#about" class="nav-link text-gray-300 hover:text-white" data-tr="Hakkımda"
-                    data-en="About">Hakkımda</a>
-                <a href="#experience" class="nav-link text-gray-300 hover:text-white" data-tr="Deneyim"
-                    data-en="Experience">Deneyim</a>
-                <a href="#skills" class="nav-link text-gray-300 hover:text-white" data-tr="Yetenekler"
-                    data-en="Skills">Yetenekler</a>
-                <a href="#certificates" class="nav-link text-gray-300 hover:text-white" data-tr="Sertifikalar"
-                    data-en="Certifications">Sertifikalar</a>
-                <a href="#projects" class="nav-link text-gray-300 hover:text-white" data-tr="Projeler"
-                    data-en="Projects">Projeler</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-white" data-tr="İletişim"
-                    data-en="Contact">İletişim</a>
+                <a href="#home" class="nav-link text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-white" data-tr="Deneyim" data-en="Experience">Deneyim</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="#certificates" class="nav-link text-gray-300 hover:text-white" data-tr="Sertifikalar" data-en="Certifications">Sertifikalar</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white" data-tr="İletişim" data-en="Contact">İletişim</a>
                 <button id="lang-switch"
                     class="ml-4 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
             </div>
@@ -559,20 +394,13 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
-                Sayfa</a>
-            <a href="#about" class="block py-2 text-gray-300 hover:text-white" data-tr="Hakkımda"
-                data-en="About">Hakkımda</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-white" data-tr="Deneyim"
-                data-en="Experience">Deneyim</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-white" data-tr="Yetenekler"
-                data-en="Skills">Yetenekler</a>
-            <a href="#certificates" class="block py-2 text-gray-300 hover:text-white" data-tr="Sertifikalar"
-                data-en="Certifications">Sertifikalar</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-white" data-tr="Projeler"
-                data-en="Projects">Projeler</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-white" data-tr="İletişim"
-                data-en="Contact">İletişim</a>
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white" data-tr="Deneyim" data-en="Experience">Deneyim</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white" data-tr="Projeler" data-en="Projects">Projeler</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+            <a href="#certificates" class="block py-2 text-gray-300 hover:text-white" data-tr="Sertifikalar" data-en="Certifications">Sertifikalar</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white" data-tr="İletişim" data-en="Contact">İletişim</a>
             <button id="lang-switch-mobile"
                 class="mt-2 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
         </div>
@@ -581,34 +409,61 @@
     <!-- Star Particles Canvas -->
     <canvas id="stars-canvas"></canvas>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="container mx-auto text-center">
+
+            <!-- Currently Badge -->
+            <div class="fade-in flex items-center justify-center gap-2 mb-6" style="animation-delay: 0.1s">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium"
+                    style="background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3);">
+                    <span class="w-2 h-2 bg-green-400 rounded-full status-dot"></span>
+                    <span class="text-green-400" data-tr="Şu an: Beko Corporate'te Part-Time AIOps Engineer" data-en="Currently: Part-Time AIOps Engineer at Beko Corporate">Şu an: Beko Corporate'te Part-Time AIOps Engineer</span>
+                </span>
+            </div>
+
+            <!-- Name -->
             <div class="fade-in" style="animation-delay: 0.2s">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 glow-text">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 glow-text">
                     Ömer Can <span class="shimmer-text">Gümüş</span>
                 </h1>
             </div>
-            <div class="slide-up" style="animation-delay: 0.4s">
-                <p class="text-xl md:text-2xl text-gray-400 mb-4">
+
+            <!-- Title -->
+            <div class="slide-up" style="animation-delay: 0.35s">
+                <p class="text-xl md:text-2xl text-gray-400 mb-3" data-tr="AIOps Engineer | Cloud Computing Specialist" data-en="AIOps Engineer | Cloud Computing Specialist">
                     AIOps Engineer | Cloud Computing Specialist
                 </p>
             </div>
-            <div class="slide-up" style="animation-delay: 0.6s">
-                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                    AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon
+
+            <!-- One-liner -->
+            <div class="slide-up" style="animation-delay: 0.45s">
+                <p class="text-base md:text-lg text-gray-500 mb-7 max-w-xl mx-auto"
+                    data-tr="Gözlemlenebilirlik sistemleri, backend pipeline'ları ve cloud-native otomasyon çözümleri geliştiriyor."
+                    data-en="Building observability systems, backend pipelines, and cloud-native automation solutions.">
+                    Gözlemlenebilirlik sistemleri, backend pipeline'ları ve cloud-native otomasyon çözümleri geliştiriyor.
                 </p>
             </div>
-            <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
-                style="animation-delay: 0.8s">
+
+            <!-- Tech Focus Badges -->
+            <div class="slide-up flex flex-wrap justify-center gap-2 mb-8" style="animation-delay: 0.55s">
+                <span class="text-xs px-3 py-1 rounded-full font-medium" style="background:rgba(138,43,226,0.18);border:1px solid rgba(138,43,226,0.35);color:#c084fc;">Cloud</span>
+                <span class="text-xs px-3 py-1 rounded-full font-medium" style="background:rgba(59,130,246,0.18);border:1px solid rgba(59,130,246,0.35);color:#93c5fd;">DevOps</span>
+                <span class="text-xs px-3 py-1 rounded-full font-medium" style="background:rgba(0,212,255,0.14);border:1px solid rgba(0,212,255,0.3);color:#67e8f9;">AIOps</span>
+                <span class="text-xs px-3 py-1 rounded-full font-medium" style="background:rgba(99,102,241,0.18);border:1px solid rgba(99,102,241,0.35);color:#a5b4fc;">MLOps</span>
+                <span class="text-xs px-3 py-1 rounded-full font-medium" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:#d1d5db;">Backend</span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center flex-wrap" style="animation-delay: 0.7s">
                 <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white"
                     data-tr="İletişime Geç" data-en="Get in Touch">
                     <i class="fas fa-envelope mr-2"></i><span>İletişime Geç</span>
                 </a>
                 <a href="https://github.com/omercangumus" target="_blank"
                     class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
-                    data-tr="GitHub Profilim" data-en="GitHub Profile">
-                    <i class="fab fa-github mr-2"></i><span>GitHub Profilim</span>
+                    data-tr="GitHub" data-en="GitHub">
+                    <i class="fab fa-github mr-2"></i><span>GitHub</span>
                 </a>
                 <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank"
                     class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
@@ -624,43 +479,48 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT SECTION ===== -->
     <section id="about" class="py-20 px-6">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-tr="Hakkımda" data-en="About Me">
                 Hakkımda
             </h2>
-            <div class="glass-card p-8 md:p-12 rounded-3xl slide-up" style="animation-delay: 0.2s">
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate'te Part-Time AIOps
-                    Engineer olarak görev alıyorum. Cloud Computing, Artificial Intelligence ve AIOps alanlarında
-                    uzmanlaşmaya odaklanmış, kurumsal ölçekte teknoloji üretmeye tutkuyla bağlı bir geliştiriciyim.
+            <div class="glass-card p-8 md:p-10 rounded-3xl slide-up" style="animation-delay: 0.2s">
+                <p class="text-lg text-gray-300 leading-relaxed mb-6" id="about-intro"
+                    data-tr="Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate'te Part-Time AIOps Engineer olarak çalışıyorum. Bulut altyapıları, gözlemlenebilirlik sistemleri ve AIOps/MLOps otomasyonları üzerine odaklanıyorum."
+                    data-en="3rd year Software Engineering student at Fırat University, currently working as a Part-Time AIOps Engineer at Beko Corporate. Focused on cloud infrastructure, observability systems, and AIOps/MLOps automation.">
+                    Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate'te Part-Time AIOps Engineer olarak çalışıyorum. Bulut altyapıları, gözlemlenebilirlik sistemleri ve AIOps/MLOps otomasyonları üzerine odaklanıyorum.
                 </p>
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    AWS, Docker ve Python başta olmak üzere modern bulut teknolojileriyle otomatik, ölçeklenebilir ve
-                    güvenilir sistemler geliştiriyorum. Çalışmalarımda AIOps yaklaşımı, containerization, CI/CD,
-                    cloud-native mimariler ve operasyonel verimlilik ön planda yer alıyor. Yapay zekayı IT
-                    operasyonlarına entegre ederek sistem performansını artıran, hataları öngören ve süreçleri optimize
-                    eden çözümler üretmeye odaklanıyorum.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    Kurumsal bir ortamda edindiğim deneyim sayesinde disiplinli çalışma, takım içi iletişim, problem
-                    çözme ve sorumluluk alma konularında güçlü bir yetkinliğe sahibim. Sürekli öğrenen, detaylara önem
-                    veren ve yüksek kaliteli çıktılar üretmeyi hedefleyen bir mühendis adayıyım.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    Kariyer hedefim; container orchestration (Docker, Kubernetes), bulut orkestrasyonu, AIOps & MLOps,
-                    AWS altyapıları ve akıllı bulut sistemleri alanlarında derinleşerek, kurumsal ölçekte etkili ve
-                    sürdürülebilir cloud-AI çözümleri geliştiren bir mühendis olarak güçlü bir kariyer inşa etmektir.
-                </p>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-building text-purple-400 mt-0.5 flex-shrink-0"></i>
+                        <span data-tr="Beko Corporate'te Docker log analizi, anomali tespiti ve monitoring süreçleri üzerinde çalışıyorum." data-en="Working at Beko Corporate on Docker log analysis, anomaly detection, and monitoring workflows.">Beko Corporate'te Docker log analizi, anomali tespiti ve monitoring süreçleri üzerinde çalışıyorum.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-cloud text-cyan-400 mt-0.5 flex-shrink-0"></i>
+                        <span data-tr="AWS, Terraform, FastAPI ile cloud-native backend sistemler ve serverless mimari çözümler geliştiriyorum." data-en="Building cloud-native backend systems and serverless architecture with AWS, Terraform, and FastAPI.">AWS, Terraform, FastAPI ile cloud-native backend sistemler ve serverless mimari çözümler geliştiriyorum.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-chart-line text-green-400 mt-0.5 flex-shrink-0"></i>
+                        <span data-tr="Prometheus, Grafana ve ELK Stack kullanarak observability pipeline'ları kuruyorum." data-en="Setting up observability pipelines with Prometheus, Grafana, and ELK Stack.">Prometheus, Grafana ve ELK Stack kullanarak observability pipeline'ları kuruyorum.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-ghost text-emerald-400 mt-0.5 flex-shrink-0"></i>
+                        <span data-tr="GhostCost — AI destekli çok-bulutlu (AWS/Azure/GCP) maliyet analiz ve anomali tespiti aracı geliştirdim." data-en="Built GhostCost — an AI-powered multi-cloud (AWS/Azure/GCP) cost intelligence and anomaly detection tool.">GhostCost — AI destekli çok-bulutlu (AWS/Azure/GCP) maliyet analiz ve anomali tespiti aracı geliştirdim.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-rocket text-indigo-400 mt-0.5 flex-shrink-0"></i>
+                        <span data-tr="Kariyer hedefim: container orchestration, AIOps & MLOps ve akıllı bulut sistemleri alanında uzmanlaşmak." data-en="Career goal: specializing in container orchestration, AIOps & MLOps, and intelligent cloud systems at enterprise scale.">Kariyer hedefim: container orchestration, AIOps &amp; MLOps ve akıllı bulut sistemleri alanında uzmanlaşmak.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===== EXPERIENCE SECTION ===== -->
     <section id="experience" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-tr="Deneyim" data-en="Experience">
                 Deneyim
             </h2>
             <div class="relative pl-16 space-y-12 max-w-4xl mx-auto">
@@ -669,16 +529,19 @@
                 <!-- Beko Corporate -->
                 <div class="slide-up" style="animation-delay: 0.1s">
                     <div class="timeline-dot"></div>
-                    <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Aralık 2025 - Günümüz</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Junior AIOps Engineer</h3>
-                        <p class="text-gray-400 mb-4">Beko Corporate - PREP Program</p>
+                    <div class="glass-card p-6 rounded-2xl ml-8" style="border-color:rgba(138,43,226,0.35)">
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <span class="text-purple-400 font-semibold" data-tr="Aralık 2025 - Günümüz" data-en="December 2025 - Present">Aralık 2025 - Günümüz</span>
+                            <span class="text-xs px-2 py-0.5 rounded-full font-semibold" style="background:rgba(138,43,226,0.2);border:1px solid rgba(138,43,226,0.4);color:#c084fc;" data-tr="Mevcut Pozisyon" data-en="Current Role">Mevcut Pozisyon</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-tr="Junior AIOps Engineer" data-en="Junior AIOps Engineer">Junior AIOps Engineer</h3>
+                        <p class="text-gray-400 mb-4" data-tr="Beko Corporate - PREP Program" data-en="Beko Corporate - PREP Program">Beko Corporate - PREP Program</p>
                         <ul class="text-gray-300 space-y-2">
-                            <li>• Docker tabanlı ve konteynerize uygulamalardan log analizi</li>
-                            <li>• Temel olay inceleme ve kök neden analizi</li>
-                            <li>• Anomali paternleri ve operasyonel sorunların anlaşılması</li>
-                            <li>• AIOps, monitoring ve observability uygulamaları</li>
-                            <li>• DevOps ekipleri ile kurumsal iş akışlarında işbirliği</li>
+                            <li data-tr="• Docker tabanlı ve konteynerize uygulamalardan log analizi" data-en="• Log analysis from Docker-based and containerized applications">• Docker tabanlı ve konteynerize uygulamalardan log analizi</li>
+                            <li data-tr="• Temel olay inceleme ve kök neden analizi" data-en="• Basic incident investigation and root cause analysis">• Temel olay inceleme ve kök neden analizi</li>
+                            <li data-tr="• Anomali paternleri ve operasyonel sorunların anlaşılması" data-en="• Understanding anomaly patterns and operational issues">• Anomali paternleri ve operasyonel sorunların anlaşılması</li>
+                            <li data-tr="• AIOps, monitoring ve observability uygulamaları" data-en="• AIOps, monitoring and observability practices">• AIOps, monitoring ve observability uygulamaları</li>
+                            <li data-tr="• DevOps ekipleri ile kurumsal iş akışlarında işbirliği" data-en="• Collaboration with DevOps teams in enterprise workflows">• DevOps ekipleri ile kurumsal iş akışlarında işbirliği</li>
                         </ul>
                     </div>
                 </div>
@@ -687,14 +550,13 @@
                 <div class="slide-up" style="animation-delay: 0.2s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Aralık 2025 - Günümüz</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Gönüllü Eğitmen</h3>
-                        <p class="text-gray-400 mb-4">Habitat Derneği</p>
+                        <span class="text-purple-400 font-semibold" data-tr="Aralık 2025 - Günümüz" data-en="December 2025 - Present">Aralık 2025 - Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-tr="Gönüllü Eğitmen" data-en="Volunteer Instructor">Gönüllü Eğitmen</h3>
+                        <p class="text-gray-400 mb-4" data-tr="Habitat Derneği" data-en="Habitat Association">Habitat Derneği</p>
                         <p class="text-gray-300"
                             data-tr="Finansal okuryazarlık konusunda öğrencilere gönüllü olarak eğitim veriyorum. Bütçe yönetimi, tasarruf ve finansal planlama gibi konularda bilinç oluşturmayı hedefliyoruz."
                             data-en="I voluntarily teach students about financial literacy. We aim to raise awareness on topics such as budget management, savings, and financial planning.">
-                            Finansal okuryazarlık konusunda öğrencilere gönüllü olarak eğitim veriyorum. Bütçe yönetimi,
-                            tasarruf ve finansal planlama gibi konularda bilinç oluşturmayı hedefliyoruz.</p>
+                            Finansal okuryazarlık konusunda öğrencilere gönüllü olarak eğitim veriyorum. Bütçe yönetimi, tasarruf ve finansal planlama gibi konularda bilinç oluşturmayı hedefliyoruz.</p>
                     </div>
                 </div>
 
@@ -702,14 +564,13 @@
                 <div class="slide-up" style="animation-delay: 0.3s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Ağustos 2025</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">QNB 101 Online Staj</h3>
-                        <p class="text-gray-400 mb-4">QNB Türkiye</p>
+                        <span class="text-purple-400 font-semibold" data-tr="Ağustos 2025" data-en="August 2025">Ağustos 2025</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-tr="QNB 101 Online Staj" data-en="QNB 101 Online Internship">QNB 101 Online Staj</h3>
+                        <p class="text-gray-400 mb-4" data-tr="QNB Türkiye" data-en="QNB Turkey">QNB Türkiye</p>
                         <p class="text-gray-300"
                             data-tr="Bankacılık sektörünün temel dinamikleri, dijital bankacılık, fintech trendleri ve kurumsal finans konularında kapsamlı eğitim programı."
                             data-en="Comprehensive training program on banking sector fundamentals, digital banking, fintech trends, and corporate finance.">
-                            Bankacılık sektörünün temel dinamikleri, dijital bankacılık, fintech trendleri ve kurumsal
-                            finans konularında kapsamlı eğitim programı.</p>
+                            Bankacılık sektörünün temel dinamikleri, dijital bankacılık, fintech trendleri ve kurumsal finans konularında kapsamlı eğitim programı.</p>
                     </div>
                 </div>
 
@@ -717,14 +578,13 @@
                 <div class="slide-up" style="animation-delay: 0.4s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Ekim 2024</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Yazılım Mühendisi</h3>
-                        <p class="text-gray-400 mb-4">Elmar Yazılım - Elazığ</p>
+                        <span class="text-purple-400 font-semibold" data-tr="Ekim 2024" data-en="October 2024">Ekim 2024</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-tr="Yazılım Mühendisi" data-en="Software Engineer">Yazılım Mühendisi</h3>
+                        <p class="text-gray-400 mb-4" data-tr="Elmar Yazılım - Elazığ" data-en="Elmar Software - Elazığ">Elmar Yazılım - Elazığ</p>
                         <p class="text-gray-300"
                             data-tr="Yazılım geliştirme süreçleri, proje yönetimi ve takım çalışması deneyimi. Gerçek dünya projelerinde kod geliştirme ve test süreçlerine katkıda bulundum."
                             data-en="Software development processes, project management, and teamwork experience. I contributed to code development and testing processes in real-world projects.">
-                            Yazılım geliştirme süreçleri, proje yönetimi ve takım çalışması deneyimi. Gerçek dünya
-                            projelerinde kod geliştirme ve test süreçlerine katkıda bulundum.</p>
+                            Yazılım geliştirme süreçleri, proje yönetimi ve takım çalışması deneyimi. Gerçek dünya projelerinde kod geliştirme ve test süreçlerine katkıda bulundum.</p>
                     </div>
                 </div>
 
@@ -732,9 +592,9 @@
                 <div class="slide-up" style="animation-delay: 0.5s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Haziran 2023 - Günümüz</span>
+                        <span class="text-purple-400 font-semibold" data-tr="Haziran 2023 - Günümüz" data-en="June 2023 - Present">Haziran 2023 - Günümüz</span>
                         <h3 class="text-2xl font-bold text-white mt-2 mb-1">Software Developer</h3>
-                        <p class="text-gray-400 mb-4">Freelance - Bursa</p>
+                        <p class="text-gray-400 mb-4" data-tr="Freelance - Bursa" data-en="Freelance - Bursa">Freelance - Bursa</p>
                         <p class="text-gray-300"
                             data-tr="Cloud-native çözümler, AIOps projeleri ve DevOps otomasyonları üzerine çalışmalar."
                             data-en="Working on cloud-native solutions, AIOps projects, and DevOps automations.">
@@ -745,13 +605,366 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text slide-up" data-tr="Projeler" data-en="Projects">
+                Projeler
+            </h2>
+            <p class="text-center text-gray-400 mb-4 slide-up" style="animation-delay:0.1s"
+                data-tr="Gerçek problemler için geliştirdiğim cloud, AIOps ve backend sistemleri"
+                data-en="Cloud, AIOps, and backend systems built for real-world problems">
+                Gerçek problemler için geliştirdiğim cloud, AIOps ve backend sistemleri
+            </p>
+
+            <!-- Featured label -->
+            <div class="flex items-center gap-4 mb-8 slide-up" style="animation-delay:0.15s">
+                <div class="flex-1 h-px" style="background:linear-gradient(90deg,transparent,rgba(138,43,226,0.4))"></div>
+                <span class="text-xs font-bold text-purple-400 tracking-widest uppercase px-3" data-tr="⭐ Öne Çıkan Projeler" data-en="⭐ Featured Projects">⭐ Öne Çıkan Projeler</span>
+                <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(138,43,226,0.4),transparent)"></div>
+            </div>
+
+            <!-- Featured Grid: 4 projects -->
+            <div class="grid md:grid-cols-2 gap-8 mb-6">
+
+                <!-- FEATURED #1: GhostCost -->
+                <div class="project-card featured-card p-6 rounded-2xl slide-up relative" style="animation-delay: 0.1s">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.4);color:#34d399;">⭐ Featured</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-500 to-green-700 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-ghost text-6xl text-white opacity-70"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">GhostCost 👻</h3>
+                    <p class="text-xs text-emerald-400 font-semibold mb-3" data-tr="AI Destekli Çok-Bulutlu Maliyet Analizi" data-en="AI-Powered Multi-Cloud Cost Intelligence">AI Destekli Çok-Bulutlu Maliyet Analizi</p>
+                    <p class="text-sm text-gray-400 mb-4"
+                        data-tr="AWS, Azure ve GCP fatura verilerini birleştiren, yerel bir LLM (Ollama 3.1) ile harcama anomalilerini doğal dilde açıklayan ve atıl kaynakları bütçeyi tüketmeden önce tespit eden AI destekli platform."
+                        data-en="AI-powered platform that aggregates AWS, Azure & GCP billing data, uses a local LLM (Ollama 3.1) to explain spending anomalies in natural language, and surfaces idle resources before they drain your budget.">
+                        AWS, Azure ve GCP fatura verilerini birleştiren, yerel bir LLM (Ollama 3.1) ile harcama anomalilerini doğal dilde açıklayan ve atıl kaynakları bütçeyi tüketmeden önce tespit eden AI destekli platform.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs mb-4">
+                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full text-emerald-300">Next.js</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full text-emerald-300">FastAPI</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full text-emerald-300">ClickHouse</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full text-emerald-300">Ollama 3.1</span>
+                    </div>
+                    <a href="https://github.com/omercangumus" target="_blank"
+                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                        <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                    </a>
+                </div>
+
+                <!-- FEATURED #2: Cloud-Native Reliability Platform -->
+                <div class="project-card featured-card p-6 rounded-2xl slide-up relative" style="animation-delay: 0.15s">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#a5b4fc;">⭐ Featured</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-network-wired text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">Cloud-Native Intelligent Reliability Platform</h3>
+                    <p class="text-xs text-indigo-400 font-semibold mb-3" data-tr="AIOps · Self-Healing · K8s & Terraform" data-en="AIOps · Self-Healing · K8s & Terraform">AIOps · Self-Healing · K8s &amp; Terraform</p>
+                    <p class="text-sm text-gray-400 mb-4"
+                        data-tr="AWS üzerinde Kubernetes ve Terraform ile kurulu, Z-Score ve EMA algoritmalarıyla çalışan self-healing AIOps platformu. Anomali tespit süresi saniyelere indi."
+                        data-en="Self-healing AIOps platform on AWS using Kubernetes and Terraform, powered by Z-Score and EMA algorithms. Anomaly detection reduced to seconds.">
+                        AWS üzerinde Kubernetes ve Terraform ile kurulu, Z-Score ve EMA algoritmalarıyla çalışan self-healing AIOps platformu. Anomali tespit süresi saniyelere indi.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs mb-4">
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">Python 3.11</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">FastAPI</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">Terraform</span>
+                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">Kubernetes</span>
+                    </div>
+                    <a href="https://github.com/omercangumus" target="_blank"
+                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                        <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                    </a>
+                </div>
+
+                <!-- FEATURED #3: SiberMiras -->
+                <div class="project-card featured-card p-6 rounded-2xl slide-up" style="animation-delay: 0.2s">
+                    <div class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1">SiberMiras 🚀</h3>
+                    <p class="text-xs text-green-400 font-semibold mb-3" data-tr="AWS Native · Cloud-Native Platform" data-en="AWS Native · Cloud-Native Platform">AWS Native · Cloud-Native Platform</p>
+                    <p class="text-sm text-gray-400 mb-4"
+                        data-tr="AWS EC2, RDS, S3, ECR ve ECS kullanarak tamamen cloud-native bir dijital miras platformu. Otomatik ölçeklendirme ve yüksek erişilebilirlik (HA) mimarisi ile kullanıcı verileri kesintisiz güvence altında."
+                        data-en="A fully cloud-native digital heritage platform using AWS EC2, RDS, S3, ECR and ECS. User data is secured without interruption through auto-scaling and high availability (HA) architecture.">
+                        AWS EC2, RDS, S3, ECR ve ECS kullanarak tamamen cloud-native bir dijital miras platformu. Otomatik ölçeklendirme ve yüksek erişilebilirlik (HA) mimarisi ile kullanıcı verileri kesintisiz güvence altında.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full text-green-300">EC2</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full text-green-300">RDS</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full text-green-300">S3</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full text-green-300">ECS</span>
+                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full text-green-300">Route53</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.siber-miras.com" target="_blank"
+                            class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-semibold"
+                            data-tr="Canlı Site" data-en="Live Site">
+                            <i class="fas fa-external-link-alt"></i><span>Canlı Site</span>
+                        </a>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub" data-en="GitHub">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FEATURED #4: AIOps Anomali Tespit -->
+                <div class="project-card featured-card p-6 rounded-2xl slide-up" style="animation-delay: 0.25s">
+                    <div class="bg-gradient-to-br from-purple-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-white opacity-50"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1" data-tr="AIOps Anomali Tespit Sistemi" data-en="AIOps Anomaly Detection System">AIOps Anomali Tespit Sistemi</h3>
+                    <p class="text-xs text-purple-400 font-semibold mb-3">Python · ML · Prometheus</p>
+                    <p class="text-sm text-gray-400 mb-4"
+                        data-tr="Gerçek zamanlı sistem metriklerini analiz ederek CPU/Bellek anormalliklerini öngören ML modülü. Uyarı eşikleri dinamik hale getirildi ve yanlış pozitif bildirimler başarıyla filtrelendi."
+                        data-en="ML module that predicts CPU/Memory anomalies by analyzing real-time system metrics. Alert thresholds made dynamic, successfully filtering out false positive incident notifications.">
+                        Gerçek zamanlı sistem metriklerini analiz ederek CPU/Bellek anormalliklerini öngören ML modülü. Uyarı eşikleri dinamik hale getirildi ve yanlış pozitif bildirimler başarıyla filtrelendi.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full text-purple-300">Python</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full text-purple-300">Prometheus</span>
+                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full text-purple-300">Machine Learning</span>
+                    </div>
+                    <a href="https://github.com/omercangumus" target="_blank"
+                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                        <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Show More Projects Button -->
+            <div class="text-center mb-4">
+                <button id="more-projects-btn" onclick="toggleMoreProjects()"
+                    class="toggle-btn inline-flex items-center gap-2 px-6 py-3 rounded-full text-gray-300 font-semibold">
+                    <i class="fas fa-chevron-down"></i>
+                    <span data-tr="Diğer Projeleri Göster (9)" data-en="Show More Projects (9)">Diğer Projeleri Göster (9)</span>
+                </button>
+            </div>
+
+            <!-- More Projects: collapsible -->
+            <div id="more-projects" class="more-content">
+                <div class="flex items-center gap-4 mb-8 mt-4">
+                    <div class="flex-1 h-px" style="background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1))"></div>
+                    <span class="text-xs font-bold text-gray-500 tracking-widest uppercase px-3" data-tr="Diğer Projeler" data-en="More Projects">Diğer Projeler</span>
+                    <div class="flex-1 h-px" style="background:linear-gradient(90deg,rgba(255,255,255,0.1),transparent)"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Cloud Order System -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Cloud Order System — AIOps + MLOps" data-en="Cloud Order System — AIOps + MLOps">Cloud Order System — AIOps + MLOps</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="Sipariş loglarını analiz eden Isolation Forest ML modelini FastAPI üzerinden sunan ve altyapıyı AWS/Terraform ile kuran sistem. Anomaliler Prometheus ve CloudWatch üzerinden ekiplere iletilir."
+                            data-en="System serving an Isolation Forest ML model via FastAPI to analyze order logs, with AWS/Terraform infra. Anomalies are sent as alerts to teams via Prometheus and CloudWatch.">
+                            Sipariş loglarını analiz eden Isolation Forest ML modelini FastAPI üzerinden sunan ve altyapıyı AWS/Terraform ile kuran sistem. Anomaliler Prometheus ve CloudWatch üzerinden ekiplere iletilir.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs mb-4">
+                            <span class="px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">Python</span>
+                            <span class="px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">MLOps</span>
+                            <span class="px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">Terraform</span>
+                            <span class="px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">AWS</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Star-Ops -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-gray-800 to-black h-40 rounded-xl mb-4 border border-gray-700 flex items-center justify-center">
+                            <i class="fas fa-satellite text-6xl text-gray-300 opacity-70"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Star-Ops — AIOps & Edge-MLOps Platform" data-en="Star-Ops — AIOps & Edge-MLOps Platform">Star-Ops — AIOps &amp; Edge-MLOps Platform</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="6 simüle uydu üzerinden canlı telemetri akışı sağlayan Isolation Forest + LSTM tabanlı ensemble anomali tespit motoru. D3.js ile canlı izleme arayüzü."
+                            data-en="Isolation Forest + LSTM-based ensemble anomaly detection engine with live telemetry from 6 simulated satellites. Live monitoring interface with D3.js.">
+                            6 simüle uydu üzerinden canlı telemetri akışı sağlayan Isolation Forest + LSTM tabanlı ensemble anomali tespit motoru. D3.js ile canlı izleme arayüzü.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs mb-4">
+                            <span class="px-3 py-1 bg-gray-700/50 rounded-full text-gray-300">React & TS</span>
+                            <span class="px-3 py-1 bg-gray-700/50 rounded-full text-gray-300">FastAPI</span>
+                            <span class="px-3 py-1 bg-gray-700/50 rounded-full text-gray-300">PostgreSQL</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- AIOps Altyapı Otomasyonu -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-cubes text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="AIOps Altyapı Otomasyonu" data-en="AIOps Infrastructure Automation">AIOps Altyapı Otomasyonu</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="Terraform ile tekrar kullanılabilir IaC modülleri geliştirerek AWS Lambda ve Docker servislerin otomatik provizyonu. Ortam kurulum süreleri dakikalara indi."
+                            data-en="Reusable IaC modules with Terraform for automated provisioning of AWS Lambda and Docker services. Environment setup reduced to minutes.">
+                            Terraform ile tekrar kullanılabilir IaC modülleri geliştirerek AWS Lambda ve Docker servislerin otomatik provizyonu. Ortam kurulum süreleri dakikalara indi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full text-blue-300">Terraform</span>
+                            <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full text-blue-300">AWS Lambda</span>
+                            <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full text-blue-300">Docker</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- CI/CD Pipeline -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-code-branch text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="AWS CI/CD Pipeline Otomasyonu" data-en="AWS CI/CD Pipeline Automation">AWS CI/CD Pipeline Otomasyonu</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="GitHub push tetikleyicileri ile çalışan Docker + AWS CodeDeploy tabanlı tam otomasyonlu CI/CD pipeline. Sıfır kesinti ile sürüm çıkma ve %60 daha hızlı deployment."
+                            data-en="Fully automated CI/CD pipeline triggered by GitHub push, using Docker + AWS CodeDeploy. Zero-downtime releases and 60% faster deployments.">
+                            GitHub push tetikleyicileri ile çalışan Docker + AWS CodeDeploy tabanlı tam otomasyonlu CI/CD pipeline. Sıfır kesinti ile sürüm çıkma ve %60 daha hızlı deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full text-pink-300">AWS CodePipeline</span>
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full text-pink-300">Docker</span>
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full text-pink-300">GitHub Actions</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Serverless Log Analyzer -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-orange-600 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Sunucusuz Log Analizörü" data-en="Serverless Log Analyzer">Sunucusuz Log Analizörü</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="AWS Lambda ve S3 ile logları asenkron toplayan ve analiz eden serverless sistem. CloudWatch destekli otomatik metrik üretimi ile AIOps süreç iyileştirmesi."
+                            data-en="Serverless system using AWS Lambda and S3 to asynchronously collect and analyze logs. AIOps process improvement through CloudWatch-backed automated metrics.">
+                            AWS Lambda ve S3 ile logları asenkron toplayan ve analiz eden serverless sistem. CloudWatch destekli otomatik metrik üretimi ile AIOps süreç iyileştirmesi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">AWS Lambda</span>
+                            <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">S3</span>
+                            <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full text-orange-300">CloudWatch</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Hibrit Bulut Yedekleme -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-cyan-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-cloud-upload-alt text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Hibrit Bulut Yedekleme Çözümü" data-en="Hybrid Cloud Backup Solution">Hibrit Bulut Yedekleme Çözümü</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="Azure'dan AWS S3 Deep Archive'a döngüsel aktarım sağlayan Boto3 tabanlı Python script sistemi. Lifecycle policy ile maliyet optimizasyonu ve %99.9 veri güvenilirliği."
+                            data-en="Boto3-backed Python scripts for cyclic transfer from Azure to AWS S3 Deep Archive. Cost optimization via lifecycle policies with 99.9% data reliability.">
+                            Azure'dan AWS S3 Deep Archive'a döngüsel aktarım sağlayan Boto3 tabanlı Python script sistemi. Lifecycle policy ile maliyet optimizasyonu ve %99.9 veri güvenilirliği.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-300">Azure</span>
+                            <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-300">AWS S3</span>
+                            <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-300">Python</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Dijital Ayak İzi -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-red-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-user-secret text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Dijital Ayak İzi (Digital Footprint)" data-en="Digital Footprint">Dijital Ayak İzi (Digital Footprint)</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="Açık kaynaklı güvenlik analiz araçlarının API'lerini kullanan Python tabanlı dijital ayak izi tarayıcı ve görselleştirici."
+                            data-en="Python-based digital footprint scanner and visualizer using open-source security analysis tool APIs.">
+                            Açık kaynaklı güvenlik analiz araçlarının API'lerini kullanan Python tabanlı dijital ayak izi tarayıcı ve görselleştirici.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full text-red-300">Python</span>
+                            <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full text-red-300">Security</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Bulut Mimari Desenleri -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-yellow-600 to-orange-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-project-diagram text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Bulut Mimari Desenleri" data-en="Cloud Architecture Patterns">Bulut Mimari Desenleri</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="Java AWS SDK ile Retry, Circuit Breaker ve Fallback desenleri uygulanarak geçici hatalara karşı self-healing uygulama mimarisi."
+                            data-en="Self-healing application architecture against transient failures using Retry, Circuit Breaker and Fallback patterns with Java AWS SDK.">
+                            Java AWS SDK ile Retry, Circuit Breaker ve Fallback desenleri uygulanarak geçici hatalara karşı self-healing uygulama mimarisi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-300">Java</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-300">AWS SDK</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                    <!-- Banka Otomasyon Sistemi -->
+                    <div class="project-card p-6 rounded-2xl">
+                        <div class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center">
+                            <i class="fas fa-university text-6xl text-white opacity-50"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2" data-tr="Banka Otomasyon Sistemi (Banka-OOP)" data-en="Bank Automation System (Banka-OOP)">Banka Otomasyon Sistemi (Banka-OOP)</h3>
+                        <p class="text-sm text-gray-400 mb-4"
+                            data-tr="C# ile karmaşık inheritance ve encapsulation teknikleri kullanılarak geliştirilmiş MSSQL destekli banka simülasyonu."
+                            data-en="MSSQL-backed bank simulation developed in C# using complex inheritance and encapsulation techniques.">
+                            C# ile karmaşık inheritance ve encapsulation teknikleri kullanılarak geliştirilmiş MSSQL destekli banka simülasyonu.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">C#</span>
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">OOP</span>
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-300">MSSQL</span>
+                        </div>
+                        <a href="https://github.com/omercangumus" target="_blank"
+                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold">
+                            <i class="fab fa-github"></i><span data-tr="GitHub Profilim" data-en="GitHub Profile">GitHub Profilim</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /more-projects -->
+
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
     <section id="skills" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-tr="Yetenekler" data-en="Skills">
                 Yetenekler
             </h2>
-            <!-- Tech Stack Grid with Categories -->
             <div class="glass-card p-8 rounded-3xl slide-up">
                 <!-- Row 1: Cloud, Containers, IaC -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -780,8 +993,7 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-box text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Konteynerler"
-                                data-en="Containers">Konteynerler</span>
+                            <span class="text-gray-400 font-semibold" data-tr="Konteynerler" data-en="Containers">Konteynerler</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
                             <div class="skill-badge p-3 rounded-xl text-center">
@@ -802,8 +1014,7 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-cube text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Kod Olarak Altyapı" data-en="IaC">Kod
-                                Olarak Altyapı</span>
+                            <span class="text-gray-400 font-semibold" data-tr="Kod Olarak Altyapı" data-en="IaC">Kod Olarak Altyapı</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
                             <div class="skill-badge p-3 rounded-xl text-center">
@@ -826,8 +1037,7 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-code text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Programlama Dilleri"
-                                data-en="Languages">Programlama Dilleri</span>
+                            <span class="text-gray-400 font-semibold" data-tr="Programlama Dilleri" data-en="Languages">Programlama Dilleri</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
                             <div class="skill-badge p-3 rounded-xl text-center">
@@ -873,8 +1083,7 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-chart-bar text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="İzleme"
-                                data-en="Monitoring">İzleme</span>
+                            <span class="text-gray-400 font-semibold" data-tr="İzleme & Observability" data-en="Monitoring & Observability">İzleme &amp; Observability</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
                             <div class="skill-badge p-3 rounded-xl text-center">
@@ -896,7 +1105,7 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
+    <!-- ===== CERTIFICATES SECTION ===== -->
     <section id="certificates" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text slide-up"
@@ -909,279 +1118,109 @@
                 Profesyonel gelişimimi destekleyen sertifikalarım
             </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Automated Testing for LLMOps -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.05s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-cogs text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Automated Testing for LLMOps</h3>
-                            <p class="text-purple-400 text-sm mb-2">CircleCI</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="LLM uygulamaları için sürekli entegrasyon ve otomatik test süreçlerinin yönetimi."
-                                data-en="Management of continuous integration and automated testing processes for LLM applications.">
-                                LLM uygulamaları için sürekli entegrasyon ve otomatik test süreçlerinin yönetimi.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">LLMOps</span>
-                                <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">CI/CD</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Evaluating and Debugging Generative AI -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.1s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-bug text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Evaluating and Debugging Generative AI</h3>
-                            <p class="text-purple-400 text-sm mb-2">Weights & Biases</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Üretken yapay zeka modellerinin performans analizi, hata ayıklama ve validasyonu."
-                                data-en="Performance analysis, debugging, and validation of generative AI models.">
-                                Üretken yapay zeka modellerinin performans analizi, hata ayıklama ve validasyonu.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">GenAI</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">Debugging</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LLMOps -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.15s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-google text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">LLMOps</h3>
-                            <p class="text-purple-400 text-sm mb-2">Google Cloud Education</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Büyük dil modellerinin operasyonelleştirilmesi, dağıtımı ve yönetimi."
-                                data-en="Operationalization, deployment, and management of large language models.">
-                                Büyük dil modellerinin operasyonelleştirilmesi, dağıtımı ve yönetimi.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Google
-                                    Cloud</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">LLM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Machine Learning in Production -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.2s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-industry text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Machine Learning in Production</h3>
-                            <p class="text-purple-400 text-sm mb-2">DeepLearning.AI</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="ML modellerinin canlı ortamlarda ölçeklenebilir ve güvenilir şekilde sunulması."
-                                data-en="Deploying scalable and reliable ML models in production environments.">
-                                ML modellerinin canlı ortamlarda ölçeklenebilir ve güvenilir şekilde sunulması.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">MLOps</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">Production</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- JPMorgan Chase Software Engineering Job Simulation -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.05s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-university text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Software Engineering Job Simulation</h3>
-                            <p class="text-purple-400 text-sm mb-2">JPMorgan Chase & Co. - Forage</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Gerçek dünya yazılım mühendisliği görevleri, finansal teknoloji projeleri ve enterprise ölçekli uygulama geliştirme deneyimi."
-                                data-en="Real-world software engineering tasks, financial technology projects, and enterprise-scale application development experience.">
-                                Gerçek dünya yazılım mühendisliği görevleri, finansal teknoloji projeleri ve enterprise
-                                ölçekli uygulama geliştirme deneyimi.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">FinTech</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Software
-                                    Engineering</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Top 8 Certs: visible -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
 
                 <!-- AWS Cloud Practitioner Essentials -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.1s">
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.05s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-aws text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-white mb-1">AWS Cloud Practitioner Essentials</h3>
                             <p class="text-purple-400 text-sm mb-2">Amazon Web Services (AWS)</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="AWS bulut temellerini, servisleri ve en iyi uygulamaları kapsayan kapsamlı eğitim."
-                                data-en="Comprehensive training covering AWS cloud fundamentals, services, and best practices.">
-                                AWS bulut temellerini, servisleri ve en iyi uygulamaları kapsayan kapsamlı eğitim.
-                            </p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">AWS</span>
-                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Cloud
-                                    Computing</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Cloud</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- AWS Observability -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.15s">
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.1s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-aws text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-white mb-1">AWS Observability</h3>
                             <p class="text-purple-400 text-sm mb-2">Amazon Web Services (AWS)</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="CloudWatch, X-Ray ve observability araçlarıyla sistem izleme ve log analizi."
-                                data-en="System monitoring and log analysis with CloudWatch, X-Ray, and observability tools.">
-                                CloudWatch, X-Ray ve observability araçlarıyla sistem izleme ve log analizi.
-                            </p>
                             <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">CloudWatch</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Monitoring</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">CloudWatch</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machine Learning in Production -->
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.15s">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-industry text-2xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">Machine Learning in Production</h3>
+                            <p class="text-purple-400 text-sm mb-2">DeepLearning.AI</p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">MLOps</span>
+                                <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLMOps -->
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.2s">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center flex-shrink-0">
+                            <i class="fab fa-google text-2xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-bold text-white mb-1">LLMOps</h3>
+                            <p class="text-purple-400 text-sm mb-2">Google Cloud Education</p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Google Cloud</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">LLM</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- CI/CD Fundamentals with GitHub Actions -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.2s">
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.25s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-microsoft text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-white mb-1">CI/CD Fundamentals with GitHub Actions</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="GitHub Actions ile sürekli entegrasyon ve sürekli dağıtım pipeline oluşturma."
-                                data-en="Building continuous integration and continuous deployment pipelines with GitHub Actions.">
-                                GitHub Actions ile sürekli entegrasyon ve sürekli dağıtım pipeline oluşturma.
-                            </p>
                             <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">GitHub
-                                    Actions</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">GitHub Actions</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">CI/CD</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Effective Use of Artificial Intelligence -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.25s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-brain text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Effective Use of Artificial Intelligence</h3>
-                            <p class="text-purple-400 text-sm mb-2">Workshopers</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Yapay zeka araçlarını verimli kullanma, prompt mühendisliği ve AI entegrasyonu."
-                                data-en="Efficient use of AI tools, prompt engineering, and AI integration strategies.">
-                                Yapay zeka araçlarını verimli kullanma, prompt mühendisliği ve AI entegrasyonu.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">AI</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">Responsible
-                                    AI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finansta Gelecek Eğitmen Eğitimi -->
+                <!-- Introduction to DevOps -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.3s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-chalkboard-teacher text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Finansta Gelecek Eğitmen Eğitimi"
-                                data-en="Future in Finance Trainer Education">Finansta Gelecek Eğitmen Eğitimi</h3>
-                            <p class="text-purple-400 text-sm mb-2">Habitat Derneği</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Finansal okuryazarlık ve eğitmenlik becerileri geliştirme programı."
-                                data-en="Financial literacy and instructor skills development program.">
-                                Finansal okuryazarlık ve eğitmenlik becerileri geliştirme programı.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Eğitim</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Finans</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Introduction to DevOps -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.35s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-microsoft text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-white mb-1">Introduction to DevOps</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="DevOps kültürü, Agile metodolojileri ve sürekli teslimat pratikleri."
-                                data-en="DevOps culture, Agile methodologies, and continuous delivery practices.">
-                                DevOps kültürü, Agile metodolojileri ve sürekli teslimat pratikleri.
-                            </p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">DevOps</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Agile</span>
@@ -1191,456 +1230,206 @@
                 </div>
 
                 <!-- Introduction to MLOps -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.4s">
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.35s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-microsoft text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-lg font-bold text-white mb-1">Introduction to MLOps</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="ML model yaşam döngüsü yönetimi, model dağıtımı ve MLOps pipeline mimarisi."
-                                data-en="ML model lifecycle management, model deployment, and MLOps pipeline architecture.">
-                                ML model yaşam döngüsü yönetimi, model dağıtımı ve MLOps pipeline mimarisi.
-                            </p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">MLOps</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Model
-                                    Deployment</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Model Deployment</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plan Agile with GitHub Projects and Azure Boards -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.45s">
+                <!-- Automated Testing for LLMOps -->
+                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.4s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-microsoft text-2xl text-white"></i>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-cogs text-2xl text-white"></i>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Plan Agile with GitHub Projects and Azure
-                                Boards</h3>
-                            <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
+                            <h3 class="text-lg font-bold text-white mb-1">Automated Testing for LLMOps</h3>
+                            <p class="text-purple-400 text-sm mb-2">CircleCI</p>
                             <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Scrum, Agile proje yönetimi ve Azure DevOps ile takım işbirliği."
-                                data-en="Scrum, Agile project management, and team collaboration with Azure DevOps.">
-                                Scrum, Agile proje yönetimi ve Azure DevOps ile takım işbirliği.
-                            </p>
                             <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Scrum</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Azure
-                                    Boards</span>
+                                <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">LLMOps</span>
+                                <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">CI/CD</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- PSEA - UNICEF -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.5s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-globe text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Cinsel Sömürü ve İstismarın Önlenmesi (PSEA)"
-                                data-en="Prevention of Sexual Exploitation and Abuse (PSEA)">Cinsel Sömürü ve İstismarın
-                                Önlenmesi (PSEA)</h3>
-                            <p class="text-purple-400 text-sm mb-2">UNICEF</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="UNICEF standartlarında cinsel sömürü ve istismarı önleme eğitimi."
-                                data-en="Prevention of Sexual Exploitation and Abuse training per UNICEF standards.">
-                                UNICEF standartlarında cinsel sömürü ve istismarı önleme eğitimi.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">UNICEF</span>
-                                <span class="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">PSEA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <!-- /top 8 certs -->
 
-                <!-- Agility: İş Hayatında Çeviklik -->
-                <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.55s">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-running text-2xl text-white"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Agility: İş Hayatında Çeviklik" data-en="Agility: Agile in Business Life">
-                                Agility: İş Hayatında Çeviklik</h3>
-                            <p class="text-purple-400 text-sm mb-2">NeoSkola</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="İş hayatında çevik düşünce yapısı ve adaptasyon becerileri."
-                                data-en="Agile mindset and adaptation skills in business environment.">
-                                İş hayatında çevik düşünce yapısı ve adaptasyon becerileri.
-                            </p>
-                            <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Agile</span>
-                                <span class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">İş
-                                    Geliştirme</span>
+            <!-- Show More Certs Button -->
+            <div class="text-center mb-4">
+                <button id="more-certs-btn" onclick="toggleMoreCerts()"
+                    class="toggle-btn inline-flex items-center gap-2 px-6 py-3 rounded-full text-gray-300 font-semibold">
+                    <i class="fas fa-chevron-down"></i>
+                    <span data-tr="Diğer Sertifikaları Göster (7)" data-en="Show More Certifications (7)">Diğer Sertifikaları Göster (7)</span>
+                </button>
+            </div>
+
+            <!-- More Certs: collapsible -->
+            <div id="more-certs" class="more-content">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+
+                    <!-- Evaluating and Debugging Generative AI -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bug text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1">Evaluating and Debugging Generative AI</h3>
+                                <p class="text-purple-400 text-sm mb-2">Weights &amp; Biases</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">GenAI</span>
+                                    <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">Debugging</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- JPMorgan Chase -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-university text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1">Software Engineering Job Simulation</h3>
+                                <p class="text-purple-400 text-sm mb-2">JPMorgan Chase &amp; Co. - Forage</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2026</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">FinTech</span>
+                                    <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">SWE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan Agile -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-microsoft text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1">Plan Agile with GitHub Projects and Azure Boards</h3>
+                                <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Scrum</span>
+                                    <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Azure Boards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Effective Use of AI -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-brain text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1">Effective Use of Artificial Intelligence</h3>
+                                <p class="text-purple-400 text-sm mb-2">Workshopers</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">AI</span>
+                                    <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">Prompt Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finansta Gelecek -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chalkboard-teacher text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1" data-tr="Finansta Gelecek Eğitmen Eğitimi" data-en="Future in Finance Trainer Education">Finansta Gelecek Eğitmen Eğitimi</h3>
+                                <p class="text-purple-400 text-sm mb-2">Habitat Derneği</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Eğitim</span>
+                                    <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Finans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PSEA -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-globe text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1" data-tr="Cinsel Sömürü ve İstismarın Önlenmesi (PSEA)" data-en="Prevention of Sexual Exploitation and Abuse (PSEA)">Cinsel Sömürü ve İstismarın Önlenmesi (PSEA)</h3>
+                                <p class="text-purple-400 text-sm mb-2">UNICEF</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">UNICEF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agility -->
+                    <div class="glass-card p-6 rounded-2xl glow-border">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-running text-2xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white mb-1" data-tr="Agility: İş Hayatında Çeviklik" data-en="Agility: Agile in Business Life">Agility: İş Hayatında Çeviklik</h3>
+                                <p class="text-purple-400 text-sm mb-2">NeoSkola</p>
+                                <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Agile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <!-- /more-certs -->
 
             <!-- LinkedIn Button -->
             <div class="text-center mt-10 slide-up" style="animation-delay: 0.6s">
                 <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/details/certifications/"
                     target="_blank"
                     class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white"
-                    data-tr="Tüm Sertifikaları Gör" data-en="View All Certifications">
+                    data-tr="LinkedIn'de Tüm Sertifikaları Gör" data-en="View All Certifications on LinkedIn">
                     <i class="fab fa-linkedin"></i>
-                    <span>Tüm Sertifikaları Gör</span>
+                    <span data-tr="LinkedIn'de Tüm Sertifikaları Gör" data-en="View All Certifications on LinkedIn">LinkedIn'de Tüm Sertifikaları Gör</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Öne Çıkan Projeler
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 - SiberMiras (Signature Project) -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.1s">
-                    <div
-                        class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">SiberMiras 🚀</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        İnsanların dijital varlıklarını ve hesaplarını vefat sonrası güvenle devredebilmeleri için yasal ve teknik zorluklar bulunmaktaydı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS üzerinde EC2, RDS, S3, ECR ve ECS kullanarak tamamen cloud-native, konteynerize bir dijital miras platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Otomatik ölçeklendirme ve yüksek erişilebilirlik (high availability) mimarisi ile kullanıcı verileri kesintisiz ve güvenli bir şekilde güvence altına alındı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">EC2</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">RDS</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">S3</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">ECR</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">ECS</span>
-                        <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Route53</span>
-                    </div>
-                    <div class="flex gap-4">
-                        <a href="https://www.siber-miras.com" target="_blank"
-                            class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-semibold"
-                            data-tr="Canlı Siteyi Gör" data-en="View Live Site">
-                            <i class="fas fa-external-link-alt"></i><span>Canlı Siteyi Gör</span>
-                        </a>
-                        <a href="https://github.com/omercangumus" target="_blank"
-                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                            data-tr="GitHub Profilim" data-en="GitHub Profile">
-                            <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 - AIOps Anomaly Detection -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.15s">
-                    <div
-                        class="bg-gradient-to-br from-purple-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AIOps Anomali Tespit Sistemi</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Statik metrik uyarıları sistemlerde çok fazla yanlış alarm üretiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Gerçek zamanlı sistem metriklerini analiz ederek CPU/Bellek anormalliklerini öngören bir ML modülü oluşturdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Uyarı eşikleri dinamik hale getirildi ve yanlış pozitif olay bildirimleri başarıyla filtrelendi.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Python</span>
-                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Prometheus</span>
-                        <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Makine Öğrenimi</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 3 - Infrastructure Automation -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.2s">
-                    <div
-                        class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-cubes text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AIOps Altyapı Otomasyonu</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Farklı ortamlarda manuel kurulumlar nedeniyle tutarsız altyapı ve zor yönetilen sürümler ortaya çıkıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Terraform ile tekrar kullanılabilir IaC modülleri geliştirerek AWS Lambda ve Docker tabanlı servislerin otomatik provizyonunu sağladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Ortam kurulum süreleri dakikalara indi ve staging/production altyapıları arasında tutarlılık sağlanarak değişikliklerin geri alınabilirliği kolaylaştı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Terraform</span>
-                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">AWS Lambda</span>
-                        <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Docker</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 4 - CI/CD Pipeline -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.25s">
-                    <div
-                        class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-code-branch text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AWS CI/CD Pipeline Otomasyonu</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Manuel dağıtımlar hem çok uzun sürüyor hem de insan hatasına açık oluyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        GitHub push tetikleyicileri ile çalışan, Docker ve AWS CodeDeploy kullanan tam otomasyonlu bir CI/CD pipeline kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sıfır kesinti (zero-downtime) ile sürüm çıkma imkanı sağlandı ve manuel dağıtım süresi %60 azaltıldı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">AWS CodePipeline</span>
-                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">Docker</span>
-                        <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">GitHub Actions</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 5 - Serverless Log Analyzer -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.3s">
-                    <div
-                        class="bg-gradient-to-br from-orange-600 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-file-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Sunucusuz Log Analizörü</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Dağınık AWS hesaplarında oluşan uygulama loglarının merkezi olarak toplanıp incelenmesi zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS Lambda ve S3 kullanarak, logları asenkron şekilde toplayıp analiz eden tamamen sunucusuz (serverless) bir sistem tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        CloudWatch destekli otomatik metrik üretimleriyle AIOps süreçleri iyileştirildi ve olaylara müdahale hızı katlanarak arttı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">AWS Lambda</span>
-                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">S3</span>
-                        <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">CloudWatch</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 6 - Hybrid Cloud Backup -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.35s">
-                    <div
-                        class="bg-gradient-to-br from-cyan-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-cloud-upload-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Hibrit Bulut Yedekleme Çözümü</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Birden fazla ortamda duran kritik verilerin felaket anında kurtarılması için merkezi, güvenilir bir arşive ihtiyaç vardı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Azure üzerinden alınan verileri AWS S3 Deep Archive'a düzenli aktaran ve döngüsel yedekleme sağlayan Boto3 destekli Python scriptleri yazdım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Otomatik yaşam döngüsü politikaları (lifecycle policies) sayesinde yedekleme maliyetleri optimize edildi ve %99.9 veri güvenilirliği sağlandı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Azure</span>
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">AWS S3</span>
-                        <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Python</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 7 - Bank Automation -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.4s">
-                    <div
-                        class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-university text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Banka Otomasyon Sistemi (Banka-OOP)</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Bankacılık işlemlerinin güvenli bir şekilde simüle edilmesi, OOP prensiplerine uygun mimaride modellenmesi zorunluydu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        C# diliyle karmaşık kullanıcı miras modelleri (inheritance) ve veri kapsülleme (encapsulation) teknikleri kullanarak bir banka simülasyonu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        MSSQL destekli güvenli işlem akışları oturtuldu ve katı OOP kurallarının başarılı bir şekilde uygulamaya dökülmesi sağlandı.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">C#</span>
-                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">NYP</span>
-                        <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">MSSQL</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 8 - Cloud Architecture Patterns -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.45s">
-                    <div
-                        class="bg-gradient-to-br from-yellow-600 to-orange-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-project-diagram text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Bulut Mimari Desenleri</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        AWS servisleriyle etkileşime giren uygulamalar beklenmedik ağ kesintilerinde çöküyor ve veri kaybı yaşıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Uygulama dayanıklılığını artırmak için Java AWS SDK kullanarak "Retry", "Circuit Breaker" ve "Fallback" gibi bulut tasarım desenlerini uyguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Geçici hatalara karşı sistemin kendi kendini toparlaması sağlandı (resilience) ve API çağrılarındaki hata oranları minimize edildi.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Java</span>
-                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">AWS SDK</span>
-                        <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Tasarım Desenleri</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 9 - Digital Footprint -->
-                <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.5s">
-                    <div
-                        class="bg-gradient-to-br from-red-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-user-secret text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Dijital Ayak İzi (Digital Footprint)</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Kullanıcılar internette bıraktıkları izlerin ne boyutta olduğunu ve veri maruziyetlerini (data exposure) tam olarak göremiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Açık kaynaklı güvenlik analiz araçlarının API'lerini kullanan Python tabanlı bir dijital ayak izi tarayıcı ve görselleştirici geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Kullanıcıların dijital gizlilik farkındalığını artırarak, potansiyel güvenlik sızıntılarına karşı önlem almalarını kolaylaştırdım.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Python</span>
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Güvenlik</span>
-                        <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Gizlilik</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </div>
-
-                <!-- Project 10 - Cloud-Native Reliability -->
-                <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.55s">
-                    <div
-                        class="bg-gradient-to-br from-indigo-600 to-purple-600 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-network-wired text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud-Native Intelligent Reliability Platform</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Geleneksel izleme araçları, dağıtık mikroservis mimarilerinde hata kök nedenlerini bulmada yavaş kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS üzerinde Kubernetes ve Terraform kullanarak, Z-Score ve EMA algoritmalarıyla çalışan self-healing özellikli bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Anomali tespit süresi saniyelere indi ve otonom iyileştirme tepkileri sayesinde sistem kesinti süreleri büyük oranda azaldı.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Python 3.11</span>
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">FastAPI</span>
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Terraform</span>
-                        <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Kubernetes</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </article>
-
-                <!-- Project 11 - Cloud Order System -->
-                <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.6s">
-                    <div
-                        class="bg-gradient-to-br from-orange-500 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud Order System — AIOps + MLOps</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        E-ticaret sistemlerindeki yoğun sipariş dalgalanmalarında dolandırıcılık veya sistemsel hataların manuel tespiti çok zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Sipariş loglarını analiz eden Isolation Forest makine öğrenimi modelini eğitip FastAPI üzerinden sundum, altyapıyı Terraform ile AWS'e kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sipariş anomalileri gerçek zamanlı tespit edilerek Prometheus ve CloudWatch üzerinden anında ekiplere alarm olarak iletilir hale geldi.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">MLOps</span>
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">Terraform</span>
-                        <span class="px-3 py-1 bg-orange-500/20 rounded-full">AWS</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </article>
-
-                <!-- Project 12 - Star-Ops -->
-                <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.65s">
-                    <div
-                        class="bg-gradient-to-br from-gray-800 to-black h-40 rounded-xl mb-4 border border-gray-700 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-satellite text-6xl text-gray-300 opacity-70 z-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Star-Ops — AIOps & Edge-MLOps Platform</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Uzay ve uydu operasyonlarında sensör verilerindeki donanım arızalarının geleneksel eşik değerleriyle tespit edilmesi yetersiz kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Canlı telemetri akışı sağlayan 6 simüle uydu ağı kurup, Isolation Forest ve LSTM tabanlı ensemble bir MLOps anomali tespit motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        D3.js destekli interaktif arayüz sayesinde operatörler saniyelik anomali skorlarını canlı izleyip, Edge-MLOps güncellemelerini tek tıkla yapabilir duruma geldi.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">React & TS</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">Node.js</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">FastAPI</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">PostgreSQL</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </article>
-
-                <!-- Project 13 - CloudCostGuard -->
-                <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.7s">
-                    <div
-                        class="bg-gradient-to-br from-emerald-500 to-green-600 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-money-check-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">CloudCostGuard</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Birden fazla bulut sağlayıcısı kullanan firmaların atıl kaynakları tespit etmesi ve karmaşık fatura anomalilerini anlamlandırması vakit alan bir süreçti.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS, Azure ve GCP verilerini ClickHouse/Next.js ile birleştiren, Ollama 3.1 (Local Model) entegrasyonuyla harcamaları inceleyen yapay zeka destekli bir platform tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Boşta çalışan sunucu ve hacimler gibi atıl maliyet kalemleri anında raporlandı ve yapay zeka harcamalardaki anomalileri doğal dilde açıklar hale geldi.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full">Next.js</span>
-                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full">FastAPI</span>
-                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full">ClickHouse</span>
-                        <span class="px-3 py-1 bg-emerald-500/20 rounded-full">Ollama 3.1</span>
-                    </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="py-20 px-6 mb-20">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-tr="İletişime Geçin" data-en="Get in Touch">
                 İletişime Geçin
             </h2>
             <div class="glass-card p-8 md:p-12 rounded-3xl slide-up text-center" style="animation-delay: 0.2s">
-                <p class="text-xl text-gray-300 mb-8">
+                <p class="text-xl text-gray-300 mb-8" data-tr="Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz." data-en="Feel free to reach out for projects or job opportunities.">
                     Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz.
                 </p>
                 <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-8">
@@ -1676,9 +1465,9 @@
         </div>
     </section>
 
-    <!-- JavaScript -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ===== STAR PARTICLES ANIMATION =====
+        // ===== STAR PARTICLES =====
         const canvas = document.getElementById('stars-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -1705,334 +1494,116 @@
 
         function animateStars() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
             stars.forEach(star => {
                 star.opacity += star.twinkleSpeed;
-                if (star.opacity > 1 || star.opacity < 0.3) {
-                    star.twinkleSpeed = -star.twinkleSpeed;
-                }
-
+                if (star.opacity > 1 || star.opacity < 0.3) star.twinkleSpeed = -star.twinkleSpeed;
                 star.y -= star.speed;
-                if (star.y < 0) {
-                    star.y = canvas.height;
-                    star.x = Math.random() * canvas.width;
-                }
-
+                if (star.y < 0) { star.y = canvas.height; star.x = Math.random() * canvas.width; }
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity})`;
                 ctx.fill();
-
-                // Add glow effect
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity * 0.3})`;
                 ctx.fill();
             });
-
             requestAnimationFrame(animateStars);
         }
         animateStars();
 
-        // Mobile menu toggle
+        // ===== MOBILE MENU =====
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking on a link
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         });
 
-        // Language Switching
-        let currentLang = 'tr';
+        // ===== SHOW MORE / LESS TOGGLE =====
+        function toggleMoreProjects() {
+            const container = document.getElementById('more-projects');
+            const btn = document.getElementById('more-projects-btn');
+            const isExpanded = container.classList.contains('expanded');
+            container.classList.toggle('expanded');
+            const iconClass = isExpanded ? 'fa-chevron-down' : 'fa-chevron-up';
+            const textTr = isExpanded ? 'Diğer Projeleri Göster (9)' : 'Daha Az Göster';
+            const textEn = isExpanded ? 'Show More Projects (9)' : 'Show Less';
+            btn.innerHTML = `<i class="fas ${iconClass}"></i><span data-tr="${textTr}" data-en="${textEn}">${currentLang === 'en' ? textEn : textTr}</span>`;
+        }
 
-        const translations = {
-            en: {
-                // Page title
-                title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
-                // Hero
-                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
-                heroTech: 'AWS & Python | Docker & Container Technologies | AI and Automation',
-                // About
-                aboutTitle: 'About Me',
-                aboutP1: 'I am a 3rd year Software Engineering student at Fırat University and currently working as a Part-Time AIOps Engineer at Beko Corporate. I am a developer passionately committed to producing technology at an enterprise scale, focused on specializing in Cloud Computing, Artificial Intelligence, and AIOps.',
-                aboutP2: 'I develop automated, scalable, and reliable systems using modern cloud technologies, primarily AWS, Docker, and Python. In my work, AIOps approach, containerization, CI/CD, cloud-native architectures, and operational efficiency are at the forefront. I focus on creating solutions that integrate AI into IT operations to improve system performance, predict errors, and optimize processes.',
-                aboutP3: 'Thanks to my experience in a corporate environment, I have strong competencies in disciplined work, team communication, problem-solving, and taking responsibility. I am an aspiring engineer who continuously learns, pays attention to details, and aims to produce high-quality outputs.',
-                aboutP4: 'My career goal is to deepen my expertise in container orchestration (Docker, Kubernetes), cloud orchestration, AIOps & MLOps, AWS infrastructure, and intelligent cloud systems, and to build a strong career as an engineer developing effective and sustainable cloud-AI solutions at an enterprise scale.',
-                // Experience
-                expTitle: 'Experience',
-                exp1Date: 'December 2025 - Present',
-                exp1Title: 'Junior AIOps Engineer',
-                exp1Company: 'Beko Corporate - PREP Program',
-                exp1Tasks: ['Log analysis from Docker-based and containerized applications', 'Basic incident investigation and root cause analysis', 'Understanding anomaly patterns and operational issues', 'AIOps, monitoring and observability practices', 'Collaboration with DevOps teams in enterprise workflows'],
-                exp2Date: 'December 2025 - Present',
-                exp2Title: 'Volunteer Instructor',
-                exp2Company: 'Habitat Association',
-                exp3Date: 'August 2025',
-                exp3Title: 'QNB 101 Online Internship',
-                exp3Company: 'QNB Turkey',
-                exp4Date: 'October 2024',
-                exp4Title: 'Software Engineer',
-                exp4Company: 'Elmar Software - Elazığ',
-                exp5Date: 'June 2023 - Present',
-                exp5Title: 'Software Developer',
-                exp5Company: 'Freelance - Bursa',
-                exp5Desc: 'Working on cloud-native solutions, AIOps projects, and DevOps automations.',
-                // Skills
-                skillsTitle: 'Skills',
-                // Projects (all 9 projects)
-                projectsTitle: 'Featured Projects',
-                proj1Title: 'SiberMiras 🚀',
-                proj1Desc: '<span class="font-semibold text-gray-200">Problem:</span> There were legal and technical difficulties for people to safely transfer their digital assets and accounts after passing away.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a fully cloud-native, containerized digital heritage platform on AWS using EC2, RDS, S3, ECR, and ECS.<br><br><span class="font-semibold text-gray-200">Result:</span> User data was securely safeguarded without interruption through an auto-scaling and high availability architecture.',
-                proj2Title: 'AIOps Anomaly Detection System',
-                proj2Desc: '<span class="font-semibold text-gray-200">Problem:</span> Static metric alerts were causing too many false alarms in our systems.<br><br><span class="font-semibold text-gray-200">Solution:</span> I built an ML module that predicts CPU/Memory anomalies by analyzing system metrics in real-time.<br><br><span class="font-semibold text-gray-200">Result:</span> Alert thresholds were made dynamic, successfully filtering out false positive incident notifications.',
-                proj3Title: 'AIOps Infrastructure Automation',
-                proj3Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual setups across different environments led to inconsistent infrastructure and hard-to-manage versions.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed reusable IaC modules using Terraform to automate provisioning of AWS Lambda and Docker-based services.<br><br><span class="font-semibold text-gray-200">Result:</span> Environment setup times were reduced to minutes, ensuring consistency between staging/production and making rollbacks easier.',
-                proj4Title: 'AWS CI/CD Pipeline Automation',
-                proj4Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual deployments were taking too long and were prone to human error.<br><br><span class="font-semibold text-gray-200">Solution:</span> I set up a fully automated CI/CD pipeline triggered by GitHub pushes, utilizing Docker and AWS CodeDeploy.<br><br><span class="font-semibold text-gray-200">Result:</span> Enabled zero-downtime releases and reduced manual deployment times by 60%.',
-                proj5Title: 'Serverless Log Analyzer',
-                proj5Desc: '<span class="font-semibold text-gray-200">Problem:</span> Centralizing and analyzing application logs spread across multiple AWS accounts was difficult.<br><br><span class="font-semibold text-gray-200">Solution:</span> I designed a fully serverless system using AWS Lambda and S3 to asynchronously collect and analyze logs.<br><br><span class="font-semibold text-gray-200">Result:</span> AIOps processes were improved with CloudWatch-backed automated metrics, exponentially increasing incident response speed.',
-                proj6Title: 'Hybrid Cloud Backup Solution',
-                proj6Desc: '<span class="font-semibold text-gray-200">Problem:</span> There was a need for a centralized, reliable archive to recover critical data stored across multiple environments during a disaster.<br><br><span class="font-semibold text-gray-200">Solution:</span> I wrote Boto3-backed Python scripts that regularly transfer data from Azure to AWS S3 Deep Archive, ensuring cyclic backups.<br><br><span class="font-semibold text-gray-200">Result:</span> Backup costs were optimized through automated lifecycle policies, and 99.9% data reliability was achieved.',
-                proj7Title: 'Bank Automation System (Banka-OOP)',
-                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Safely simulating banking transactions and modeling them in an architecture compliant with OOP principles was necessary.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a bank simulation in C# utilizing complex user inheritance models and data encapsulation techniques.<br><br><span class="font-semibold text-gray-200">Result:</span> Secure transaction flows backed by MSSQL were established, and strict OOP rules were successfully implemented.',
-                proj8Title: 'Cloud Architecture Patterns',
-                proj8Desc: '<span class="font-semibold text-gray-200">Problem:</span> Applications interacting with AWS services were crashing and experiencing data loss during unexpected network outages.<br><br><span class="font-semibold text-gray-200">Solution:</span> I implemented cloud design patterns such as "Retry", "Circuit Breaker", and "Fallback" using the Java AWS SDK to enhance application resilience.<br><br><span class="font-semibold text-gray-200">Result:</span> The system was empowered to self-heal (resilience) against transient errors, minimizing error rates in API calls.',
-                proj9Title: 'Digital Footprint',
-                proj9Desc: '<span class="font-semibold text-gray-200">Problem:</span> Users couldn\'t accurately see the extent of the traces they left on the internet and their data exposure.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a Python-based digital footprint scanner and visualizer that utilizes APIs from open-source security analysis tools.<br><br><span class="font-semibold text-gray-200">Result:</span> I increased digital privacy awareness among users, making it easier for them to take precautions against potential security leaks.',
-                proj10Title: 'Cloud-Native Intelligent Reliability Platform',
-                proj10Desc: '<span class="font-semibold text-gray-200">Problem:</span> Traditional monitoring tools were too slow to find root causes of errors in distributed microservice architectures.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a self-healing AIOps platform on AWS using Kubernetes and Terraform, powered by Z-Score and EMA algorithms.<br><br><span class="font-semibold text-gray-200">Result:</span> Anomaly detection time was reduced to seconds, and autonomous healing responses significantly decreased system downtimes.',
-                proj11Title: 'Cloud Order System — AIOps + MLOps',
-                proj11Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manually detecting fraud or systemic errors during heavy order fluctuations in e-commerce systems was very difficult.<br><br><span class="font-semibold text-gray-200">Solution:</span> I trained an Isolation Forest machine learning model to analyze order logs, served it via FastAPI, and deployed the infrastructure on AWS with Terraform.<br><br><span class="font-semibold text-gray-200">Result:</span> Order anomalies are now detected in real-time and instantly sent as alerts to teams via Prometheus and CloudWatch.',
-                proj12Title: 'Star-Ops — AIOps & Edge-MLOps Platform',
-                proj12Desc: '<span class="font-semibold text-gray-200">Problem:</span> Traditional threshold values were insufficient to detect hardware failures in sensor data during space and satellite operations.<br><br><span class="font-semibold text-gray-200">Solution:</span> I set up a 6-simulated satellite network providing live telemetry streams and developed an ensemble MLOps anomaly detection engine based on Isolation Forest and LSTM.<br><br><span class="font-semibold text-gray-200">Result:</span> Thanks to the D3.js powered interactive interface, operators can now monitor per-second anomaly scores live and perform Edge-MLOps updates with a single click.',
-                proj13Title: 'CloudCostGuard',
-                proj13Desc: '<span class="font-semibold text-gray-200">Problem:</span> It was a time-consuming process for companies using multiple cloud providers to detect idle resources and make sense of complex billing anomalies.<br><br><span class="font-semibold text-gray-200">Solution:</span> I designed an AI-powered platform combining AWS, Azure, and GCP data via ClickHouse/Next.js, which analyzes expenses through Ollama 3.1 (Local Model) integration.<br><br><span class="font-semibold text-gray-200">Result:</span> Idle cost items like inactive servers and volumes were instantly reported, and the AI now explains billing anomalies in natural language.',
-                // Contact
-                contactTitle: 'Get in Touch',
-                contactDesc: 'Feel free to reach out for projects or job opportunities.',
-            },
-            tr: {
-                title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
-                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
-                heroTech: 'AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon',
-                aboutTitle: 'Hakkımda',
-                aboutP1: 'Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisi ve Beko Corporate\'te Part-Time AIOps Engineer olarak görev alıyorum. Cloud Computing, Artificial Intelligence ve AIOps alanlarında uzmanlaşmaya odaklanmış, kurumsal ölçekte teknoloji üretmeye tutkuyla bağlı bir geliştiriciyim.',
-                aboutP2: 'AWS, Docker ve Python başta olmak üzere modern bulut teknolojileriyle otomatik, ölçeklenebilir ve güvenilir sistemler geliştiriyorum. Çalışmalarımda AIOps yaklaşımı, containerization, CI/CD, cloud-native mimariler ve operasyonel verimlilik ön planda yer alıyor. Yapay zekayı IT operasyonlarına entegre ederek sistem performansını artıran, hataları öngören ve süreçleri optimize eden çözümler üretmeye odaklanıyorum.',
-                aboutP3: 'Kurumsal bir ortamda edindiğim deneyim sayesinde disiplinli çalışma, takım içi iletişim, problem çözme ve sorumluluk alma konularında güçlü bir yetkinliğe sahibim. Sürekli öğrenen, detaylara önem veren ve yüksek kaliteli çıktılar üretmeyi hedefleyen bir mühendis adayıyım.',
-                aboutP4: 'Kariyer hedefim; container orchestration (Docker, Kubernetes), bulut orkestrasyonu, AIOps & MLOps, AWS altyapıları ve akıllı bulut sistemleri alanlarında derinleşerek, kurumsal ölçekte etkili ve sürdürülebilir cloud-AI çözümleri geliştiren bir mühendis olarak güçlü bir kariyer inşa etmektir.',
-                expTitle: 'Deneyim',
-                exp1Date: 'Aralık 2025 - Günümüz',
-                exp1Title: 'Junior AIOps Engineer',
-                exp1Company: 'Beko Corporate - PREP Program',
-                exp1Tasks: ['Docker tabanlı ve konteynerize uygulamalardan log analizi', 'Temel olay inceleme ve kök neden analizi', 'Anomali paternleri ve operasyonel sorunların anlaşılması', 'AIOps, monitoring ve observability uygulamaları', 'DevOps ekipleri ile kurumsal iş akışlarında işbirliği'],
-                exp2Date: 'Aralık 2025 - Günümüz',
-                exp2Title: 'Gönüllü Eğitmen',
-                exp2Company: 'Habitat Derneği',
-                exp3Date: 'Ağustos 2025',
-                exp3Title: 'QNB 101 Online Staj',
-                exp3Company: 'QNB Türkiye',
-                exp4Date: 'Ekim 2024',
-                exp4Title: 'Yazılım Mühendisi',
-                exp4Company: 'Elmar Yazılım - Elazığ',
-                exp5Date: 'Haziran 2023 - Günümüz',
-                exp5Title: 'Software Developer',
-                exp5Company: 'Freelance - Bursa',
-                exp5Desc: 'Cloud-native çözümler, AIOps projeleri ve DevOps otomasyonları üzerine çalışmalar.',
-                skillsTitle: 'Yetenekler',
-                // Projects (all 9 projects)
-                projectsTitle: 'Öne Çıkan Projeler',
-                proj1Title: 'SiberMiras 🚀',
-                proj1Desc: '<span class="font-semibold text-gray-200">Problem:</span> İnsanların dijital varlıklarını ve hesaplarını vefat sonrası güvenle devredebilmeleri için yasal ve teknik zorluklar bulunmaktaydı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS üzerinde EC2, RDS, S3, ECR ve ECS kullanarak tamamen cloud-native, konteynerize bir dijital miras platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Otomatik ölçeklendirme ve yüksek erişilebilirlik (high availability) mimarisi ile kullanıcı verileri kesintisiz ve güvenli bir şekilde güvence altına alındı.',
-                proj2Title: 'AIOps Anomali Tespit Sistemi',
-                proj2Desc: '<span class="font-semibold text-gray-200">Problem:</span> Statik metrik uyarıları sistemlerde çok fazla yanlış alarm üretiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Gerçek zamanlı sistem metriklerini analiz ederek CPU/Bellek anormalliklerini öngören bir ML modülü oluşturdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Uyarı eşikleri dinamik hale getirildi ve yanlış pozitif olay bildirimleri başarıyla filtrelendi.',
-                proj3Title: 'AIOps Altyapı Otomasyonu',
-                proj3Desc: '<span class="font-semibold text-gray-200">Problem:</span> Farklı ortamlarda manuel kurulumlar nedeniyle tutarsız altyapı ve zor yönetilen sürümler ortaya çıkıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Terraform ile tekrar kullanılabilir IaC modülleri geliştirerek AWS Lambda ve Docker tabanlı servislerin otomatik provizyonunu sağladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Ortam kurulum süreleri dakikalara indi ve staging/production altyapıları arasında tutarlılık sağlanarak değişikliklerin geri alınabilirliği kolaylaştı.',
-                proj4Title: 'AWS CI/CD Pipeline Otomasyonu',
-                proj4Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manuel dağıtımlar hem çok uzun sürüyor hem de insan hatasına açık oluyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> GitHub push tetikleyicileri ile çalışan, Docker ve AWS CodeDeploy kullanan tam otomasyonlu bir CI/CD pipeline kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sıfır kesinti (zero-downtime) ile sürüm çıkma imkanı sağlandı ve manuel dağıtım süresi %60 azaltıldı.',
-                proj5Title: 'Sunucusuz Log Analizörü',
-                proj5Desc: '<span class="font-semibold text-gray-200">Problem:</span> Dağınık AWS hesaplarında oluşan uygulama loglarının merkezi olarak toplanıp incelenmesi zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS Lambda ve S3 kullanarak, logları asenkron şekilde toplayıp analiz eden tamamen sunucusuz (serverless) bir sistem tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> CloudWatch destekli otomatik metrik üretimleriyle AIOps süreçleri iyileştirildi ve olaylara müdahale hızı katlanarak arttı.',
-                proj6Title: 'Hibrit Bulut Yedekleme Çözümü',
-                proj6Desc: '<span class="font-semibold text-gray-200">Problem:</span> Birden fazla ortamda duran kritik verilerin felaket anında kurtarılması için merkezi, güvenilir bir arşive ihtiyaç vardı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Azure üzerinden alınan verileri AWS S3 Deep Archive\'a düzenli aktaran ve döngüsel yedekleme sağlayan Boto3 destekli Python scriptleri yazdım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Otomatik yaşam döngüsü politikaları (lifecycle policies) sayesinde yedekleme maliyetleri optimize edildi ve %99.9 veri güvenilirliği sağlandı.',
-                proj7Title: 'Banka Otomasyon Sistemi (Banka-OOP)',
-                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Bankacılık işlemlerinin güvenli bir şekilde simüle edilmesi, OOP prensiplerine uygun mimaride modellenmesi zorunluydu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> C# diliyle karmaşık kullanıcı miras modelleri (inheritance) ve veri kapsülleme (encapsulation) teknikleri kullanarak bir banka simülasyonu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> MSSQL destekli güvenli işlem akışları oturtuldu ve katı OOP kurallarının başarılı bir şekilde uygulamaya dökülmesi sağlandı.',
-                proj8Title: 'Bulut Mimari Desenleri',
-                proj8Desc: '<span class="font-semibold text-gray-200">Problem:</span> AWS servisleriyle etkileşime giren uygulamalar beklenmedik ağ kesintilerinde çöküyor ve veri kaybı yaşıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Uygulama dayanıklılığını artırmak için Java AWS SDK kullanarak "Retry", "Circuit Breaker" ve "Fallback" gibi bulut tasarım desenlerini uyguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Geçici hatalara karşı sistemin kendi kendini toparlaması sağlandı (resilience) ve API çağrılarındaki hata oranları minimize edildi.',
-                proj9Title: 'Dijital Ayak İzi (Digital Footprint)',
-                proj9Desc: '<span class="font-semibold text-gray-200">Problem:</span> Kullanıcılar internette bıraktıkları izlerin ne boyutta olduğunu ve veri maruziyetlerini (data exposure) tam olarak göremiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Açık kaynaklı güvenlik analiz araçlarının API\'lerini kullanan Python tabanlı bir dijital ayak izi tarayıcı ve görselleştirici geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Kullanıcıların dijital gizlilik farkındalığını artırarak, potansiyel güvenlik sızıntılarına karşı önlem almalarını kolaylaştırdım.',
-                proj10Title: 'Cloud-Native Intelligent Reliability Platform',
-                proj10Desc: '<span class="font-semibold text-gray-200">Problem:</span> Geleneksel izleme araçları, dağıtık mikroservis mimarilerinde hata kök nedenlerini bulmada yavaş kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS üzerinde Kubernetes ve Terraform kullanarak, Z-Score ve EMA algoritmalarıyla çalışan self-healing özellikli bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Anomali tespit süresi saniyelere indi ve otonom iyileştirme tepkileri sayesinde sistem kesinti süreleri büyük oranda azaldı.',
-                proj11Title: 'Cloud Order System — AIOps + MLOps',
-                proj11Desc: '<span class="font-semibold text-gray-200">Problem:</span> E-ticaret sistemlerindeki yoğun sipariş dalgalanmalarında dolandırıcılık veya sistemsel hataların manuel tespiti çok zordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Sipariş loglarını analiz eden Isolation Forest makine öğrenimi modelini eğitip FastAPI üzerinden sundum, altyapıyı Terraform ile AWS\'e kurdum.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sipariş anomalileri gerçek zamanlı tespit edilerek Prometheus ve CloudWatch üzerinden anında ekiplere alarm olarak iletilir hale geldi.',
-                proj12Title: 'Star-Ops — AIOps & Edge-MLOps Platform',
-                proj12Desc: '<span class="font-semibold text-gray-200">Problem:</span> Uzay ve uydu operasyonlarında sensör verilerindeki donanım arızalarının geleneksel eşik değerleriyle tespit edilmesi yetersiz kalıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Canlı telemetri akışı sağlayan 6 simüle uydu ağı kurup, Isolation Forest ve LSTM tabanlı ensemble bir MLOps anomali tespit motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> D3.js destekli interaktif arayüz sayesinde operatörler saniyelik anomali skorlarını canlı izleyip, Edge-MLOps güncellemelerini tek tıkla yapabilir duruma geldi.',
-                proj13Title: 'CloudCostGuard',
-                proj13Desc: '<span class="font-semibold text-gray-200">Problem:</span> Birden fazla bulut sağlayıcısı kullanan firmaların atıl kaynakları tespit etmesi ve karmaşık fatura anomalilerini anlamlandırması vakit alan bir süreçti.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS, Azure ve GCP verilerini ClickHouse/Next.js ile birleştiren, Ollama 3.1 (Local Model) entegrasyonuyla harcamaları inceleyen yapay zeka destekli bir platform tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Boşta çalışan sunucu ve hacimler gibi atıl maliyet kalemleri anında raporlandı ve yapay zeka harcamalardaki anomalileri doğal dilde açıklar hale geldi.',
-                contactTitle: 'İletişime Geçin',
-                contactDesc: 'Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz.',
-            }
-        };
+        function toggleMoreCerts() {
+            const container = document.getElementById('more-certs');
+            const btn = document.getElementById('more-certs-btn');
+            const isExpanded = container.classList.contains('expanded');
+            container.classList.toggle('expanded');
+            const iconClass = isExpanded ? 'fa-chevron-down' : 'fa-chevron-up';
+            const textTr = isExpanded ? 'Diğer Sertifikaları Göster (7)' : 'Daha Az Göster';
+            const textEn = isExpanded ? 'Show More Certifications (7)' : 'Show Less';
+            btn.innerHTML = `<i class="fas ${iconClass}"></i><span data-tr="${textTr}" data-en="${textEn}">${currentLang === 'en' ? textEn : textTr}</span>`;
+        }
+
+        // ===== LANGUAGE SWITCHING =====
+        let currentLang = 'tr';
 
         function switchLanguage(lang) {
             currentLang = lang;
-            const t = translations[lang];
 
-            // Update data-tr/data-en elements
+            // Update all data-tr/data-en elements
             document.querySelectorAll('[data-tr][data-en]').forEach(el => {
                 const text = el.getAttribute(`data-${lang}`);
-                if (el.querySelector('span')) {
-                    el.querySelector('span').textContent = text;
-                } else if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.tagName === 'P') {
-                    const icon = el.querySelector('i');
-                    if (icon) {
-                        el.innerHTML = '';
-                        el.appendChild(icon);
-                        el.appendChild(document.createTextNode(' '));
-                        const span = document.createElement('span');
-                        span.textContent = text;
-                        el.appendChild(span);
-                    } else {
-                        el.textContent = text;
-                    }
+                if (!text) return;
+                const icon = el.querySelector('i');
+                const span = el.querySelector('span');
+                if (span) {
+                    span.textContent = text;
+                } else if (icon) {
+                    const newSpan = document.createElement('span');
+                    newSpan.textContent = text;
+                    el.innerHTML = '';
+                    el.appendChild(icon.cloneNode(true));
+                    el.appendChild(document.createTextNode(' '));
+                    el.appendChild(newSpan);
                 } else {
                     el.textContent = text;
                 }
             });
 
-            // Update section titles
-            document.getElementById('about').querySelector('h2').textContent = t.aboutTitle;
-            document.getElementById('experience').querySelector('h2').textContent = t.expTitle;
-            document.getElementById('skills').querySelector('h2').textContent = t.skillsTitle;
-            document.getElementById('projects').querySelector('h2').textContent = t.projectsTitle;
-            document.getElementById('contact').querySelector('h2').textContent = t.contactTitle;
-
-            // Update about section paragraphs
-            const aboutParagraphs = document.querySelectorAll('#about .glass-card p');
-            if (aboutParagraphs.length >= 4) {
-                aboutParagraphs[0].textContent = t.aboutP1;
-                aboutParagraphs[1].textContent = t.aboutP2;
-                aboutParagraphs[2].textContent = t.aboutP3;
-                aboutParagraphs[3].textContent = t.aboutP4;
-            }
-
-            // Update hero subtitles
-            document.querySelector('#home .text-xl.md\\:text-2xl').textContent = t.heroJob;
-            document.querySelector('#home .text-lg.text-gray-500').textContent = t.heroTech;
-
-            // Update contact description
-            document.querySelector('#contact .glass-card > p').textContent = t.contactDesc;
-
-            // Update Experience section
-            const expCards = document.querySelectorAll('#experience .glass-card');
-            if (expCards.length >= 5) {
-                // Beko
-                expCards[0].querySelector('.text-purple-400').textContent = t.exp1Date;
-                expCards[0].querySelector('h3').textContent = t.exp1Title;
-                expCards[0].querySelector('.text-gray-400').textContent = t.exp1Company;
-                const taskItems = expCards[0].querySelectorAll('li');
-                t.exp1Tasks.forEach((task, i) => { if (taskItems[i]) taskItems[i].textContent = '• ' + task; });
-                // Habitat
-                expCards[1].querySelector('.text-purple-400').textContent = t.exp2Date;
-                expCards[1].querySelector('h3').textContent = t.exp2Title;
-                expCards[1].querySelector('.text-gray-400').textContent = t.exp2Company;
-                // QNB
-                expCards[2].querySelector('.text-purple-400').textContent = t.exp3Date;
-                expCards[2].querySelector('h3').textContent = t.exp3Title;
-                expCards[2].querySelector('.text-gray-400').textContent = t.exp3Company;
-                // Elmar
-                expCards[3].querySelector('.text-purple-400').textContent = t.exp4Date;
-                expCards[3].querySelector('h3').textContent = t.exp4Title;
-                expCards[3].querySelector('.text-gray-400').textContent = t.exp4Company;
-                // Freelance
-                expCards[4].querySelector('.text-purple-400').textContent = t.exp5Date;
-                expCards[4].querySelector('h3').textContent = t.exp5Title;
-                expCards[4].querySelectorAll('.text-gray-400')[0].textContent = t.exp5Company;
-                const freelanceDesc = expCards[4].querySelector('.text-gray-300');
-                if (freelanceDesc) freelanceDesc.textContent = t.exp5Desc;
-            }
-
-            // Update Projects section
-            const projCards = document.querySelectorAll('#projects .project-card');
-            if (projCards.length >= 13) {
-                // SiberMiras (index 0)
-                projCards[0].querySelector('h3').textContent = t.proj1Title;
-                projCards[0].querySelector('p').innerHTML = t.proj1Desc;
-                // AIOps Anomaly Detection (index 1)
-                projCards[1].querySelector('h3').textContent = t.proj2Title;
-                projCards[1].querySelector('p').innerHTML = t.proj2Desc;
-                // AIOps Infrastructure (index 2)
-                projCards[2].querySelector('h3').textContent = t.proj3Title;
-                projCards[2].querySelector('p').innerHTML = t.proj3Desc;
-                // AWS CI/CD (index 3)
-                projCards[3].querySelector('h3').textContent = t.proj4Title;
-                projCards[3].querySelector('p').innerHTML = t.proj4Desc;
-                // Serverless Log Analyzer (index 4)
-                projCards[4].querySelector('h3').textContent = t.proj5Title;
-                projCards[4].querySelector('p').innerHTML = t.proj5Desc;
-                // Hybrid Cloud Backup (index 5)
-                projCards[5].querySelector('h3').textContent = t.proj6Title;
-                projCards[5].querySelector('p').innerHTML = t.proj6Desc;
-                // Bank Automation (index 6)
-                projCards[6].querySelector('h3').textContent = t.proj7Title;
-                projCards[6].querySelector('p').innerHTML = t.proj7Desc;
-                // Cloud Architecture (index 7)
-                projCards[7].querySelector('h3').textContent = t.proj8Title;
-                projCards[7].querySelector('p').innerHTML = t.proj8Desc;
-                // Digital Footprint (index 8)
-                projCards[8].querySelector('h3').textContent = t.proj9Title;
-                projCards[8].querySelector('p').innerHTML = t.proj9Desc;
-                // Cloud-Native Intelligent Reliability Platform (index 9)
-                projCards[9].querySelector('h3').textContent = t.proj10Title;
-                projCards[9].querySelector('p').innerHTML = t.proj10Desc;
-                // Cloud Order System (index 10)
-                projCards[10].querySelector('h3').textContent = t.proj11Title;
-                projCards[10].querySelector('p').innerHTML = t.proj11Desc;
-                // Star-Ops (index 11)
-                projCards[11].querySelector('h3').textContent = t.proj12Title;
-                projCards[11].querySelector('p').innerHTML = t.proj12Desc;
-                // CloudCostGuard (index 12)
-                projCards[12].querySelector('h3').textContent = t.proj13Title;
-                projCards[12].querySelector('p').innerHTML = t.proj13Desc;
-            }
-
-            // Update button text
+            // Switch button text
             const langBtn = document.getElementById('lang-switch');
             const langBtnMobile = document.getElementById('lang-switch-mobile');
-            if (lang === 'en') {
-                langBtn.textContent = 'TR';
-                langBtnMobile.textContent = 'TR';
-            } else {
-                langBtn.textContent = 'EN';
-                langBtnMobile.textContent = 'EN';
-            }
+            if (langBtn) langBtn.textContent = lang === 'en' ? 'TR' : 'EN';
+            if (langBtnMobile) langBtnMobile.textContent = lang === 'en' ? 'TR' : 'EN';
         }
 
         document.getElementById('lang-switch').addEventListener('click', () => {
             switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
         });
-
         document.getElementById('lang-switch-mobile').addEventListener('click', () => {
             switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
         });
 
-        // Smooth scroll for navigation links
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ===== INTERSECTION OBSERVER for slide-up =====
+        const slideUpElements = document.querySelectorAll('.slide-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
                 }
             });
+        }, { threshold: 0.1 });
+        slideUpElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
         });
     </script>
 </body>
