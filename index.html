@@ -78,12 +78,14 @@
 
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             z-index: 1;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .glass-card:hover {
@@ -95,19 +97,20 @@
         }
 
         .glow-text {
-            text-shadow: 0 0 30px rgba(138, 43, 226, 0.6),
-                0 0 60px rgba(138, 43, 226, 0.3);
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
         }
 
         .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease forwards;
+            will-change: opacity;
         }
 
         .slide-up {
             opacity: 0;
             transform: translateY(40px);
             animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            will-change: transform, opacity;
         }
 
         @keyframes fadeIn {
@@ -223,6 +226,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.4s ease;
             overflow: hidden;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .project-card:hover {
@@ -590,12 +595,12 @@
                 </h1>
             </div>
             <div class="slide-up" style="animation-delay: 0.4s">
-                <p class="text-xl md:text-2xl text-gray-400 mb-4">
+                <p id="hero-job" class="text-xl md:text-2xl text-gray-400 mb-4">
                     AIOps Engineer & Cloud Solutions Architect
                 </p>
             </div>
             <div class="slide-up" style="animation-delay: 0.6s">
-                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+                <p id="hero-tech" class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
                     AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation
                 </p>
             </div>
@@ -1680,7 +1685,7 @@
         window.addEventListener('resize', resizeCanvas);
 
         const stars = [];
-        const numStars = 150;
+        const numStars = 80;
 
         for (let i = 0; i < numStars; i++) {
             stars.push({
@@ -1713,11 +1718,6 @@
                 ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity})`;
                 ctx.fill();
 
-                // Add glow effect
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius * 2, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(138, 43, 226, ${star.opacity * 0.3})`;
-                ctx.fill();
             });
 
             requestAnimationFrame(animateStars);
@@ -1747,8 +1747,8 @@
                 // Page title
                 title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
                 // Hero
-                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
-                heroTech: 'AWS & Python | Docker & Container Technologies | AI and Automation',
+                heroJob: 'AIOps Engineer & Cloud Solutions Architect',
+                heroTech: 'AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation',
                 // About
                 aboutTitle: 'About Me',
                 aboutP1: 'I am a 3rd year **Software Engineering** student at Fırat University and currently working as a Part-Time **AIOps Engineer** at **Beko Corporate**. I am a developer passionately committed to producing technology at an enterprise scale, focused on specializing in **Cloud Computing**, **Artificial Intelligence**, and **AIOps**.',
@@ -1818,8 +1818,8 @@
             },
             tr: {
                 title: 'Ömer Can Gümüş - AIOps Engineer & Cloud Developer',
-                heroJob: 'AIOps Engineer | Cloud Computing Specialist',
-                heroTech: 'AWS & Python | Docker & Container Technologies | Yapay Zeka ve Otomasyon',
+                heroJob: 'AIOps Engineer & Cloud Solutions Architect',
+                heroTech: 'AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation',
                 aboutTitle: 'Hakkımda',
                 aboutP1: 'Fırat Üniversitesi **Yazılım Mühendisliği** bölümünde lisans eğitimime devam ederken, **Beko Corporate** bünyesinde **AIOps Engineer** olarak görev alıyorum. Kurumsal ölçekteki sistemlerin cloud-native dönüşümü, operasyonel verimliliği ve akıllı otomasyonu üzerine uzmanlaşıyorum.',
                 aboutP2: 'Teknik odak noktam; **AWS** eko-sistemi, **Docker** konteynerizasyon süreçleri ve **Python** tabanlı veri analitiğidir. Çalışmalarımda **CI/CD** süreçlerini modern bulut mimarileriyle bütünleştirerek; proaktif anomali tespiti, otonom sistem iyileştirmeleri ve yüksek performanslı altyapılar inşa etmeye odaklanıyorum.',
@@ -1923,8 +1923,8 @@
             }
 
             // Update hero subtitles
-            document.querySelector('#home .text-xl.md\\:text-2xl').textContent = t.heroJob;
-            document.querySelector('#home .text-lg.text-gray-500').textContent = t.heroTech;
+            document.getElementById('hero-job').textContent = t.heroJob;
+            document.getElementById('hero-tech').textContent = t.heroTech;
 
             // Update contact description
             document.querySelector('#contact .glass-card > p').textContent = t.contactDesc;
