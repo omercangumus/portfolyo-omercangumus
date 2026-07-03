@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -541,20 +541,13 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold gradient-text">ÖCG</div>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
-                    Sayfa</a>
-                <a href="#about" class="nav-link text-gray-300 hover:text-white" data-tr="Hakkımda"
-                    data-en="About">Hakkımda</a>
-                <a href="#experience" class="nav-link text-gray-300 hover:text-white" data-tr="Deneyim"
-                    data-en="Experience">Deneyim</a>
-                <a href="#skills" class="nav-link text-gray-300 hover:text-white" data-tr="Yetenekler"
-                    data-en="Skills">Yetenekler</a>
-                <a href="#certificates" class="nav-link text-gray-300 hover:text-white" data-tr="Sertifikalar"
-                    data-en="Certifications">Sertifikalar</a>
-                <a href="#projects" class="nav-link text-gray-300 hover:text-white" data-tr="Projeler"
-                    data-en="Projects">Projeler</a>
-                <a href="#contact" class="nav-link text-gray-300 hover:text-white" data-tr="İletişim"
-                    data-en="Contact">İletişim</a>
+                <a href="#home" class="nav-link text-gray-300 hover:text-white" data-i18n="navHome">Ana Sayfa</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white" data-i18n="navAbout">Hakkımda</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-white" data-i18n="navExperience">Deneyim</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white" data-i18n="navSkills">Yetenekler</a>
+                <a href="#certificates" class="nav-link text-gray-300 hover:text-white" data-i18n="navCertificates">Sertifikalar</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white" data-i18n="navProjects">Projeler</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white" data-i18n="navContact">İletişim</a>
                 <button id="lang-switch"
                     class="ml-4 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
             </div>
@@ -564,20 +557,13 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-300 hover:text-white" data-tr="Ana Sayfa" data-en="Home">Ana
-                Sayfa</a>
-            <a href="#about" class="block py-2 text-gray-300 hover:text-white" data-tr="Hakkımda"
-                data-en="About">Hakkımda</a>
-            <a href="#experience" class="block py-2 text-gray-300 hover:text-white" data-tr="Deneyim"
-                data-en="Experience">Deneyim</a>
-            <a href="#skills" class="block py-2 text-gray-300 hover:text-white" data-tr="Yetenekler"
-                data-en="Skills">Yetenekler</a>
-            <a href="#certificates" class="block py-2 text-gray-300 hover:text-white" data-tr="Sertifikalar"
-                data-en="Certifications">Sertifikalar</a>
-            <a href="#projects" class="block py-2 text-gray-300 hover:text-white" data-tr="Projeler"
-                data-en="Projects">Projeler</a>
-            <a href="#contact" class="block py-2 text-gray-300 hover:text-white" data-tr="İletişim"
-                data-en="Contact">İletişim</a>
+            <a href="#home" class="block py-2 text-gray-300 hover:text-white" data-i18n="navHome">Ana Sayfa</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-white" data-i18n="navAbout">Hakkımda</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-white" data-i18n="navExperience">Deneyim</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-white" data-i18n="navSkills">Yetenekler</a>
+            <a href="#certificates" class="block py-2 text-gray-300 hover:text-white" data-i18n="navCertificates">Sertifikalar</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-white" data-i18n="navProjects">Projeler</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-white" data-i18n="navContact">İletişim</a>
             <button id="lang-switch-mobile"
                 class="mt-2 px-3 py-1 rounded-full text-sm font-semibold bg-purple-600 hover:bg-purple-500 transition-colors">EN</button>
         </div>
@@ -595,35 +581,27 @@
                 </h1>
             </div>
             <div class="slide-up" style="animation-delay: 0.4s">
-                <p id="hero-job" class="text-xl md:text-2xl text-gray-400 mb-4">
-                    Beko Corporate'te System Infrastructure Intern
-                </p>
+                <p class="text-xl md:text-2xl text-gray-400 mb-4" data-i18n="heroJob">Beko Corporate'te System Infrastructure Intern</p>
             </div>
             <div class="slide-up" style="animation-delay: 0.6s">
-                <p id="hero-tech" class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                    AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation
-                </p>
+                <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto" data-i18n="heroTech">AWS &amp; Python Core | Docker &amp; Cloud-Native Systems | AI-Predictive Automation</p>
             </div>
             <div class="slide-up flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
                 style="animation-delay: 0.8s">
-                <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white"
-                    data-tr="İletişime Geç" data-en="Get in Touch">
-                    <i class="fas fa-envelope mr-2"></i><span>İletişime Geç</span>
+                <a href="#contact" class="btn-primary px-8 py-4 rounded-full font-semibold text-white">
+                    <i class="fas fa-envelope mr-2"></i><span data-i18n="btnContact">İletişime Geç</span>
                 </a>
                 <a href="https://github.com/omercangumus" target="_blank"
-                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
-                    data-tr="GitHub Profilim" data-en="GitHub Profile">
-                    <i class="fab fa-github mr-2"></i><span>GitHub Profilim</span>
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400">
+                    <i class="fab fa-github mr-2"></i><span data-i18n="btnGithub">GitHub Profilim</span>
                 </a>
                 <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank"
-                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
-                    data-tr="LinkedIn" data-en="LinkedIn">
-                    <i class="fab fa-linkedin mr-2"></i><span>LinkedIn</span>
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400">
+                    <i class="fab fa-linkedin mr-2"></i><span data-i18n="btnLinkedin">LinkedIn</span>
                 </a>
                 <a href="omercangumus.pdf" target="_blank"
-                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400"
-                    data-tr="CV İndir" data-en="Download CV">
-                    <i class="fas fa-file-pdf mr-2"></i><span>CV İndir</span>
+                    class="glass-card px-8 py-4 rounded-full font-semibold text-white hover:text-purple-400">
+                    <i class="fas fa-file-pdf mr-2"></i><span data-i18n="btnCV">CV İndir</span>
                 </a>
             </div>
         </div>
@@ -632,19 +610,11 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Hakkımda
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-i18n="aboutTitle">Hakkımda</h2>
             <div class="glass-card p-8 md:p-12 rounded-3xl slide-up" style="animation-delay: 0.2s">
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    Fırat Üniversitesi <b>Yazılım Mühendisliği</b> 3. sınıf öğrencisiyim ve <b>Beko Corporate</b>'te <b>System Infrastructure Intern</b> olarak çalışıyorum. AIOps, DevOps ve Cloud Computing kesişiminde üretiyorum.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    Ölçeklenebilir cloud-native ortamlar tasarlıyor, otomatikleştiriyor ve yönetiyorum — maliyet bilinçli mimari ve operasyonel verimlilik odağımda. <b>AWS</b>, <b>Terraform (IaC)</b>, <b>Docker</b>, <b>Kubernetes</b>, <b>GitLab CI/CD</b> ve <b>Python</b> kullanarak iş akışlarını otomatikleştiriyor, observability'yi güçlendiriyor ve <b>Linux</b> ortamlarında güvenilir deployment'lar sağlıyorum.
-                </p>
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    Gerçek dünya yükü altında ayakta kalan production sistemler kurmayı önemsiyorum — <b>ölçeklenebilir, verimli ve kalıcı</b>.
-                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6" data-i18n="aboutP1">Fırat Üniversitesi <b>Yazılım Mühendisliği</b> 3. sınıf öğrencisiyim ve <b>Beko Corporate</b>'te <b>System Infrastructure Intern</b> olarak çalışıyorum. AIOps, DevOps ve Cloud Computing kesişiminde üretiyorum.</p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6" data-i18n="aboutP2">Ölçeklenebilir cloud-native ortamlar tasarlıyor, otomatikleştiriyor ve yönetiyorum — maliyet bilinçli mimari ve operasyonel verimlilik odağımda. <b>AWS</b>, <b>Terraform (IaC)</b>, <b>Docker</b>, <b>Kubernetes</b>, <b>GitLab CI/CD</b> ve <b>Python</b> kullanarak iş akışlarını otomatikleştiriyor, observability'yi güçlendiriyor ve <b>Linux</b> ortamlarında güvenilir deployment'lar sağlıyorum.</p>
+                <p class="text-lg text-gray-300 leading-relaxed" data-i18n="aboutP3">Gerçek dünya yükü altında ayakta kalan production sistemler kurmayı önemsiyorum — <b>ölçeklenebilir, verimli ve kalıcı</b>.</p>
             </div>
         </div>
     </section>
@@ -652,9 +622,7 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Deneyim
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-i18n="expTitle">Deneyim</h2>
             <div class="relative pl-16 space-y-12 max-w-4xl mx-auto">
                 <div class="timeline-line"></div>
 
@@ -662,14 +630,14 @@
                 <div class="slide-up" style="animation-delay: 0.1s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Temmuz 2026 — Günümüz</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">System Infrastructure Intern</h3>
-                        <p class="text-gray-400 mb-4">Beko Corporate</p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp1Date">Temmuz 2026 — Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp1Title">System Infrastructure Intern</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp1Company">Beko Corporate</p>
                         <ul class="text-gray-300 space-y-3 list-disc list-inside">
-                            <li>SCCM ortamı modernizasyonu ve patch management optimizasyonu.</li>
-                            <li>Sistem altyapısı operasyonları ve compliance analizi.</li>
-                            <li>Windows/Linux ortamlarında altyapı otomasyonu.</li>
-                            <li>DevOps ve altyapı ekipleriyle kurumsal iş akışlarında işbirliği.</li>
+                            <li data-i18n="exp1Task1">SCCM ortamı modernizasyonu ve patch management optimizasyonu.</li>
+                            <li data-i18n="exp1Task2">Sistem altyapısı operasyonları ve compliance analizi.</li>
+                            <li data-i18n="exp1Task3">Windows/Linux ortamlarında altyapı otomasyonu.</li>
+                            <li data-i18n="exp1Task4">DevOps ve altyapı ekipleriyle kurumsal iş akışlarında işbirliği.</li>
                         </ul>
                     </div>
                 </div>
@@ -678,15 +646,15 @@
                 <div class="slide-up" style="animation-delay: 0.15s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Aralık 2025 — Temmuz 2026</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">AIOps Engineer | PREP Program</h3>
-                        <p class="text-gray-400 mb-4">Beko Corporate</p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp2Date">Aralık 2025 — Temmuz 2026</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp2Title">AIOps Engineer | PREP Program</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp2Company">Beko Corporate</p>
                         <ul class="text-gray-300 space-y-3 list-disc list-inside">
-                            <li>Docker tabanlı ve konteynerize uygulamalardan log analizi.</li>
-                            <li>Temel olay inceleme ve kök neden analizi.</li>
-                            <li>Anomali paternleri ve operasyonel sorunların anlaşılması.</li>
-                            <li>AIOps, monitoring ve observability uygulamaları.</li>
-                            <li>DevOps ekipleri ile kurumsal iş akışlarında işbirliği.</li>
+                            <li data-i18n="exp2Task1">Docker tabanlı ve konteynerize uygulamalardan log analizi.</li>
+                            <li data-i18n="exp2Task2">Temel olay inceleme ve kök neden analizi.</li>
+                            <li data-i18n="exp2Task3">Anomali paternleri ve operasyonel sorunların anlaşılması.</li>
+                            <li data-i18n="exp2Task4">AIOps, monitoring ve observability uygulamaları.</li>
+                            <li data-i18n="exp2Task5">DevOps ekipleri ile kurumsal iş akışlarında işbirliği.</li>
                         </ul>
                     </div>
                 </div>
@@ -695,12 +663,10 @@
                 <div class="slide-up" style="animation-delay: 0.2s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Aralık 2025 — Günümüz</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Gönüllü Eğitmen</h3>
-                        <p class="text-gray-400 mb-4">Habitat Derneği</p>
-                        <p class="text-gray-300">
-                            Finansal okuryazarlık ve dijital yetkinlikler odağında gençlere bütçe yönetimi, stratejik planlama ve teknoloji kullanımı konularında gönüllü eğitimler veriyorum.
-                        </p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp3Date">Aralık 2025 — Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp3Title">Gönüllü Eğitmen</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp3Company">Habitat Derneği</p>
+                        <p class="text-gray-300" data-i18n="exp3Desc">Finansal okuryazarlık ve dijital yetkinlikler odağında gençlere bütçe yönetimi, stratejik planlama ve teknoloji kullanımı konularında gönüllü eğitimler veriyorum.</p>
                     </div>
                 </div>
 
@@ -708,12 +674,10 @@
                 <div class="slide-up" style="animation-delay: 0.3s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Ağustos 2025</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">QNB 101 — Technical Trainee</h3>
-                        <p class="text-gray-400 mb-4">QNB Türkiye</p>
-                        <p class="text-gray-300">
-                            Bankacılık teknolojileri, Fintech trendleri ve dijital dönüşüm stratejileri üzerine yoğunlaşmış kapsamlı teknik eğitim ve vizyon programı.
-                        </p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp4Date">Ağustos 2025</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp4Title">QNB 101 — Teknik Stajyer</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp4Company">QNB Türkiye</p>
+                        <p class="text-gray-300" data-i18n="exp4Desc">Bankacılık teknolojileri, Fintech trendleri ve dijital dönüşüm stratejileri üzerine yoğunlaşmış kapsamlı teknik eğitim ve vizyon programı.</p>
                     </div>
                 </div>
 
@@ -721,12 +685,10 @@
                 <div class="slide-up" style="animation-delay: 0.4s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Ekim 2024</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Yazılım Mühendisi</h3>
-                        <p class="text-gray-400 mb-4">Elmar Yazılım · Elazığ</p>
-                        <p class="text-gray-300">
-                            Yazılım geliştirme yaşam döngüsü (SDLC) süreçlerinde gerçek dünya projelerine katkı sağlayarak kod geliştirme ve test otomasyonu alanlarında deneyim kazandım.
-                        </p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp5Date">Ekim 2024</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp5Title">Yazılım Mühendisi</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp5Company">Elmar Yazılım · Elazığ</p>
+                        <p class="text-gray-300" data-i18n="exp5Desc">Yazılım geliştirme yaşam döngüsü (SDLC) süreçlerinde gerçek dünya projelerine katkı sağlayarak kod geliştirme ve test otomasyonu alanlarında deneyim kazandım.</p>
                     </div>
                 </div>
 
@@ -734,12 +696,10 @@
                 <div class="slide-up" style="animation-delay: 0.5s">
                     <div class="timeline-dot"></div>
                     <div class="glass-card p-6 rounded-2xl ml-8">
-                        <span class="text-purple-400 font-semibold">Haziran 2023 — Günümüz</span>
-                        <h3 class="text-2xl font-bold text-white mt-2 mb-1">Bağımsız Yazılım Geliştirici</h3>
-                        <p class="text-gray-400 mb-4">Freelance</p>
-                        <p class="text-gray-300">
-                            Cloud-native mimariler, AIOps entegrasyonları ve DevOps otomasyonları üzerine butik çözümler ve teknik danışmanlık süreçleri yürütüyorum.
-                        </p>
+                        <span class="text-purple-400 font-semibold" data-i18n="exp6Date">Haziran 2023 — Günümüz</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-1" data-i18n="exp6Title">Bağımsız Yazılım Geliştirici</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="exp6Company">Freelance</p>
+                        <p class="text-gray-300" data-i18n="exp6Desc">Cloud-native mimariler, AIOps entegrasyonları ve DevOps otomasyonları üzerine butik çözümler ve teknik danışmanlık süreçleri yürütüyorum.</p>
                     </div>
                 </div>
             </div>
@@ -749,9 +709,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Yetenekler
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-i18n="skillsTitle">Yetenekler</h2>
             <!-- Tech Stack Grid with Categories -->
             <div class="glass-card p-8 rounded-3xl slide-up">
                 <!-- Row 1: Cloud, Containers, IaC -->
@@ -760,61 +718,35 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-cloud text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Bulut Bilişim" data-en="Cloud Computing">Bulut Bilişim</span>
+                            <span class="text-gray-400 font-semibold" data-i18n="skillCloud">Bulut Bilişim</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-aws text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">AWS</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-microsoft text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Azure</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-google text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">GCP</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-aws text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">AWS</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-microsoft text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Azure</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-google text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">GCP</p></div>
                         </div>
                     </div>
                     <!-- Containers -->
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-box text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Container Teknolojileri"
-                                data-en="Container Technologies">Container Teknolojileri</span>
+                            <span class="text-gray-400 font-semibold" data-i18n="skillContainers">Container Teknolojileri</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-docker text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Docker</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-dharmachakra text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Kubernetes</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-linux text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Linux</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-docker text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Docker</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-dharmachakra text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Kubernetes</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-linux text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Linux</p></div>
                         </div>
                     </div>
                     <!-- IaC -->
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-cube text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Altyapı Otomasyonu (IaC)" data-en="Infrastructure as Code">Altyapı
-                                Otomasyonu (IaC)</span>
+                            <span class="text-gray-400 font-semibold" data-i18n="skillIaC">Altyapı Otomasyonu (IaC)</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-cube text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Terraform</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-cogs text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Ansible</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-cube text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Terraform</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-cogs text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Ansible</p></div>
                         </div>
                     </div>
                 </div>
@@ -827,26 +759,13 @@
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-code text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Diller & Teknolojiler"
-                                data-en="Languages & Tech">Diller & Teknolojiler</span>
+                            <span class="text-gray-400 font-semibold" data-i18n="skillLangs">Diller &amp; Teknolojiler</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-python text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Python</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-java text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Java</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-terminal text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Bash</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-database text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">SQL</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-python text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Python</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-java text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Java</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-terminal text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Bash</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-database text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">SQL</p></div>
                         </div>
                     </div>
                     <!-- CI/CD -->
@@ -856,40 +775,21 @@
                             <span class="text-gray-400 font-semibold">CI/CD</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-gitlab text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">GitLab</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-github text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">GitHub</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fab fa-jenkins text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Jenkins</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-gitlab text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">GitLab</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-github text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">GitHub</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fab fa-jenkins text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Jenkins</p></div>
                         </div>
                     </div>
                     <!-- Monitoring -->
                     <div class="text-center">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <i class="fas fa-chart-bar text-purple-400"></i>
-                            <span class="text-gray-400 font-semibold" data-tr="Monitoring & Observability"
-                                data-en="Monitoring & Observability">Monitoring & Observability</span>
+                            <span class="text-gray-400 font-semibold" data-i18n="skillMonitoring">Monitoring &amp; Observability</span>
                         </div>
                         <div class="flex justify-center gap-3 flex-wrap">
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-fire text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Prometheus</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-chart-area text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">Grafana</p>
-                            </div>
-                            <div class="skill-badge p-3 rounded-xl text-center">
-                                <i class="fas fa-search text-2xl text-purple-400 mb-1"></i>
-                                <p class="text-xs text-gray-400">ELK Stack</p>
-                            </div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-fire text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Prometheus</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-chart-area text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">Grafana</p></div>
+                            <div class="skill-badge p-3 rounded-xl text-center"><i class="fas fa-search text-2xl text-purple-400 mb-1"></i><p class="text-xs text-gray-400">ELK Stack</p></div>
                         </div>
                     </div>
                 </div>
@@ -900,85 +800,51 @@
     <!-- Certificates Section -->
     <section id="certificates" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text slide-up"
-                data-tr="Lisanslar ve Sertifikalar" data-en="Licenses & Certifications">
-                Lisanslar ve Sertifikalar
-            </h2>
-            <p class="text-center text-gray-400 mb-12 slide-up" style="animation-delay: 0.1s"
-                data-tr="Profesyonel gelişimimi destekleyen sertifikalarım"
-                data-en="Certifications supporting my professional development">
-                Profesyonel gelişimimi destekleyen sertifikalarım
-            </p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text slide-up" data-i18n="certsTitle">Lisanslar ve Sertifikalar</h2>
+            <p class="text-center text-gray-400 mb-12 slide-up" style="animation-delay: 0.1s" data-i18n="certsSubtitle">Profesyonel gelişimimi destekleyen sertifikalarım</p>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1: AWS Cloud Practitioner Essentials -->
+                <!-- Cert 1: AWS Cloud Practitioner Essentials -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.1s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-aws text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-aws text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">AWS Cloud Practitioner Essentials</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert1Title">AWS Cloud Practitioner Essentials</h3>
                             <p class="text-purple-400 text-sm mb-2">Amazon Web Services (AWS)</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="AWS bulut temellerini, servisleri ve en iyi uygulamaları kapsayan kapsamlı eğitim."
-                                data-en="Comprehensive training covering AWS cloud fundamentals, services, and best practices.">
-                                AWS bulut temellerini, servisleri ve en iyi uygulamaları kapsayan kapsamlı eğitim.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert1Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert1Desc">AWS bulut temellerini, servisleri ve en iyi uygulamaları kapsayan kapsamlı eğitim.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">AWS</span>
-                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Cloud
-                                    Computing</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Cloud Computing</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 2: AWS Observability -->
+                <!-- Cert 2: AWS Observability -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.15s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-aws text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-aws text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">AWS Observability</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert2Title">AWS Observability</h3>
                             <p class="text-purple-400 text-sm mb-2">Amazon Web Services (AWS)</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="CloudWatch, X-Ray ve observability araçlarıyla sistem izleme ve log analizi."
-                                data-en="System monitoring and log analysis with CloudWatch, X-Ray, and observability tools.">
-                                CloudWatch, X-Ray ve observability araçlarıyla sistem izleme ve log analizi.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert2Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert2Desc">CloudWatch, X-Ray ve observability araçlarıyla sistem izleme ve log analizi.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">CloudWatch</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Monitoring</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">CloudWatch</span>
+                                <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-300 rounded-full">Monitoring</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 3: JPMorgan Chase Software Engineering Job Simulation -->
+                <!-- Cert 3: JPMorgan Chase -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.05s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center flex-shrink-0 relative">
-                            <i class="fas fa-university text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center flex-shrink-0 relative"><i class="fas fa-university text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Software Engineering Job Simulation</h3>
-                            <p class="text-yellow-500 text-sm mb-2 font-semibold">JPMorgan Chase & Co. - Forage</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Gerçek dünya yazılım mühendisliği görevleri, finansal teknoloji projeleri ve enterprise ölçekli uygulama geliştirme deneyimi."
-                                data-en="Real-world software engineering tasks, financial technology projects, and enterprise-scale application development experience.">
-                                Gerçek dünya yazılım mühendisliği görevleri, finansal teknoloji projeleri ve enterprise
-                                ölçekli uygulama geliştirme deneyimi.
-                            </p>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert3Title">Software Engineering Job Simulation</h3>
+                            <p class="text-yellow-500 text-sm mb-2 font-semibold">JPMorgan Chase &amp; Co. - Forage</p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert3Date">2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert3Desc">Gerçek dünya yazılım mühendisliği görevleri, finansal teknoloji projeleri ve enterprise ölçekli uygulama geliştirme deneyimi.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">FinTech</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Software Engineering</span>
@@ -986,48 +852,31 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 4: Introduction to MLOps -->
+                <!-- Cert 4: Introduction to MLOps -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.2s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-microsoft text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-microsoft text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Introduction to MLOps</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert4Title">Introduction to MLOps</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="ML model yaşam döngüsü yönetimi, model dağıtımı ve MLOps pipeline mimarisi."
-                                data-en="ML model lifecycle management, model deployment, and MLOps pipeline architecture.">
-                                ML model yaşam döngüsü yönetimi, model dağıtımı ve MLOps pipeline mimarisi.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert4Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert4Desc">ML model yaşam döngüsü yönetimi, model dağıtımı ve MLOps pipeline mimarisi.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">MLOps</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Model
-                                    Deployment</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Model Deployment</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 5: Introduction to DevOps -->
+                <!-- Cert 5: Introduction to DevOps -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.25s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-microsoft text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-microsoft text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Introduction to DevOps</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert5Title">Introduction to DevOps</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="DevOps kültürü, Agile metodolojileri ve sürekli teslimat pratikleri."
-                                data-en="DevOps culture, Agile methodologies, and continuous delivery practices.">
-                                DevOps kültürü, Agile metodolojileri ve sürekli teslimat pratikleri.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert5Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert5Desc">DevOps kültürü, Agile metodolojileri ve sürekli teslimat pratikleri.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">DevOps</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Agile</span>
@@ -1035,73 +884,47 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 6: LLMOps -->
+                <!-- Cert 6: LLMOps -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.3s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-google text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-google text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">LLMOps</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert6Title">LLMOps</h3>
                             <p class="text-purple-400 text-sm mb-2">Google Cloud Education</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Büyük dil modellerinin operasyonelleştirilmesi, dağıtımı ve yönetimi."
-                                data-en="Operationalization, deployment, and management of large language models.">
-                                Büyük dil modellerinin operasyonelleştirilmesi, dağıtımı ve yönetimi.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert6Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert6Desc">Büyük dil modellerinin operasyonelleştirilmesi, dağıtımı ve yönetimi.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Google
-                                    Cloud</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Google Cloud</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">LLM</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 7: Machine Learning in Production -->
+                <!-- Cert 7: Machine Learning in Production -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.35s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-industry text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center flex-shrink-0"><i class="fas fa-industry text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Machine Learning in Production</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert7Title">Machine Learning in Production</h3>
                             <p class="text-purple-400 text-sm mb-2">DeepLearning.AI</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="ML modellerinin canlı ortamlarda ölçeklenebilir ve güvenilir şekilde sunulması."
-                                data-en="Deploying scalable and reliable ML models in production environments.">
-                                ML modellerinin canlı ortamlarda ölçeklenebilir ve güvenilir şekilde sunulması.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert7Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert7Desc">ML modellerinin canlı ortamlarda ölçeklenebilir ve güvenilir şekilde sunulması.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">MLOps</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">Production</span>
+                                <span class="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded-full">Production</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 8: Automated Testing for LLMOps -->
+                <!-- Cert 8: Automated Testing for LLMOps -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.4s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-cogs text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center flex-shrink-0"><i class="fas fa-cogs text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Automated Testing for LLMOps</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert8Title">Automated Testing for LLMOps</h3>
                             <p class="text-purple-400 text-sm mb-2">CircleCI</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="LLM uygulamaları için sürekli entegrasyon ve otomatik test süreçlerinin yönetimi."
-                                data-en="Management of continuous integration and automated testing processes for LLM applications.">
-                                LLM uygulamaları için sürekli entegrasyon ve otomatik test süreçlerinin yönetimi.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert8Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert8Desc">LLM uygulamaları için sürekli entegrasyon ve otomatik test süreçlerinin yönetimi.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">LLMOps</span>
                                 <span class="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full">CI/CD</span>
@@ -1109,182 +932,111 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 9: CI/CD Fundamentals with GitHub Actions -->
+                <!-- Cert 9: CI/CD Fundamentals -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.45s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-microsoft text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-microsoft text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">CI/CD Fundamentals with GitHub Actions</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert9Title">CI/CD Fundamentals with GitHub Actions</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="GitHub Actions ile sürekli entegrasyon ve sürekli dağıtım pipeline oluşturma."
-                                data-en="Building continuous integration and continuous deployment pipelines with GitHub Actions.">
-                                GitHub Actions ile sürekli entegrasyon ve sürekli dağıtım pipeline oluşturma.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert9Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert9Desc">GitHub Actions ile sürekli entegrasyon ve sürekli dağıtım pipeline oluşturma.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">GitHub
-                                    Actions</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">GitHub Actions</span>
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">CI/CD</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 10: Plan Agile with GitHub Projects and Azure Boards -->
+                <!-- Cert 10: Plan Agile -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.5s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fab fa-microsoft text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0"><i class="fab fa-microsoft text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Plan Agile with Projects & Boards</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert10Title">Plan Agile with Projects &amp; Boards</h3>
                             <p class="text-purple-400 text-sm mb-2">Microsoft Learning</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Scrum, Agile proje yönetimi ve Azure DevOps ile takım işbirliği."
-                                data-en="Scrum, Agile project management, and team collaboration with Azure DevOps.">
-                                Scrum, Agile proje yönetimi ve Azure DevOps ile takım işbirliği.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert10Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert10Desc">Scrum, Agile proje yönetimi ve Azure DevOps ile takım işbirliği.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Scrum</span>
-                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Azure
-                                    Boards</span>
+                                <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full">Azure Boards</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 11: Evaluating and Debugging Generative AI -->
+                <!-- Cert 11: Evaluating and Debugging GenAI -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.55s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-bug text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center flex-shrink-0"><i class="fas fa-bug text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Evaluating and Debugging GenAI</h3>
-                            <p class="text-purple-400 text-sm mb-2">Weights & Biases</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Üretken yapay zeka modellerinin performans analizi, hata ayıklama ve validasyonu."
-                                data-en="Performance analysis, debugging, and validation of generative AI models.">
-                                Üretken yapay zeka modellerinin performans analizi, hata ayıklama ve validasyonu.
-                            </p>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert11Title">Evaluating and Debugging GenAI</h3>
+                            <p class="text-purple-400 text-sm mb-2">Weights &amp; Biases</p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert11Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert11Desc">Üretken yapay zeka modellerinin performans analizi, hata ayıklama ve validasyonu.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">GenAI</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">Debugging</span>
+                                <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">GenAI</span>
+                                <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-full">Debugging</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 12: Effective Use of Artificial Intelligence -->
+                <!-- Cert 12: Effective Use of AI -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.6s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-brain text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-brain text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Effective Use of AI</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert12Title">Effective Use of AI</h3>
                             <p class="text-purple-400 text-sm mb-2">Workshopers</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Yapay zeka araçlarını verimli kullanma, prompt mühendisliği ve AI entegrasyonu."
-                                data-en="Efficient use of AI tools, prompt engineering, and AI integration strategies.">
-                                Yapay zeka araçlarını verimli kullanma, prompt mühendisliği ve AI entegrasyonu.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert12Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert12Desc">Yapay zeka araçlarını verimli kullanma, prompt mühendisliği ve AI entegrasyonu.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">AI</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">Prompt Eng</span>
+                                <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full">Prompt Eng</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 13: Agility: İş Hayatında Çeviklik -->
+                <!-- Cert 13: Agility -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.65s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-running text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0"><i class="fas fa-running text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Agility: İş Hayatında Çeviklik" data-en="Agility: Agile in Business Life">
-                                Agility: İş Hayatında Çeviklik</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert13Title">Agility: İş Hayatında Çeviklik</h3>
                             <p class="text-purple-400 text-sm mb-2">NeoSkola</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="İş hayatında çevik düşünce yapısı ve adaptasyon becerileri."
-                                data-en="Agile mindset and adaptation skills in business environment.">
-                                İş hayatında çevik düşünce yapısı ve adaptasyon becerileri.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert13Date">2025</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert13Desc">İş hayatında çevik düşünce yapısı ve adaptasyon becerileri.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Agile</span>
+                                <span class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Agile</span>
                                 <span class="text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded-full">Adaptation</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 14: Finansta Gelecek Eğitmen Eğitimi -->
+                <!-- Cert 14: Finansta Gelecek -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.7s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-chalkboard-teacher text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center flex-shrink-0"><i class="fas fa-chalkboard-teacher text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Finansta Gelecek Eğitmen Eğitimi"
-                                data-en="Future in Finance Trainer Education">Finansta Gelecek Eğitmen Eğitimi</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert14Title">Finansta Gelecek Eğitmen Eğitimi</h3>
                             <p class="text-purple-400 text-sm mb-2">Habitat Derneği</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>Ocak 2026</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="Finansal okuryazarlık ve eğitmenlik becerileri geliştirme programı."
-                                data-en="Financial literacy and instructor skills development program.">
-                                Finansal okuryazarlık ve eğitmenlik becerileri geliştirme programı.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert14Date">Ocak 2026</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert14Desc">Finansal okuryazarlık ve eğitmenlik becerileri geliştirme programı.</p>
                             <div class="flex flex-wrap gap-1">
-                                <span
-                                    class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Eğitim</span>
-                                <span
-                                    class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Finans</span>
+                                <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Eğitim</span>
+                                <span class="text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded-full">Finans</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 15: PSEA - UNICEF -->
+                <!-- Cert 15: PSEA - UNICEF -->
                 <div class="glass-card p-6 rounded-2xl slide-up glow-border" style="animation-delay: 0.75s">
                     <div class="flex items-start gap-4">
-                        <div
-                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-globe text-2xl text-white"></i>
-                        </div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"><i class="fas fa-globe text-2xl text-white"></i></div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1 cert-title"
-                                data-tr="Cinsel Sömürü ve İstismarın Önlenmesi (PSEA)"
-                                data-en="Prevention of Sexual Exploitation and Abuse (PSEA)">Cinsel Sömürü ve İstismarın
-                                Önlenmesi (PSEA)</h3>
+                            <h3 class="text-lg font-bold text-white mb-1" data-i18n="cert15Title">Cinsel Sömürü ve İstismarın Önlenmesi (PSEA)</h3>
                             <p class="text-purple-400 text-sm mb-2">UNICEF</p>
-                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i>2025</p>
-                            <p class="text-gray-400 text-xs mb-3 cert-desc"
-                                data-tr="UNICEF standartlarında cinsel sömürü ve istismarı önleme eğitimi."
-                                data-en="Prevention of Sexual Exploitation and Abuse training per UNICEF standards.">
-                                UNICEF standartlarında cinsel sömürü ve istismarı önleme eğitimi.
-                            </p>
+                            <p class="text-gray-500 text-xs mb-2"><i class="far fa-calendar-alt mr-1"></i><span data-i18n="cert15Date">2025</span></p>
+                            <p class="text-gray-400 text-xs mb-3" data-i18n="cert15Desc">UNICEF standartlarında cinsel sömürü ve istismarı önleme eğitimi.</p>
                             <div class="flex flex-wrap gap-1">
                                 <span class="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">UNICEF</span>
                                 <span class="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">PSEA</span>
@@ -1298,10 +1050,9 @@
             <div class="text-center mt-10 slide-up" style="animation-delay: 0.6s">
                 <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/details/certifications/"
                     target="_blank"
-                    class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white"
-                    data-tr="Tüm Sertifikaları Gör" data-en="View All Certifications">
+                    class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white">
                     <i class="fab fa-linkedin"></i>
-                    <span>Tüm Sertifikaları Gör</span>
+                    <span data-i18n="btnAllCerts">Tüm Sertifikaları Gör</span>
                 </a>
             </div>
         </div>
@@ -1310,53 +1061,30 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Öne Çıkan Projeler
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-i18n="projTitle">Öne Çıkan Projeler</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 - GhostCost (Signature Project) -->
+                <!-- Project 1 - GhostCost -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.1s">
-                    <div
-                        class="bg-gradient-to-br from-emerald-500 to-green-600 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-ghost text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">GhostCost ⚡</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Multi-cloud (AWS/Azure) altyapılarında kontrolsüz maliyet artışları ve fatura anomalilerinin manuel takibi yüksek hata payı barındırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        ClickHouse tabanlı yüksek performanslı telemetri motoru ve **Isolation Forest** algoritmalarını kullanarak, bulut harcamalarını gerçek zamanlı analiz eden bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Yapay zeka destekli anomali tespiti ile gereksiz harcamalar %30 optimize edildi ve maliyet sızıntıları doğal dilde (Ollama 3.1) raporlanabilir hale geldi.</p>
+                    <div class="bg-gradient-to-br from-emerald-500 to-green-600 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-ghost text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj1Title">GhostCost ⚡</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj1Desc"><span class="font-semibold text-gray-200">Problem:</span> Multi-cloud (AWS/Azure) altyapılarında kontrolsüz maliyet artışları ve fatura anomalilerinin manuel takibi yüksek hata payı barındırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> ClickHouse tabanlı yüksek performanslı telemetri motoru ve <b>Isolation Forest</b> algoritmalarını kullanarak, bulut harcamalarını gerçek zamanlı analiz eden bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yapay zeka destekli anomali tespiti ile gereksiz harcamalar %30 optimize edildi ve maliyet sızıntıları doğal dilde (Ollama 3.1) raporlanabilir hale geldi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Python (Scikit-learn)</span>
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">FastAPI</span>
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">ClickHouse</span>
-                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">AWS & Azure SDK</span>
+                        <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">AWS &amp; Azure SDK</span>
                         <span class="text-xs px-3 py-1 bg-emerald-500/20 rounded-full">Next.js</span>
                     </div>
                     <div class="flex gap-4">
-                        <a href="https://ghostcost.com" target="_blank"
-                            class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-semibold"
-                            data-tr="Canlı Siteyi Gör" data-en="View Live Site">
-                            <i class="fas fa-external-link-alt"></i><span>Canlı Siteyi Gör</span>
-                        </a>
-                        <a href="https://github.com/omercangumus" target="_blank"
-                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                            data-tr="GitHub Profilim" data-en="GitHub Profile">
-                            <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                        </a>
+                        <a href="https://ghostcost.com" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-semibold"><i class="fas fa-external-link-alt"></i><span data-i18n="btnLiveSite">Canlı Siteyi Gör</span></a>
+                        <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                     </div>
                 </div>
-
-                <!-- Project 2 - SiberMiras (Signature Project) -->
+                <!-- Project 2 - SiberMiras -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.15s">
-                    <div
-                        class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">SiberMiras 🚀</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Dijital varlıkların yasal devri için ölçeklenebilir ve güvenli bir teknik altyapı eksikliği mevcuttu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS üzerinde Dockerize edilmiş mikroservis mimarisini; ECS, RDS ve S3 kullanarak kurguladım. Altyapı yönetimini Terraform (IaC) ile otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Multi-AZ deployment ve auto-scaling ile %99.9 uptime sağlayan, Türkiye'nin ilk bulut tabanlı dijital miras platformunun MVP'si yayına alındı.</p>
+                    <div class="bg-gradient-to-br from-green-600 to-teal-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-shield-alt text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj2Title">SiberMiras 🚀</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj2Desc"><span class="font-semibold text-gray-200">Problem:</span> Dijital varlıkların yasal devri için ölçeklenebilir ve güvenli bir teknik altyapı eksikliği mevcuttu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS üzerinde Dockerize edilmiş mikroservis mimarisini; ECS, RDS ve S3 kullanarak kurguladım. Altyapı yönetimini Terraform (IaC) ile otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Multi-AZ deployment ve auto-scaling ile %99.9 uptime sağlayan, Türkiye'nin ilk bulut tabanlı dijital miras platformunun MVP'si yayına alındı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">AWS (ECS/ECR/RDS)</span>
                         <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Docker</span>
@@ -1365,78 +1093,41 @@
                         <span class="text-xs px-3 py-1 bg-green-500/20 rounded-full">Route53</span>
                     </div>
                     <div class="flex gap-4">
-                        <a href="https://www.siber-miras.com" target="_blank"
-                            class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-semibold"
-                            data-tr="Canlı Siteyi Gör" data-en="View Live Site">
-                            <i class="fas fa-external-link-alt"></i><span>Canlı Siteyi Gör</span>
-                        </a>
-                        <a href="https://github.com/omercangumus" target="_blank"
-                            class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                            data-tr="GitHub Profilim" data-en="GitHub Profile">
-                            <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                        </a>
+                        <a href="https://www.siber-miras.com" target="_blank" class="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-semibold"><i class="fas fa-external-link-alt"></i><span data-i18n="btnLiveSite">Canlı Siteyi Gör</span></a>
+                        <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                     </div>
                 </div>
-
                 <!-- Project 3 - Cloud-Native Reliability -->
                 <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.2s">
-                    <div
-                        class="bg-gradient-to-br from-indigo-600 to-purple-600 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-network-wired text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud-Native Reliability Platform</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Dağıtık mikroservis sistemlerindeki performans kayıplarının manuel izleme ile tespit edilmesi zaman alıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Prometheus verilerini işleyen **Z-Score** ve **EMA** algoritmalarını kullanarak, Kubernetes üzerinde self-healing kabiliyetine sahip otonom bir yapı kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sistem kesinti süreleri (MTTR) %50 azaltıldı ve anomaliler kullanıcıya yansımadan otonom olarak önlendi.</p>
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-network-wired text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj3Title">Cloud-Native Reliability Platform</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj3Desc"><span class="font-semibold text-gray-200">Problem:</span> Dağıtık mikroservis sistemlerindeki performans kayıplarının manuel izleme ile tespit edilmesi zaman alıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Prometheus verilerini işleyen <b>Z-Score</b> ve <b>EMA</b> algoritmalarını kullanarak, Kubernetes üzerinde self-healing kabiliyetine sahip otonom bir yapı kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sistem kesinti süreleri (MTTR) %50 azaltıldı ve anomaliler kullanıcıya yansımadan otonom olarak önlendi.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
                         <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Kubernetes (EKS)</span>
                         <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Prometheus</span>
                         <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Python (Anomali Analizi)</span>
                         <span class="px-3 py-1 bg-indigo-500/20 rounded-full">Terraform</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </article>
-
                 <!-- Project 4 - Star-Ops -->
                 <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.25s">
-                    <div
-                        class="bg-gradient-to-br from-gray-800 to-black h-40 rounded-xl mb-4 border border-gray-700 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-satellite text-6xl text-gray-300 opacity-70 z-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Star-Ops — Edge-MLOps Platform</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Uydu telemetri verilerinin gerçek zamanlı analizi ve anomali tespiti için düşük gecikmeli bir mimari ihtiyacı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        **Isolation Forest** ve **LSTM** modellerini kapsayan ensemble bir ML motoru geliştirerek, Edge-MLOps prensipleriyle çalışan bir takip sistemi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Donanım arızaları %95 doğrulukla öngörüldü ve D3.js ile operatörlere canlı analiz paneli sunuldu.</p>
+                    <div class="bg-gradient-to-br from-gray-800 to-black h-40 rounded-xl mb-4 border border-gray-700 flex items-center justify-center relative overflow-hidden"><i class="fas fa-satellite text-6xl text-gray-300 opacity-70 z-10"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj4Title">Star-Ops — Edge-MLOps Platform</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj4Desc"><span class="font-semibold text-gray-200">Problem:</span> Uydu telemetri verilerinin gerçek zamanlı analizi ve anomali tespiti için düşük gecikmeli bir mimari ihtiyacı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> <b>Isolation Forest</b> ve <b>LSTM</b> modellerini kapsayan ensemble bir ML motoru geliştirerek, Edge-MLOps prensipleriyle çalışan bir takip sistemi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Donanım arızaları %95 doğrulukla öngörüldü ve D3.js ile operatörlere canlı analiz paneli sunuldu.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">FastAPI & Python</span>
+                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">FastAPI &amp; Python</span>
                         <span class="px-3 py-1 bg-gray-700/50 rounded-full">ML (LSTM/Ensemble)</span>
                         <span class="px-3 py-1 bg-gray-700/50 rounded-full">PostgreSQL</span>
-                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">React & D3.js</span>
+                        <span class="px-3 py-1 bg-gray-700/50 rounded-full">React &amp; D3.js</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </article>
-
                 <!-- Project 5 - Cloud Order System -->
                 <article class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.3s">
-                    <div
-                        class="bg-gradient-to-br from-orange-500 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud Order — MLOps Integration</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        E-ticaret akışındaki sistem hatalarının manuel takibi ölçeklenebilirliği kısıtlıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Sipariş loglarını analiz eden **Isolation Forest** modelini eğitip, CI/CD süreçlerine MLOps pipeline olarak entegre ederek AWS üzerinde kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Hatalı siparişler saniyeler içinde tespit edilerek Prometheus ve CloudWatch üzerinden anlık alarm olarak iletildi.</p>
+                    <div class="bg-gradient-to-br from-orange-500 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-shopping-cart text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj5Title">Cloud Order — MLOps Integration</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj5Desc"><span class="font-semibold text-gray-200">Problem:</span> E-ticaret akışındaki sistem hatalarının manuel takibi ölçeklenebilirliği kısıtlıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Sipariş loglarını analiz eden <b>Isolation Forest</b> modelini eğitip, CI/CD süreçlerine MLOps pipeline olarak entegre ederek AWS üzerinde kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Hatalı siparişler saniyeler içinde tespit edilerek Prometheus ve CloudWatch üzerinden anlık alarm olarak iletildi.</p>
                     <div class="flex flex-wrap gap-2 text-xs mb-4">
                         <span class="px-3 py-1 bg-orange-500/20 rounded-full">ML (Scikit-learn)</span>
                         <span class="px-3 py-1 bg-orange-500/20 rounded-full">Python Core</span>
@@ -1444,201 +1135,109 @@
                         <span class="px-3 py-1 bg-orange-500/20 rounded-full">AWS CloudWatch</span>
                         <span class="px-3 py-1 bg-orange-500/20 rounded-full">FastAPI</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </article>
-
                 <!-- Project 6 - AIOps Anomaly Detection -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.35s">
-                    <div
-                        class="bg-gradient-to-br from-purple-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AIOps Anomali Tespit Sistemi</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Sunucu loglarındaki performans sızıntılarının klasik eşik değer (threshold) uyarılarıyla geç yakalanması.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Prometheus metriklerini ML modelleriyle besleyerek, dinamik eşik değerleri oluşturan bir analiz modülü geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Yanlış alarmlar (false positives) %40 azaltıldı ve proaktif sistem bakımı için doğru veri akışı sağlandı.</p>
+                    <div class="bg-gradient-to-br from-purple-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-chart-line text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj6Title">AIOps Anomali Tespit Sistemi</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj6Desc"><span class="font-semibold text-gray-200">Problem:</span> Sunucu loglarındaki performans sızıntılarının klasik eşik değer (threshold) uyarılarıyla geç yakalanması.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Prometheus metriklerini ML modelleriyle besleyerek, dinamik eşik değerleri oluşturan bir analiz modülü geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yanlış alarmlar (false positives) %40 azaltıldı ve proaktif sistem bakımı için doğru veri akışı sağlandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Python</span>
                         <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Prometheus (PromQL)</span>
                         <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">ML Algorithms</span>
                         <span class="text-xs px-3 py-1 bg-purple-500/20 rounded-full">Grafana</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 7 - Infrastructure Automation -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.4s">
-                    <div
-                        class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-cubes text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AIOps Infrastructure (IaC) ☁️</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Dağınık AWS kaynaklarının manuel yönetimi, konfigürasyon sürüklenmesine (drift) ve ortamlar arası uyumsuzluklara yol açıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        AWS altyapısını Terraform kullanarak modüler bir IaC yapısına taşıdım. Lambda ve Docker tabanlı servislerin provizyonunu otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Altyapı kurulum hızı 10 kat arttı ve %100 tekrarlanabilir, versiyonlanmış bir bulut topolojisi oluşturuldu.</p>
+                    <div class="bg-gradient-to-br from-blue-600 to-cyan-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-cubes text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj7Title">AIOps Infrastructure (IaC) ☁️</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj7Desc"><span class="font-semibold text-gray-200">Problem:</span> Dağınık AWS kaynaklarının manuel yönetimi, konfigürasyon sürüklenmesine (drift) ve ortamlar arası uyumsuzluklara yol açıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS altyapısını Terraform kullanarak modüler bir IaC yapısına taşıdım. Lambda ve Docker tabanlı servislerin provizyonunu otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Altyapı kurulum hızı 10 kat arttı ve %100 tekrarlanabilir, versiyonlanmış bir bulut topolojisi oluşturuldu.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Terraform</span>
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">AWS Lambda</span>
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">Docker</span>
                         <span class="text-xs px-3 py-1 bg-blue-500/20 rounded-full">HCL</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 8 - CI/CD Pipeline -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.45s">
-                    <div
-                        class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-code-branch text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">AWS CI/CD Automation ⚙️</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Manuel dağıtımların yarattığı operasyonel riskler ve uzun 'time-to-market' süreleri hata payını artırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        GitHub Actions ve AWS CodeDeploy entegrasyonu ile Docker tabanlı image'ların sunulduğu uçtan uca bir CI/CD pipeline kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Dağıtım hataları minimize edildi ve zero-downtime deployment (blue-green) stratejisi başarıyla uygulandı.</p>
+                    <div class="bg-gradient-to-br from-purple-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-code-branch text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj8Title">AWS CI/CD Automation ⚙️</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj8Desc"><span class="font-semibold text-gray-200">Problem:</span> Manuel dağıtımların yarattığı operasyonel riskler ve uzun 'time-to-market' süreleri hata payını artırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> GitHub Actions ve AWS CodeDeploy entegrasyonu ile Docker tabanlı image'ların sunulduğu uçtan uca bir CI/CD pipeline kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Dağıtım hataları minimize edildi ve zero-downtime deployment (blue-green) stratejisi başarıyla uygulandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">AWS CodePipeline</span>
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">Docker</span>
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">GitHub Actions</span>
                         <span class="text-xs px-3 py-1 bg-pink-500/20 rounded-full">CodeDeploy</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 9 - Serverless Log Analyzer -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.5s">
-                    <div
-                        class="bg-gradient-to-br from-orange-600 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-file-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Serverless Log Analyzer ⚡</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Farklı AWS region'larından gelen yüksek hacimli log verilerinin maliyet etkin bir şekilde analiz edilmesi gerekiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        S3 ve Lambda kullanarak olay bazlı (event-driven) tetiklenen, sunucusuz bir veri işleme mimarisi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sabit sunucu maliyetleri ortadan kalktı ve pay-as-you-go modeliyle işlem başına ödeme prensibi uygulandı.</p>
+                    <div class="bg-gradient-to-br from-orange-600 to-red-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-file-alt text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj9Title">Sunucusuz Log Analizörü ⚡</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj9Desc"><span class="font-semibold text-gray-200">Problem:</span> Farklı AWS region'larından gelen yüksek hacimli log verilerinin maliyet etkin bir şekilde analiz edilmesi gerekiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> S3 ve Lambda kullanarak olay bazlı (event-driven) tetiklenen, sunucusuz bir veri işleme mimarisi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sabit sunucu maliyetleri ortadan kalktı ve pay-as-you-go modeliyle işlem başına ödeme prensibi uygulandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">AWS Lambda</span>
                         <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">Amazon S3</span>
                         <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">CloudWatch Metrics</span>
                         <span class="text-xs px-3 py-1 bg-orange-500/20 rounded-full">Python Core</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 10 - Cloud Architecture Patterns -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.55s">
-                    <div
-                        class="bg-gradient-to-br from-yellow-600 to-orange-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-project-diagram text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Cloud Resiliency Patterns 🛡️</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Kritik bulut servislerindeki geçici hata ve kesintilere karşı uygulamaların dayanıklılık (resilience) seviyesi düşüktü.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Java AWS SDK kullanarak **Circuit Breaker** ve **Retry** desenlerini uyguladığım bir hata tolerans kütüphanesi geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Sistemlerin self-recovery kabiliyeti artırıldı ve API hata oranları %25 oranında düşürüldü.</p>
+                    <div class="bg-gradient-to-br from-yellow-600 to-orange-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-project-diagram text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj10Title">Bulut Mimari Desenleri 🛡️</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj10Desc"><span class="font-semibold text-gray-200">Problem:</span> Kritik bulut servislerindeki geçici hata ve kesintilere karşı uygulamaların dayanıklılık (resilience) seviyesi düşüktü.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Java AWS SDK kullanarak <b>Circuit Breaker</b> ve <b>Retry</b> desenlerini uyguladığım bir hata tolerans kütüphanesi geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sistemlerin self-recovery kabiliyeti artırıldı ve API hata oranları %25 oranında düşürüldü.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Java Core</span>
                         <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">AWS SDK</span>
                         <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Cloud Patterns</span>
                         <span class="text-xs px-3 py-1 bg-yellow-500/20 rounded-full">Resilience Design</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 11 - Hybrid Cloud Backup -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.6s">
-                    <div
-                        class="bg-gradient-to-br from-cyan-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-cloud-upload-alt text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Hybrid Cloud Data Backup 💾</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Azure ve lokal verilerin AWS S3 üzerinde felaket kurtarma (DR) merkezi oluşturularak yedeklenmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Boto3 kütüphanesi kullanarak cross-cloud veri transferini otomatize eden Python betikleri ve lifecycle politikaları kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Veri saklama maliyetleri Glacier S3 kullanımıyla optimize edildi ve veri dönüş hızı (RTO) iyileştirildi.</p>
+                    <div class="bg-gradient-to-br from-cyan-600 to-blue-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-cloud-upload-alt text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj11Title">Hibrit Bulut Yedekleme Çözümü 💾</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj11Desc"><span class="font-semibold text-gray-200">Problem:</span> Azure ve lokal verilerin AWS S3 üzerinde felaket kurtarma (DR) merkezi oluşturularak yedeklenmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Boto3 kütüphanesi kullanarak cross-cloud veri transferini otomatize eden Python betikleri ve lifecycle politikaları kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Veri saklama maliyetleri Glacier S3 kullanımıyla optimize edildi ve veri dönüş hızı (RTO) iyileştirildi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Python (Boto3)</span>
                         <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">Azure Blob Storage</span>
                         <span class="text-xs px-3 py-1 bg-cyan-500/20 rounded-full">AWS S3 Glacier</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 12 - Digital Footprint -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.65s">
-                    <div
-                        class="bg-gradient-to-br from-red-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-user-secret text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Digital Footprint Scanner 🔍</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        OSINT verilerinin dağınık olması ve bireysel sızıntı maruziyetinin ölçülememesi güvenlik açığı oluşturuyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        Çeşitli güvenlik API'larını birleştiren, Python tabanlı bir dijital ayak izi tarayıcı ve analiz motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Kullanıcılar için proaktif sızıntı kontrolleri ve veriye dayalı risk skoru raporlama imkanı sağlandı.</p>
+                    <div class="bg-gradient-to-br from-red-600 to-pink-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-user-secret text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj12Title">Dijital Ayak İzi (Digital Footprint) 🔍</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj12Desc"><span class="font-semibold text-gray-200">Problem:</span> OSINT verilerinin dağınık olması ve bireysel sızıntı maruziyetinin ölçülememesi güvenlik açığı oluşturuyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Çeşitli güvenlik API'larını birleştiren, Python tabanlı bir dijital ayak izi tarayıcı ve analiz motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Kullanıcılar için proaktif sızıntı kontrolleri ve veriye dayalı risk skoru raporlama imkanı sağlandı.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Python Core</span>
                         <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">OSINT Tools</span>
                         <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Security APIs</span>
                         <span class="text-xs px-3 py-1 bg-red-500/20 rounded-full">Matplotlib</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
-
                 <!-- Project 13 - Bank Automation -->
                 <div class="project-card p-6 rounded-2xl slide-up" style="animation-delay: 0.7s">
-                    <div
-                        class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center">
-                        <i class="fas fa-university text-6xl text-white opacity-50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Enterprise Bank Automation 🏦</h3>
-                    <p class="text-sm text-gray-400 mb-4"><span class="font-semibold text-gray-200">Problem:</span>
-                        Kurumsal finansal modellerin, temiz kod ve SOLID prensiplerine sadık kalarak yazılım mimarisine dönüştürülmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span>
-                        C# ve MSSQL tabanlı, miras (inheritance) ve kapsülleme tekniklerinin uygulandığı modüler bir banka otomasyonu kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span>
-                        Yüksek sürdürülebilirlik seviyesine sahip, katmanlı bir yazılım mimarisi başarılı bir şekilde hayata geçirildi.</p>
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-500 h-40 rounded-xl mb-4 flex items-center justify-center"><i class="fas fa-university text-6xl text-white opacity-50"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="proj13Title">Enterprise Bank Automation 🏦</h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="proj13Desc"><span class="font-semibold text-gray-200">Problem:</span> Kurumsal finansal modellerin, temiz kod ve SOLID prensiplerine sadık kalarak yazılım mimarisine dönüştürülmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> C# ve MSSQL tabanlı, miras (inheritance) ve kapsülleme tekniklerinin uygulandığı modüler bir banka otomasyonu kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yüksek sürdürülebilirlik seviyesine sahip, katmanlı bir yazılım mimarisi başarılı bir şekilde hayata geçirildi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">C# (.NET)</span>
                         <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">MSSQL</span>
                         <span class="text-xs px-3 py-1 bg-indigo-500/20 rounded-full">OOP Principles</span>
                     </div>
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"
-                        data-tr="GitHub Profilim" data-en="GitHub Profile">
-                        <i class="fab fa-github"></i><span>GitHub Profilim</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors font-semibold"><i class="fab fa-github"></i><span data-i18n="btnGithubProfile">GitHub Profilim</span></a>
                 </div>
             </div>
         </div>
@@ -1647,41 +1246,23 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 mb-20">
         <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up">
-                Proje Talebi & İletişim
-            </h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text slide-up" data-i18n="contactTitle">Proje Talebi &amp; İletişim</h2>
             <div class="glass-card p-8 md:p-12 rounded-3xl slide-up text-center" style="animation-delay: 0.2s">
-                <p class="text-xl text-gray-300 mb-8">
-                    Küresel ölçekli projeleriniz, teknik danışmanlık veya iş birliği talepleriniz için bana ulaşabilirsiniz.
-                </p>
+                <p class="text-xl text-gray-300 mb-8" data-i18n="contactDesc">Küresel ölçekli projeleriniz, teknik danışmanlık veya iş birliği talepleriniz için bana ulaşabilirsiniz.</p>
                 <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-8">
-                    <a href="mailto:omercangumus3@gmail.com"
-                        class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
+                    <a href="mailto:omercangumus3@gmail.com" class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
                         <i class="fas fa-envelope text-2xl"></i>
                         <span>omercangumus3@gmail.com</span>
                     </a>
-                    <a href="tel:+905550546235"
-                        class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
+                    <a href="tel:+905550546235" class="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors">
                         <i class="fas fa-phone text-2xl"></i>
                         <span>+90 555 054 6235</span>
                     </a>
                 </div>
                 <div class="flex gap-8 justify-center">
-                    <a href="https://github.com/omercangumus" target="_blank"
-                        class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1">
-                        <i class="fab fa-github"></i>
-                        <span class="text-xs">GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank"
-                        class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="text-xs">LinkedIn</span>
-                    </a>
-                    <a href="https://medium.com/@omercangumus" target="_blank"
-                        class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1">
-                        <i class="fab fa-medium"></i>
-                        <span class="text-xs">Medium</span>
-                    </a>
+                    <a href="https://github.com/omercangumus" target="_blank" class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1"><i class="fab fa-github"></i><span class="text-xs">GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/%C3%B6mer-can-g%C3%BCm%C3%BC%C5%9F-a76950258/" target="_blank" class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1"><i class="fab fa-linkedin"></i><span class="text-xs">LinkedIn</span></a>
+                    <a href="https://medium.com/@omercangumus" target="_blank" class="social-icon text-3xl text-gray-400 flex flex-col items-center gap-1"><i class="fab fa-medium"></i><span class="text-xs">Medium</span></a>
                 </div>
             </div>
         </div>
@@ -1755,351 +1336,6 @@
             });
         });
 
-        // Language Switching
-        let currentLang = 'tr';
-
-        const translations = {
-            en: {
-                // Page title
-                title: 'Ömer Can Gümüş - System Infrastructure Intern at Beko Corporate',
-                // Hero
-                heroJob: 'System Infrastructure Intern at Beko Corporate',
-                heroTech: 'AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation',
-                // About
-                aboutTitle: 'About Me',
-                aboutP1: 'Software Engineering student and **System Infrastructure Intern** at **Beko Corporate**, working at the intersection of **AIOps**, **DevOps**, and **Cloud Computing**.',
-                aboutP2: 'I design, automate, and maintain scalable cloud-native environments — with a focus on cost-aware architecture and operational efficiency. My toolkit includes **AWS**, **Terraform (IaC)**, **Docker**, **Kubernetes**, **GitLab CI/CD**, and **Python**, which I use to automate workflows, improve observability, and keep deployments reliable in **Linux** environments.',
-                aboutP3: 'I care about building production systems that hold up under real-world load — **scalable, efficient, and built to last**.',
-                // Experience
-                expTitle: 'Experience',
-                exp1Tasks: [
-                    'SCCM environment modernization and patch management optimization',
-                    'System infrastructure operations and compliance analysis',
-                    'Infrastructure automation in Windows/Linux environments',
-                    'Collaboration with DevOps and infrastructure teams on enterprise workflows'
-                ],
-                exp2Date: 'December 2025 - July 2026',
-                exp2Title: 'AIOps Engineer | PREP Program',
-                exp2Company: 'Beko Corporate',
-                exp2Tasks: [
-                    'Log analysis from Docker-based and containerized applications',
-                    'Incident investigation and root cause analysis',
-                    'Understanding anomaly patterns and operational issues',
-                    'AIOps, monitoring and observability practices',
-                    'Collaboration with DevOps teams on enterprise workflows'
-                ],
-                exp3Date: 'December 2025 - Present',
-                exp3Title: 'Volunteer Instructor',
-                exp3Company: 'Habitat Association',
-                exp3Desc: 'Volunteer trainer on financial literacy, budget management, and strategic planning for youth.',
-                exp4Date: 'August 2025',
-                exp4Title: 'QNB 101 Online Internship',
-                exp4Company: 'QNB Turkey',
-                exp4Desc: 'Comprehensive technical training and vision program focused on banking technologies, Fintech trends, and digital transformation.',
-                exp5Date: 'October 2024',
-                exp5Title: 'Software Engineer',
-                exp5Company: 'Elmar Software - Elazığ',
-                exp5Desc: 'Contributed to real-world projects in the software development life cycle (SDLC), gaining experience in code development and test automation.',
-                exp6Date: 'June 2023 - Present',
-                exp6Title: 'Independent Developer',
-                exp6Company: 'Freelance - Bursa',
-                exp6Desc: 'Working on cloud-native solutions, AIOps projects, and DevOps automations.',
-                // Skills
-                skillsTitle: 'Skills',
-                // Projects (13 projects)
-                projectsTitle: 'Featured Projects',
-                proj1Title: 'GhostCost ⚡',
-                proj1Desc: '<span class="font-semibold text-gray-200">Problem:</span> Uncontrolled cost increases and manual tracking of billing anomalies in multi-cloud (AWS/Azure) infrastructures had a high margin of error.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed an AIOps platform that analyzes cloud expenses in real-time using a ClickHouse-based high-performance telemetry engine and Isolation Forest algorithms.<br><br><span class="font-semibold text-gray-200">Result:</span> Unnecessary expenses were optimized by 30% with AI-powered anomaly detection, and cost leaks became reportable in natural language (Ollama 3.1).',
-                proj2Title: 'SiberMiras 🚀',
-                proj2Desc: '<span class="font-semibold text-gray-200">Problem:</span> There was a lack of a scalable and secure technical infrastructure for the legal transfer of digital assets.<br><br><span class="font-semibold text-gray-200">Solution:</span> I built a microservice architecture on AWS using ECS, RDS, and S3, and automated infrastructure management with Terraform (IaC).<br><br><span class="font-semibold text-gray-200">Result:</span> An MVP of Turkey\'s first cloud-based digital legacy platform was launched, providing 99.9% uptime with multi-AZ deployment and auto-scaling.',
-                proj3Title: 'Cloud-Native Reliability Platform',
-                proj3Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manually detecting performance losses in distributed microservice systems was time-consuming.<br><br><span class="font-semibold text-gray-200">Solution:</span> Using Z-Score and EMA algorithms that process Prometheus data, I built an autonomous self-healing structure on Kubernetes.<br><br><span class="font-semibold text-gray-200">Result:</span> System downtime (MTTR) was reduced by 50%, and anomalies were prevented autonomously before affecting users.',
-                proj4Title: 'Star-Ops — Edge-MLOps Platform',
-                proj4Desc: '<span class="font-semibold text-gray-200">Problem:</span> Need for low-latency architecture for real-time analysis and anomaly detection of satellite telemetry data.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed an ensemble ML engine including Isolation Forest and LSTM models, and designed a tracking system working with Edge-MLOps principles.<br><br><span class="font-semibold text-gray-200">Result:</span> Hardware failures were predicted with 95% accuracy, and a live analysis dashboard was presented to operators using D3.js.',
-                proj5Title: 'Cloud Order — MLOps Integration',
-                proj5Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual tracking of system errors in e-commerce flows limited scalability.<br><br><span class="font-semibold text-gray-200">Solution:</span> I trained an Isolation Forest model to analyze order logs and integrated it into CI/CD processes as an MLOps pipeline on AWS.<br><br><span class="font-semibold text-gray-200">Result:</span> Erroneous orders were detected in seconds and sent as instant alerts via Prometheus and CloudWatch.',
-                proj6Title: 'AIOps Anomaly Detection System',
-                proj6Desc: '<span class="font-semibold text-gray-200">Problem:</span> Performance leaks in server logs were caught late with traditional threshold alerts.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed an analysis module that creates dynamic thresholds by feeding Prometheus metrics into ML models.<br><br><span class="font-semibold text-gray-200">Result:</span> False positives were reduced by 40%, ensuring accurate data flow for proactive system maintenance.',
-                proj7Title: 'AIOps Infrastructure (IaC) ☁️',
-                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual management of scattered AWS resources led to configuration drift and environment incompatibilities.<br><br><span class="font-semibold text-gray-200">Solution:</span> I moved the AWS infrastructure to a modular IaC structure using Terraform and automated the provisioning of Lambda and Docker-based services.<br><br><span class="font-semibold text-gray-200">Result:</span> Infrastructure provisioning speed increased 10x and a 100% repeatable, versioned cloud topology was created.',
-                proj8Title: 'AWS CI/CD Automation ⚙️',
-                proj8Desc: '<span class="font-semibold text-gray-200">Problem:</span> Operational risks of manual deployments and long time-to-market periods increased error margins.<br><br><span class="font-semibold text-gray-200">Solution:</span> I built an end-to-end CI/CD pipeline for Docker-based images using GitHub Actions and AWS CodeDeploy integration.<br><br><span class="font-semibold text-gray-200">Result:</span> Deployment errors were minimized, and a zero-downtime deployment (blue-green) strategy was successfully implemented.',
-                proj9Title: 'Serverless Log Analyzer ⚡',
-                proj9Desc: '<span class="font-semibold text-gray-200">Problem:</span> High-volume log data from different AWS regions needed to be analyzed cost-effectively.<br><br><span class="font-semibold text-gray-200">Solution:</span> I designed a serverless data processing architecture triggered by S3 and Lambda for event-driven processing.<br><br><span class="font-semibold text-gray-200">Result:</span> Fixed server costs were eliminated, applying pay-as-you-go principles for per-transaction billing.',
-                proj10Title: 'Cloud Resiliency Patterns 🛡️',
-                proj10Desc: '<span class="font-semibold text-gray-200">Problem:</span> Applications had low resilience levels against transient errors and outages in critical cloud services.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a fault tolerance library using Java AWS SDK, implementing Circuit Breaker and Retry patterns.<br><br><span class="font-semibold text-gray-200">Result:</span> System self-recovery capability was increased, and API error rates were reduced by 25%.',
-                proj11Title: 'Hybrid Cloud Data Backup 💾',
-                proj11Desc: '<span class="font-semibold text-gray-200">Problem:</span> Need to backup Azure and local data on AWS S3 to create a disaster recovery (DR) center.<br><br><span class="font-semibold text-gray-200">Solution:</span> I built automated cross-cloud data transfer scripts using Boto3 and set up lifecycle policies.<br><br><span class="font-semibold text-gray-200">Result:</span> Data storage costs were optimized using Glacier S3, and Recovery Time Objective (RTO) was improved.',
-                proj12Title: 'Digital Footprint Scanner 🔍',
-                proj12Desc: '<span class="font-semibold text-gray-200">Problem:</span> Scattered OSINT data and inability to measure individual exposure created security vulnerabilities.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed a Python-based digital footprint scanner and analysis engine that combines various security APIs.<br><br><span class="font-semibold text-gray-200">Result:</span> Proactive leak checks and data-driven risk score reporting were enabled for users.',
-                proj13Title: 'Enterprise Bank Automation 🏦',
-                proj13Desc: '<span class="font-semibold text-gray-200">Problem:</span> Necessity of transforming corporate financial models into software architecture following clean code and SOLID principles.<br><br><span class="font-semibold text-gray-200">Solution:</span> I designed a modular bank automation based on C# and MSSQL, applying inheritance and encapsulation techniques.<br><br><span class="font-semibold text-gray-200">Result:</span> A layered software architecture with a high level of sustainability was successfully implemented.',
-                // Contact
-                contactTitle: 'Get in Touch',
-                contactDesc: 'Feel free to reach out for projects or job opportunities.',
-                months: {
-                    'Ocak': 'January', 'Şubat': 'February', 'Mart': 'March', 'Nisan': 'April',
-                    'Mayıs': 'May', 'Haziran': 'June', 'Temmuz': 'July', 'Ağustos': 'August',
-                    'Eylül': 'September', 'Ekim': 'October', 'Kasım': 'November', 'Aralık': 'December',
-                    'Günümüz': 'Present'
-                }
-            },
-            tr: {
-                title: 'Ömer Can Gümüş - Beko Corporate\'te System Infrastructure Intern',
-                heroJob: 'Beko Corporate\'te System Infrastructure Intern',
-                heroTech: 'AWS & Python Core | Docker & Cloud-Native Systems | AI-Predictive Automation',
-                aboutTitle: 'Hakkımda',
-                aboutP1: 'Fırat Üniversitesi **Yazılım Mühendisliği** 3. sınıf öğrencisiyim ve **Beko Corporate**\'te **System Infrastructure Intern** olarak çalışıyorum. **AIOps**, **DevOps** ve **Cloud Computing** kesişiminde üretiyorum.',
-                aboutP2: 'Ölçeklenebilir cloud-native ortamlar tasarlıyor, otomatikleştiriyor ve yönetiyorum — maliyet bilinçli mimari ve operasyonel verimlilik odağımda. **AWS**, **Terraform (IaC)**, **Docker**, **Kubernetes**, **GitLab CI/CD** ve **Python** kullanarak iş akışlarını otomatikleştiriyor, observability\'yi güçlendiriyor ve **Linux** ortamlarında güvenilir deployment\'lar sağlıyorum.',
-                aboutP3: 'Gerçek dünya yükü altında ayakta kalan production sistemler kurmayı önemsiyorum — **ölçeklenebilir, verimli ve kalıcı**.',
-                expTitle: 'Deneyim',
-                exp1Date: 'Temmuz 2026 - Günümüz',
-                exp1Title: 'System Infrastructure Intern',
-                exp1Company: 'Beko Corporate',
-                exp1Tasks: [
-                    'SCCM ortamı modernizasyonu ve patch management optimizasyonu',
-                    'Sistem altyapısı operasyonları ve compliance analizi',
-                    'Windows/Linux ortamlarında altyapı otomasyonu',
-                    'DevOps ve altyapı ekipleriyle kurumsal iş akışlarında işbirliği'
-                ],
-                exp2Date: 'Aralık 2025 - Temmuz 2026',
-                exp2Title: 'AIOps Engineer | PREP Program',
-                exp2Company: 'Beko Corporate',
-                exp2Tasks: [
-                    'Docker tabanlı ve konteynerize uygulamalardan log analizi',
-                    'Temel olay inceleme ve kök neden analizi',
-                    'Anomali paternleri ve operasyonel sorunların anlaşılması',
-                    'AIOps, monitoring ve observability uygulamaları',
-                    'DevOps ekipleri ile kurumsal iş akışlarında işbirliği'
-                ],
-                exp3Date: 'Aralık 2025 - Günümüz',
-                exp3Title: 'Gönüllü Eğitmen',
-                exp3Company: 'Habitat Derneği',
-                exp3Desc: 'Finansal okuryazarlık, bütçe yönetimi ve stratejik planlama konularında gençlere yönelik gönüllü eğitmenlik.',
-                exp4Date: 'Ağustos 2025',
-                exp4Title: 'QNB 101 Online Staj',
-                exp4Company: 'QNB Türkiye',
-                exp4Desc: 'Bankacılık teknolojileri, Fintech trendleri ve dijital dönüşüm stratejileri üzerine yoğunlaşmış kapsamlı teknik eğitim ve vizyon programı.',
-                exp5Date: 'Ekim 2024',
-                exp5Title: 'Yazılım Mühendisi',
-                exp5Company: 'Elmar Yazılım - Elazığ',
-                exp5Desc: 'Yazılım geliştirme yaşam döngüsü (SDLC) süreçlerinde gerçek dünya projelerine katkı sağlayarak kod geliştirme ve test otomasyonu alanlarında deneyim kazandım.',
-                exp6Date: 'Haziran 2023 - Günümüz',
-                exp6Title: 'Bağımsız Yazılım Geliştirici',
-                exp6Company: 'Freelance - Bursa',
-                exp6Desc: 'Cloud-native çözümler, AIOps projeleri ve DevOps otomasyonları üzerine çalışmalar.',
-                skillsTitle: 'Yetenekler',
-                projectsTitle: 'Öne Çıkan Projeler',
-                proj1Title: 'GhostCost ⚡',
-                proj1Desc: '<span class="font-semibold text-gray-200">Problem:</span> Multi-cloud (AWS/Azure) altyapılarında kontrolsüz maliyet artışları ve fatura anomalilerinin manuel takibi yüksek hata payı barındırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> ClickHouse tabanlı yüksek performanslı telemetri motoru ve Isolation Forest algoritmalarını kullanarak, bulut harcamalarını gerçek zamanlı analiz eden bir AIOps platformu geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yapay zeka destekli anomali tespiti ile gereksiz harcamalar %30 optimize edildi ve maliyet sızıntıları doğal dilde (Ollama 3.1) raporlanabilir hale geldi.',
-                proj2Title: 'SiberMiras 🚀',
-                proj2Desc: '<span class="font-semibold text-gray-200">Problem:</span> Dijital varlıkların yasal devri için ölçeklenebilir ve güvenli bir teknik altyapı eksikliği mevcuttu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS üzerinde Dockerize edilmiş mikroservis mimarisini; ECS, RDS ve S3 kullanarak kurguladım. Altyapı yönetimini Terraform (IaC) ile otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Multi-AZ deployment ve auto-scaling ile %99.9 uptime sağlayan, Türkiye\'nin ilk bulut tabanlı dijital miras platformunun MVP\'si yayına alındı.',
-                proj3Title: 'Cloud-Native Reliability Platform',
-                proj3Desc: '<span class="font-semibold text-gray-200">Problem:</span> Dağıtık mikroservis sistemlerindeki performans kayıplarının manuel izleme ile tespit edilmesi zaman alıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Prometheus verilerini işleyen Z-Score ve EMA algoritmalarını kullanarak, Kubernetes üzerinde self-healing kabiliyetine sahip otonom bir yapı kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sistem kesinti süreleri (MTTR) %50 azaltıldı ve anomaliler kullanıcıya yansımadan otonom olarak önlendi.',
-                proj4Title: 'Star-Ops — Edge-MLOps Platform',
-                proj4Desc: '<span class="font-semibold text-gray-200">Problem:</span> Uydu telemetri verilerinin gerçek zamanlı analizi ve anomali tespiti için düşük gecikmeli bir mimari ihtiyacı.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Isolation Forest ve LSTM modellerini kapsayan ensemble bir ML motoru geliştirerek, Edge-MLOps prensipleriyle çalışan bir takip sistemi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Donanım arızaları %95 doğrulukla öngörüldü ve D3.js ile operatörlere canlı analiz paneli sunuldu.',
-                proj5Title: 'Cloud Order — MLOps Integration',
-                proj5Desc: '<span class="font-semibold text-gray-200">Problem:</span> E-ticaret akışındaki sistem hatalarının manuel tespiti ölçeklenebilirliği kısıtlıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Sipariş loglarını analiz eden Isolation Forest modelini eğitip, CI/CD süreçlerine MLOps pipeline olarak entegre ederek AWS üzerinde kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Hatalı siparişler saniyeler içinde tespit edilerek Prometheus ve CloudWatch üzerinden anlık alarm olarak iletildi.',
-                proj6Title: 'AIOps Anomali Tespit Sistemi',
-                proj6Desc: '<span class="font-semibold text-gray-200">Problem:</span> Sunucu loglarındaki performans sızıntılarının klasik eşik değer (threshold) uyarılarıyla geç yakalanması.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Prometheus metriklerini ML modelleriyle besleyerek, dinamik eşik değerleri oluşturan bir analiz modülü geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yanlış alarmlar (false positives) %40 azaltıldı ve proaktif sistem bakımı için doğru veri akışı sağlandı.',
-                proj7Title: 'AIOps Infrastructure (IaC) ☁️',
-                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Dağınık AWS kaynaklarının manuel yönetimi, konfigürasyon sürüklenmesine (drift) ve ortamlar arası uyumsuzluklara yol açıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> AWS altyapısını Terraform kullanarak modüler bir IaC yapısına taşıdım. Lambda ve Docker tabanlı servislerin provizyonunu otomatize ettim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Altyapı kurulum hızı 10 kat arttı ve %100 tekrarlanabilir, versiyonlanmış bir bulut topolojisi oluşturuldu.',
-                proj8Title: 'AWS CI/CD Automation ⚙️',
-                proj8Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manuel dağıtımların yarattığı operasyonel riskler ve uzun \'time-to-market\' süreleri hata payını artırıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> GitHub Actions ve AWS CodeDeploy entegrasyonu ile Docker tabanlı image\'ların sunulduğu uçtan uca bir CI/CD pipeline kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Dağıtım hataları minimize edildi ve zero-downtime deployment (blue-green) stratejisi başarıyla uygulandı.',
-                proj9Title: 'Sunucusuz Log Analizörü ⚡',
-                proj9Desc: '<span class="font-semibold text-gray-200">Problem:</span> Farklı AWS region\'larından gelen yüksek hacimli log verilerinin maliyet etkin bir şekilde analiz edilmesi gerekiyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> S3 ve Lambda kullanarak olay bazlı (event-driven) tetiklenen, sunucusuz bir veri işleme mimarisi tasarladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Sabit sunucu maliyetleri ortadan kalktı ve pay-as-you-go modeliyle işlem başına ödeme prensibi uygulandı.',
-                proj10Title: 'Bulut Mimari Desenleri 🛡️',
-                proj10Desc: '<span class="font-semibold text-gray-200">Problem:</span> AWS servisleriyle etkileşime giren uygulamalar beklenmedik ağ kesintilerinde çöküyor ve veri kaybı yaşıyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Uygulama dayanıklılığını artırmak için Java AWS SDK kullanarak Retry, Circuit Breaker ve Fallback gibi bulut tasarım desenlerini uyguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Geçici hatalara karşı sistemin kendi kendini toparlaması sağlandı (resilience) ve API çağrılarındaki hata oranları minimize edildi.',
-                proj11Title: 'Hibrit Bulut Yedekleme Çözümü 💾',
-                proj11Desc: '<span class="font-semibold text-gray-200">Problem:</span> Azure ve lokal verilerin AWS S3 üzerinde felaket kurtarma (DR) merkezi oluşturularak yedeklenmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Boto3 kütüphanesi kullanarak cross-cloud veri transferini otomatize eden Python betikleri ve lifecycle politikaları kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Veri saklama maliyetleri Glacier S3 kullanımıyla optimize edildi ve veri dönüş hızı (RTO) iyileştirildi.',
-                proj12Title: 'Dijital Ayak İzi (Digital Footprint) 🔍',
-                proj12Desc: '<span class="font-semibold text-gray-200">Problem:</span> OSINT verilerinin dağınık olması ve bireysel sızıntı maruziyetinin ölçülememesi güvenlik açığı oluşturuyordu.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> Çeşitli güvenlik API\'larını birleştiren, Python tabanlı bir dijital ayak izi tarayıcı ve analiz motoru geliştirdim.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Kullanıcılar için proaktif sızıntı kontrolleri ve veriye dayalı risk skoru raporlama imkanı sağlandı.',
-                proj13Title: 'Enterprise Bank Automation 🏦',
-                proj13Desc: '<span class="font-semibold text-gray-200">Problem:</span> Kurumsal finansal modellerin, temiz kod ve SOLID prensiplerine sadık kalarak yazılım mimarisine dönüştürülmesi gerekliliği.<br><br><span class="font-semibold text-gray-200">Çözüm:</span> C# ve MSSQL tabanlı, miras (inheritance) ve kapsülleme tekniklerinin uygulandığı modüler bir banka otomasyonu kurguladım.<br><br><span class="font-semibold text-gray-200">Sonuç:</span> Yüksek sürdürülebilirlik seviyesine sahip, katmanlı bir yazılım mimarisi başarılı bir şekilde hayata geçirildi.',
-                contactTitle: 'İletişime Geçin',
-                contactDesc: 'Projeleriniz veya iş fırsatları için benimle iletişime geçebilirsiniz.',
-            }
-        };
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            document.documentElement.lang = lang;
-            const t = translations[lang];
-
-            // Update page title
-            document.title = t.title;
-
-            // Update data-tr/data-en elements
-            document.querySelectorAll('[data-tr][data-en]').forEach(el => {
-                const text = el.getAttribute(`data-${lang}`);
-                if (el.querySelector('span')) {
-                    el.querySelector('span').textContent = text;
-                } else if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.tagName === 'P') {
-                    const icon = el.querySelector('i');
-                    if (icon) {
-                        el.innerHTML = '';
-                        el.appendChild(icon);
-                        el.appendChild(document.createTextNode(' '));
-                        const span = document.createElement('span');
-                        span.textContent = text;
-                        el.appendChild(span);
-                    } else {
-                        el.textContent = text;
-                    }
-                } else {
-                    el.textContent = text;
-                }
-            });
-
-            // Update section titles
-            document.getElementById('about').querySelector('h2').textContent = t.aboutTitle;
-            document.getElementById('experience').querySelector('h2').textContent = t.expTitle;
-            document.getElementById('skills').querySelector('h2').textContent = t.skillsTitle;
-            document.getElementById('projects').querySelector('h2').textContent = t.projectsTitle;
-            document.getElementById('contact').querySelector('h2').textContent = t.contactTitle;
-
-            // Update about section paragraphs
-            const aboutParagraphs = document.querySelectorAll('#about .glass-card p');
-            if (aboutParagraphs.length >= 3) {
-                aboutParagraphs[0].innerHTML = t.aboutP1.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-                aboutParagraphs[1].innerHTML = t.aboutP2.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-                aboutParagraphs[2].innerHTML = t.aboutP3.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-            }
-
-            // Update hero subtitles
-            document.getElementById('hero-job').textContent = t.heroJob;
-            document.getElementById('hero-tech').textContent = t.heroTech;
-
-            // Update contact description
-            document.querySelector('#contact .glass-card > p').textContent = t.contactDesc;
-
-            // Update Experience section
-            const expCards = document.querySelectorAll('#experience .glass-card');
-            if (expCards.length >= 6) {
-                // Beko (System Infrastructure Intern)
-                expCards[0].querySelector('.text-purple-400').textContent = t.exp1Date;
-                expCards[0].querySelector('h3').textContent = t.exp1Title;
-                expCards[0].querySelector('.text-gray-400').textContent = t.exp1Company;
-                const taskItems0 = expCards[0].querySelectorAll('li');
-                t.exp1Tasks.forEach((task, i) => { if (taskItems0[i]) taskItems0[i].textContent = task; });
-                
-                // Beko (AIOps Engineer)
-                expCards[1].querySelector('.text-purple-400').textContent = t.exp2Date;
-                expCards[1].querySelector('h3').textContent = t.exp2Title;
-                expCards[1].querySelector('.text-gray-400').textContent = t.exp2Company;
-                const taskItems1 = expCards[1].querySelectorAll('li');
-                t.exp2Tasks.forEach((task, i) => { if (taskItems1[i]) taskItems1[i].textContent = task; });
-                
-                // Habitat
-                expCards[2].querySelector('.text-purple-400').textContent = t.exp3Date;
-                expCards[2].querySelector('h3').textContent = t.exp3Title;
-                expCards[2].querySelector('.text-gray-400').textContent = t.exp3Company;
-                if (expCards[2].querySelector('.text-gray-300')) expCards[2].querySelector('.text-gray-300').textContent = t.exp3Desc;
-                
-                // Elmar
-                expCards[3].querySelector('.text-purple-400').textContent = t.exp4Date;
-                expCards[3].querySelector('h3').textContent = t.exp4Title;
-                expCards[3].querySelector('.text-gray-400').textContent = t.exp4Company;
-                if (expCards[3].querySelector('.text-gray-300')) expCards[3].querySelector('.text-gray-300').textContent = t.exp4Desc;
-                
-                // Freelance
-                expCards[4].querySelector('.text-purple-400').textContent = t.exp5Date;
-                expCards[4].querySelector('h3').textContent = t.exp5Title;
-                const freelanceCompanyEl = expCards[4].querySelector('.text-gray-400') || expCards[4].querySelectorAll('p')[0];
-                if (freelanceCompanyEl) freelanceCompanyEl.textContent = t.exp5Company;
-                if (expCards[4].querySelector('.text-gray-300')) expCards[4].querySelector('.text-gray-300').textContent = t.exp5Desc;
-            }
-
-            // Update Projects section
-            const projCards = document.querySelectorAll('#projects .project-card');
-            if (projCards.length >= 13) {
-                const projectKeys = [
-                    'proj1', 'proj2', 'proj3', 'proj4', 'proj5', 'proj6', 
-                    'proj7', 'proj8', 'proj9', 'proj10', 'proj11', 'proj12', 'proj13'
-                ];
-                projectKeys.forEach((key, index) => {
-                    const card = projCards[index];
-                    if (card) {
-                        if (card.querySelector('h3')) card.querySelector('h3').textContent = t[key + 'Title'];
-                        if (card.querySelector('p')) card.querySelector('p').innerHTML = t[key + 'Desc'];
-                    }
-                });
-            }
-
-            // Update date fields in Experience and Certificates
-            document.querySelectorAll('.text-purple-400, .text-gray-500.text-xs').forEach(el => {
-                const calendarIcon = el.querySelector('.far.fa-calendar-alt');
-                let text = el.textContent.trim();
-                
-                // If it's a date string
-                if (lang === 'en') {
-                    for (const [tr, en] of Object.entries(translations.en.months)) {
-                        text = text.replace(tr, en);
-                    }
-                    text = text.replace('— Günümüz', '— Present').replace('— Günümüz', '— Present');
-                } else {
-                    // Reverting to TR is harder if we don't store original, but usually the page starts in TR
-                    // and we can refresh or use data attributes. For now, let's just make EN transformation robust.
-                    // Actually, let's use a simpler approach: if lang is TR, we can just use the mapping in reverse if needed
-                    // but most dates are already in TR in the HTML.
-                }
-
-                if (calendarIcon) {
-                    el.innerHTML = '';
-                    el.appendChild(calendarIcon);
-                    el.appendChild(document.createTextNode(' ' + text));
-                } else {
-                    el.textContent = text;
-                }
-            });
-
-            // Update specific tags that don't have data-tr/en
-            const tagMap = {
-                'en': {
-                    'Eğitim': 'Education',
-                    'Finans': 'Finance',
-                    'Anomali Analizi': 'Anomaly Analysis'
-                },
-                'tr': {
-                    'Education': 'Eğitim',
-                    'Finance': 'Finans',
-                    'Anomaly Analysis': 'Anomali Analizi'
-                }
-            };
-            
-            document.querySelectorAll('.skill-badge .text-xs, .cert-desc + div span, .project-card span').forEach(el => {
-                const currentText = el.textContent.trim();
-                if (tagMap[lang][currentText]) {
-                    el.textContent = tagMap[lang][currentText];
-                }
-                // Handle complex tags like "Python (Anomali Analizi)"
-                if (lang === 'en' && currentText.includes('Anomali Analizi')) {
-                    el.textContent = currentText.replace('Anomali Analizi', 'Anomaly Analysis');
-                } else if (lang === 'tr' && currentText.includes('Anomaly Analysis')) {
-                    el.textContent = currentText.replace('Anomaly Analysis', 'Anomali Analizi');
-                }
-            });
-
-            // Update button text
-            const langBtn = document.getElementById('lang-switch');
-            const langBtnMobile = document.getElementById('lang-switch-mobile');
-            if (lang === 'en') {
-                langBtn.textContent = 'TR';
-                langBtnMobile.textContent = 'TR';
-            } else {
-                langBtn.textContent = 'EN';
-                langBtnMobile.textContent = 'EN';
-            }
-        }
-
-        document.getElementById('lang-switch').addEventListener('click', () => {
-            switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
-        });
-
-        document.getElementById('lang-switch-mobile').addEventListener('click', () => {
-            switchLanguage(currentLang === 'tr' ? 'en' : 'tr');
-        });
-
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -2114,6 +1350,7 @@
             });
         });
     </script>
+    <script src="i18n.js"></script>
 </body>
 
 </html>
