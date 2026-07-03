@@ -665,11 +665,11 @@
                         <span class="text-purple-400 font-semibold">Temmuz 2026 — Günümüz</span>
                         <h3 class="text-2xl font-bold text-white mt-2 mb-1">System Infrastructure Intern</h3>
                         <p class="text-gray-400 mb-4">Beko Corporate</p>
-                        <ul class="text-gray-300 space-y-3">
-                            <li>• SCCM ortamı modernizasyonu ve patch management optimizasyonu.</li>
-                            <li>• Sistem altyapısı operasyonları ve compliance analizi.</li>
-                            <li>• Windows/Linux ortamlarında altyapı otomasyonu.</li>
-                            <li>• DevOps ve altyapı ekipleriyle kurumsal iş akışlarında işbirliği.</li>
+                        <ul class="text-gray-300 space-y-3 list-disc list-inside">
+                            <li>SCCM ortamı modernizasyonu ve patch management optimizasyonu.</li>
+                            <li>Sistem altyapısı operasyonları ve compliance analizi.</li>
+                            <li>Windows/Linux ortamlarında altyapı otomasyonu.</li>
+                            <li>DevOps ve altyapı ekipleriyle kurumsal iş akışlarında işbirliği.</li>
                         </ul>
                     </div>
                 </div>
@@ -681,12 +681,12 @@
                         <span class="text-purple-400 font-semibold">Aralık 2025 — Temmuz 2026</span>
                         <h3 class="text-2xl font-bold text-white mt-2 mb-1">AIOps Engineer | PREP Program</h3>
                         <p class="text-gray-400 mb-4">Beko Corporate</p>
-                        <ul class="text-gray-300 space-y-3">
-                            <li>• Docker tabanlı ve konteynerize uygulamalardan log analizi.</li>
-                            <li>• Temel olay inceleme ve kök neden analizi.</li>
-                            <li>• Anomali paternleri ve operasyonel sorunların anlaşılması.</li>
-                            <li>• AIOps, monitoring ve observability uygulamaları.</li>
-                            <li>• DevOps ekipleri ile kurumsal iş akışlarında işbirliği.</li>
+                        <ul class="text-gray-300 space-y-3 list-disc list-inside">
+                            <li>Docker tabanlı ve konteynerize uygulamalardan log analizi.</li>
+                            <li>Temel olay inceleme ve kök neden analizi.</li>
+                            <li>Anomali paternleri ve operasyonel sorunların anlaşılması.</li>
+                            <li>AIOps, monitoring ve observability uygulamaları.</li>
+                            <li>DevOps ekipleri ile kurumsal iş akışlarında işbirliği.</li>
                         </ul>
                     </div>
                 </div>
@@ -1772,24 +1772,21 @@
                 aboutP3: 'I care about building production systems that hold up under real-world load — **scalable, efficient, and built to last**.',
                 // Experience
                 expTitle: 'Experience',
-                exp1Date: 'July 2026 - Present',
-                exp1Title: 'System Infrastructure Intern',
-                exp1Company: 'Beko Corporate',
                 exp1Tasks: [
-                    'Modernization of SCCM environment and patch management optimization',
+                    'SCCM environment modernization and patch management optimization',
                     'System infrastructure operations and compliance analysis',
                     'Infrastructure automation in Windows/Linux environments',
-                    'Collaboration with DevOps and infrastructure teams in enterprise workflows'
+                    'Collaboration with DevOps and infrastructure teams on enterprise workflows'
                 ],
                 exp2Date: 'December 2025 - July 2026',
                 exp2Title: 'AIOps Engineer | PREP Program',
                 exp2Company: 'Beko Corporate',
                 exp2Tasks: [
                     'Log analysis from Docker-based and containerized applications',
-                    'Basic incident investigation and root cause analysis',
+                    'Incident investigation and root cause analysis',
                     'Understanding anomaly patterns and operational issues',
                     'AIOps, monitoring and observability practices',
-                    'Collaboration with DevOps teams in enterprise workflows'
+                    'Collaboration with DevOps teams on enterprise workflows'
                 ],
                 exp3Date: 'December 2025 - Present',
                 exp3Title: 'Volunteer Instructor',
@@ -1824,7 +1821,7 @@
                 proj6Title: 'AIOps Anomaly Detection System',
                 proj6Desc: '<span class="font-semibold text-gray-200">Problem:</span> Performance leaks in server logs were caught late with traditional threshold alerts.<br><br><span class="font-semibold text-gray-200">Solution:</span> I developed an analysis module that creates dynamic thresholds by feeding Prometheus metrics into ML models.<br><br><span class="font-semibold text-gray-200">Result:</span> False positives were reduced by 40%, ensuring accurate data flow for proactive system maintenance.',
                 proj7Title: 'AIOps Infrastructure (IaC) ☁️',
-                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual management of scattered AWS resources led to configuration drift and environment incompatibilities.<br><br><span class="font-semibold text-gray-200">Solution:</span> I moved the AWS infrastructure to a modular IaC structure using Terraform and automated the provisioning of Lambda and Docker-based services.<br><br><span class="font-semibold text-gray-200">Result:</span> Altyapı kurulum hızı 10 kat arttı ve %100 tekrarlanabilir, versiyonlanmış bir bulut topolojisi oluşturuldu.',
+                proj7Desc: '<span class="font-semibold text-gray-200">Problem:</span> Manual management of scattered AWS resources led to configuration drift and environment incompatibilities.<br><br><span class="font-semibold text-gray-200">Solution:</span> I moved the AWS infrastructure to a modular IaC structure using Terraform and automated the provisioning of Lambda and Docker-based services.<br><br><span class="font-semibold text-gray-200">Result:</span> Infrastructure provisioning speed increased 10x and a 100% repeatable, versioned cloud topology was created.',
                 proj8Title: 'AWS CI/CD Automation ⚙️',
                 proj8Desc: '<span class="font-semibold text-gray-200">Problem:</span> Operational risks of manual deployments and long time-to-market periods increased error margins.<br><br><span class="font-semibold text-gray-200">Solution:</span> I built an end-to-end CI/CD pipeline for Docker-based images using GitHub Actions and AWS CodeDeploy integration.<br><br><span class="font-semibold text-gray-200">Result:</span> Deployment errors were minimized, and a zero-downtime deployment (blue-green) strategy was successfully implemented.',
                 proj9Title: 'Serverless Log Analyzer ⚡',
@@ -1926,6 +1923,7 @@
 
         function switchLanguage(lang) {
             currentLang = lang;
+            document.documentElement.lang = lang;
             const t = translations[lang];
 
             // Update page title
@@ -1983,14 +1981,14 @@
                 expCards[0].querySelector('h3').textContent = t.exp1Title;
                 expCards[0].querySelector('.text-gray-400').textContent = t.exp1Company;
                 const taskItems0 = expCards[0].querySelectorAll('li');
-                t.exp1Tasks.forEach((task, i) => { if (taskItems0[i]) taskItems0[i].textContent = '• ' + task; });
+                t.exp1Tasks.forEach((task, i) => { if (taskItems0[i]) taskItems0[i].textContent = task; });
                 
                 // Beko (AIOps Engineer)
                 expCards[1].querySelector('.text-purple-400').textContent = t.exp2Date;
                 expCards[1].querySelector('h3').textContent = t.exp2Title;
                 expCards[1].querySelector('.text-gray-400').textContent = t.exp2Company;
                 const taskItems1 = expCards[1].querySelectorAll('li');
-                t.exp2Tasks.forEach((task, i) => { if (taskItems1[i]) taskItems1[i].textContent = '• ' + task; });
+                t.exp2Tasks.forEach((task, i) => { if (taskItems1[i]) taskItems1[i].textContent = task; });
                 
                 // Habitat
                 expCards[2].querySelector('.text-purple-400').textContent = t.exp3Date;
@@ -2069,7 +2067,7 @@
                 }
             };
             
-            document.querySelectorAll('.skill-badge text-xs, .cert-desc + div span, .project-card span.text-xs').forEach(el => {
+            document.querySelectorAll('.skill-badge .text-xs, .cert-desc + div span, .project-card span').forEach(el => {
                 const currentText = el.textContent.trim();
                 if (tagMap[lang][currentText]) {
                     el.textContent = tagMap[lang][currentText];
