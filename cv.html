@@ -19,13 +19,21 @@
 
         @media print {
             @page {
-                margin: 0.5cm;
+                margin: 12mm 15mm;
                 size: A4;
             }
 
             body {
-                print-color-adjust: exact;
-                -webkit-print-color-adjust: exact;
+                max-width: 100% !important;
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            *, *:before, *:after {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
             }
 
             a {
@@ -50,6 +58,8 @@
             position: relative;
             padding-left: 1.5rem;
             border-left: 2px solid #e5e7eb;
+            break-inside: avoid;
+            page-break-inside: avoid;
         }
 
         .timeline-item::before {
@@ -85,7 +95,7 @@
     </header>
 
     <!-- Experience -->
-    <section class="mb-8 break-avoid">
+    <section class="mb-8">
         <h2 class="text-2xl font-bold section-title">Deneyim</h2>
         <div class="space-y-6">
             <div class="timeline-item">
@@ -200,10 +210,10 @@
     </section>
 
     <!-- Projects -->
-    <section class="mb-8 break-avoid">
+    <section class="mb-8">
         <h2 class="text-2xl font-bold section-title">Öne Çıkan Projeler</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="border rounded-lg p-4 bg-gray-50">
+            <div class="border rounded-lg p-4 bg-gray-50 break-avoid">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-gray-900">SiberMiras 🚀</h3>
                     <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AWS Native</span>
@@ -213,7 +223,7 @@
                 <a href="https://www.siber-miras.com" class="text-xs text-blue-600 hover:underline">siber-miras.com</a>
             </div>
 
-            <div class="border rounded-lg p-4 bg-gray-50">
+            <div class="border rounded-lg p-4 bg-gray-50 break-avoid">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-gray-900">AIOps Anomali Tespit</h3>
                     <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Python & ML</span>
@@ -222,7 +232,7 @@
                     makine öğrenimi modülü.</p>
             </div>
 
-            <div class="border rounded-lg p-4 bg-gray-50">
+            <div class="border rounded-lg p-4 bg-gray-50 break-avoid">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-gray-900">Cloud-Native Reliability Platform</h3>
                     <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">K8s & Terraform</span>
@@ -230,7 +240,7 @@
                 <p class="text-sm text-gray-700 mb-2">Kurumsal ölçekli telemetri platformu. AIOps ve self-healing yetenekleri ile anomali tespit süresini saniyelere indiren mikroservis mimarisi.</p>
             </div>
 
-            <div class="border rounded-lg p-4 bg-gray-50">
+            <div class="border rounded-lg p-4 bg-gray-50 break-avoid">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-gray-900">Cloud Order System</h3>
                     <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">MLOps & AWS</span>
@@ -241,7 +251,7 @@
     </section>
 
     <!-- Certificates -->
-    <section class="break-avoid">
+    <section class="">
         <h2 class="text-2xl font-bold section-title">Sertifikalar</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs text-gray-700">
             <div class="flex items-center gap-2">
