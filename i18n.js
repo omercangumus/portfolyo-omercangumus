@@ -162,7 +162,7 @@ const translations = {
     // ── Contact ──
     contactTitle: "Proje Talebi & İletişim",
     contactDesc: "Küresel ölçekli projeleriniz, teknik danışmanlık veya iş birliği talepleriniz için bana ulaşabilirsiniz.",
-    footerText: "© 2026 Ömer Can Gümüş. Tüm hakları saklıdır.",
+    footerText: "© 2025 Ömer Can Gümüş. Tüm hakları saklıdır.",
   },
 
   en: {
@@ -323,7 +323,7 @@ const translations = {
     // ── Contact ──
     contactTitle: "Get in Touch",
     contactDesc: "Feel free to reach out for global-scale projects, technical consulting, or collaboration opportunities.",
-    footerText: "© 2026 Ömer Can Gümüş. All rights reserved.",
+    footerText: "© 2025 Ömer Can Gümüş. All rights reserved.",
   }
 };
 
