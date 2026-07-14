@@ -536,7 +536,7 @@
         @media print {
             body {
                 background: white !important;
-                color: #1a1a1a !important;
+                color: #000000 !important;
             }
 
             body::before, body::after {
@@ -544,7 +544,9 @@
                 content: none !important;
             }
 
-            #stars-canvas, nav, #mobile-menu, #mobile-menu-btn, button, .no-print {
+            #stars-canvas, nav, #mobile-menu, #mobile-menu-btn, button, .no-print,
+            #home .flex-wrap, /* hide hero buttons */
+            #contact .flex.gap-8 /* hide footer links */ {
                 display: none !important;
             }
 
@@ -556,29 +558,88 @@
                 text-shadow: none !important;
             }
 
+            /* Force all text elements to solid black on print to avoid pale colors */
+            h1, h2, h3, h4, h5, h6,
+            .text-white, .text-gray-100, .text-gray-200, .text-gray-300, .text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700,
+            p, span, li, div, b, strong {
+                color: #111111 !important;
+                -webkit-text-fill-color: #111111 !important;
+            }
+
+            /* Rich dark purple for section details and category headers */
+            .text-purple-400, .text-purple-300 {
+                color: #6b21a8 !important;
+                -webkit-text-fill-color: #6b21a8 !important;
+            }
+
+            /* Rich blue for other colored components */
+            .text-blue-300, .text-blue-400, .text-blue-600 {
+                color: #1d4ed8 !important;
+                -webkit-text-fill-color: #1d4ed8 !important;
+            }
+
+            /* Keep icons in colored blocks white */
+            .w-14 i, .w-14 svg, .w-14 .fab, .w-14 .fas, .w-14 .far,
+            .bg-gradient-to-br i, .bg-gradient-to-br svg, .bg-gradient-to-br .fab, .bg-gradient-to-br .fas {
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+
+            /* Badges inside cards styling */
+            span.rounded-full {
+                background-color: #e5e7eb !important;
+                color: #1f2937 !important;
+                border: 1px solid #d1d5db !important;
+            }
+
+            /* Card styles override */
             .glass-card, .project-card, .skill-badge {
                 background: #ffffff !important;
-                color: #1a1a1a !important;
-                border: 1px solid #e5e7eb !important;
+                color: #111111 !important;
+                border: 1px solid #d1d5db !important;
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
                 box-shadow: none !important;
                 transform: none !important;
+                margin-bottom: 12px !important;
+            }
+
+            /* Projects grid on print - make it 1 column to avoid text wrapping bugs */
+            #projects .grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+
+            /* Certificates grid on print - make it 2 columns to look compact */
+            #certificates .grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+            }
+
+            /* Skills grid on print - make it 2 columns to save space */
+            #skills .grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
             }
 
             .gradient-text, .shimmer-text {
                 background: none !important;
                 -webkit-text-fill-color: initial !important;
-                color: #8a2be2 !important;
+                color: #5b21b6 !important;
                 font-weight: bold;
             }
 
             a {
-                color: #2563eb !important;
+                color: #1d4ed8 !important;
                 text-decoration: underline !important;
             }
 
             section {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
                 page-break-inside: auto !important;
                 break-inside: auto !important;
             }
