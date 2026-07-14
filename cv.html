@@ -19,7 +19,7 @@
 
         @media print {
             @page {
-                margin: 12mm 15mm;
+                margin: 10mm 12mm;
                 size: A4;
             }
 
@@ -28,12 +28,74 @@
                 width: 100% !important;
                 padding: 0 !important;
                 margin: 0 !important;
+                font-size: 9.5pt !important;
+                line-height: 1.4 !important;
+                color: #1f2937 !important;
             }
 
             *, *:before, *:after {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 color-adjust: exact !important;
+            }
+
+            h1, h2, h3, h4, .section-title {
+                color: #111827 !important;
+            }
+
+            p, span, li, div {
+                color: #374151 !important;
+            }
+
+            .text-blue-600, p.text-blue-600 {
+                color: #1d4ed8 !important;
+                font-weight: 600 !important;
+            }
+
+            .text-gray-600, .text-gray-500, .text-gray-700 {
+                color: #4b5563 !important;
+            }
+
+            .bg-gray-50 {
+                background-color: #f9fafb !important;
+            }
+
+            .bg-green-100 {
+                background-color: #d1fae5 !important;
+                color: #065f46 !important;
+            }
+
+            .bg-purple-100 {
+                background-color: #f3e8ff !important;
+                color: #5b21b6 !important;
+            }
+
+            .bg-indigo-100 {
+                background-color: #e0e7ff !important;
+                color: #3730a3 !important;
+            }
+
+            .bg-red-100 {
+                background-color: #fee2e2 !important;
+                color: #991b1b !important;
+            }
+
+            .mb-8 {
+                margin-bottom: 1.25rem !important;
+            }
+
+            .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 0.85rem !important;
+            }
+
+            .timeline-item {
+                border-left-color: #d1d5db !important;
+            }
+
+            .section-title {
+                border-bottom-color: #9ca3af !important;
+                padding-bottom: 0.25rem !important;
+                margin-bottom: 0.75rem !important;
             }
 
             a {
@@ -56,8 +118,26 @@
             }
 
             .break-avoid {
-                break-inside: avoid;
-                page-break-inside: avoid;
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+
+            #projects-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+
+            #skills-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px !important;
+            }
+
+            #certificates-grid {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 8px !important;
             }
         }
 
@@ -183,9 +263,9 @@
     </section>
 
     <!-- Skills -->
-    <section class="mb-8 break-avoid">
+    <section class="mb-8">
         <h2 class="text-2xl font-bold section-title">Yetenekler</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <div>
                 <h4 class="font-bold text-gray-900 mb-2">Cloud & DevOps</h4>
                 <ul class="text-gray-700 space-y-1">
@@ -226,7 +306,7 @@
     <!-- Projects -->
     <section class="mb-8">
         <h2 class="text-2xl font-bold section-title">Öne Çıkan Projeler</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="border rounded-lg p-4 bg-gray-50 break-avoid">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="font-bold text-gray-900">SiberMiras 🚀</h3>
@@ -267,7 +347,7 @@
     <!-- Certificates -->
     <section class="">
         <h2 class="text-2xl font-bold section-title">Sertifikalar</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs text-gray-700">
+        <div id="certificates-grid" class="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs text-gray-700">
             <div class="flex items-center gap-2">
                 <i class="fas fa-certificate text-yellow-500"></i>
                 <span>Automated Testing for LLMOps (CircleCI)</span>
