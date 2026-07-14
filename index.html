@@ -532,6 +532,62 @@
         .skill-badge:hover::after {
             transform: translateX(100%);
         }
+
+        @media print {
+            body {
+                background: white !important;
+                color: #1a1a1a !important;
+            }
+
+            body::before, body::after {
+                display: none !important;
+                content: none !important;
+            }
+
+            #stars-canvas, nav, #mobile-menu, #mobile-menu-btn, button, .no-print {
+                display: none !important;
+            }
+
+            *, *:before, *:after {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+            }
+
+            .glass-card, .project-card, .skill-badge {
+                background: #ffffff !important;
+                color: #1a1a1a !important;
+                border: 1px solid #e5e7eb !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+
+            .gradient-text, .shimmer-text {
+                background: none !important;
+                -webkit-text-fill-color: initial !important;
+                color: #8a2be2 !important;
+                font-weight: bold;
+            }
+
+            a {
+                color: #2563eb !important;
+                text-decoration: underline !important;
+            }
+
+            section {
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+
+            .project-card, .timeline-item, .glass-card {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
     </style>
 </head>
 
