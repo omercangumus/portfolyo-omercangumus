@@ -1,0 +1,33 @@
+{
+  "name": "Ömer Can Gümüş — MLOps, AIOps & DevOps",
+  "short_name": "Ömer Gümüş",
+  "description": "Ömer Can Gümüş’ün MLOps, AIOps, DevOps, gözlemlenebilirlik ve altyapı otomasyonu odaklı portfolyosu.",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f2eb",
+  "theme_color": "#f5f2eb",
+  "categories": ["portfolio", "technology", "engineering"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

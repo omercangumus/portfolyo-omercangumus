@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Ömer Can Gümüş</title>
+  <desc id="description">Signal-trace monogram for Ömer Can Gümüş.</desc>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#171315"/>
+  <circle cx="25" cy="14" r="3" fill="#e0afba"/>
+  <circle cx="39" cy="14" r="3" fill="#e0afba"/>
+  <circle cx="32" cy="38" r="14" fill="none" stroke="#fcf8f4" stroke-width="6"/>
+  <path d="M46 38h8" fill="none" stroke="#7a1f35" stroke-width="6" stroke-linecap="square"/>
+  <rect x="52" y="35" width="6" height="6" fill="#571526" stroke="#fcf8f4" stroke-width="2"/>
+</svg>
