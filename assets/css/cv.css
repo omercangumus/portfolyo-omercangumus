@@ -17,6 +17,8 @@
     --font-sans: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
     --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
     --cv-max: 1180px;
+    --notebook-rule: rgba(56, 47, 51, 0.06);
+    --notebook-step: 32px;
 }
 
 :root[data-theme="dark"] {
@@ -35,14 +37,7 @@
     --white: #fcf8f4;
     --blue: #d85a72;
     --inverse-text: #080607;
-}
-
-:root[data-theme="dark"] body {
-    background-color: var(--paper);
-    background-image:
-        linear-gradient(to right, rgba(244, 239, 241, 0.022) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(244, 239, 241, 0.022) 1px, transparent 1px);
-    background-size: 24px 24px;
+    --notebook-rule: rgba(244, 239, 241, 0.042);
 }
 
 :root[data-theme="dark"] .cv-toolbar {
@@ -111,10 +106,8 @@ body {
     margin: 0;
     color: var(--ink);
     background-color: var(--paper);
-    background-image:
-        linear-gradient(to right, rgba(20, 15, 17, 0.026) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(20, 15, 17, 0.026) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: linear-gradient(to bottom, var(--notebook-rule) 1px, transparent 1px);
+    background-size: 100% var(--notebook-step);
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.5;
@@ -863,6 +856,10 @@ address a:focus-visible strong {
 }
 
 @media (max-width: 700px) {
+    :root {
+        --notebook-step: 28px;
+    }
+
     .cv-toolbar {
         align-items: flex-start;
         flex-direction: column;

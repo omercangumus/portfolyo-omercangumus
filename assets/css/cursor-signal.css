@@ -1,11 +1,11 @@
 @media (any-hover: hover) and (any-pointer: fine) {
     body {
-        cursor: url("../icons/signal-cursor.svg") 14 14, default;
+        cursor: url("../icons/signal-cursor.svg") 3 3, default;
     }
 
     body :is(a, button, [role="button"], summary, label[for]),
     body :is(a, button, [role="button"], summary, label[for]) * {
-        cursor: url("../icons/signal-cursor-active.svg") 14 14, pointer;
+        cursor: url("../icons/signal-cursor-active.svg") 3 3, pointer;
     }
 
     body :is(input:not([type]), input[type="text"], input[type="email"], input[type="search"], input[type="tel"], input[type="url"], input[type="password"], textarea, [contenteditable]:not([contenteditable="false"])) {
@@ -19,8 +19,7 @@
 
 @media (any-hover: hover) and (any-pointer: fine) and (prefers-reduced-motion: no-preference) {
     .cursor-signal {
-        --cursor-signal-glow-scale: 1;
-        --cursor-signal-ring-scale: 1;
+        --cursor-signal-ring-scale: 0.72;
         position: fixed;
         z-index: 2000;
         inset: 0;
@@ -31,10 +30,6 @@
         isolation: isolate;
     }
 
-    html.cursor-signal-visible .cursor-signal__anchor {
-        opacity: 1;
-    }
-
     .cursor-signal__anchor {
         position: absolute;
         top: 0;
@@ -43,12 +38,16 @@
         height: 0;
         opacity: 0;
         transform: translate3d(-120px, -120px, 0);
-        transition: opacity 140ms ease;
+        transition: opacity 100ms ease;
         will-change: transform;
     }
 
-    .cursor-signal__glow,
+    html.cursor-signal-visible .cursor-signal__anchor {
+        opacity: 1;
+    }
+
     .cursor-signal__ring,
+    .cursor-signal__pulse,
     .cursor-signal__trail-node {
         position: absolute;
         top: 0;
@@ -57,50 +56,45 @@
         will-change: transform, opacity;
     }
 
-    .cursor-signal__glow {
-        width: 6.5rem;
-        height: 6.5rem;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(216, 90, 114, 0.13) 0, rgba(216, 90, 114, 0.055) 34%, transparent 70%);
-        opacity: 0.72;
-        transform: translate(-50%, -50%) scale(var(--cursor-signal-glow-scale));
-        transition: opacity 180ms ease, transform 180ms ease;
-    }
-
     .cursor-signal__ring {
-        width: 1.5rem;
-        height: 1.5rem;
-        border: 1px solid rgba(216, 90, 114, 0.5);
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid rgba(104, 14, 32, 0.52);
         border-radius: 50%;
-        box-shadow: 0 0 0 1px rgba(8, 6, 7, 0.2), 0 0 1rem rgba(216, 90, 114, 0.08);
+        opacity: 0;
         transform: translate(-50%, -50%) scale(var(--cursor-signal-ring-scale));
-        transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+        transition: border-color 150ms ease, opacity 150ms ease, transform 170ms ease;
     }
 
-    html.cursor-signal-interactive .cursor-signal {
-        --cursor-signal-glow-scale: 1.14;
-        --cursor-signal-ring-scale: 1.45;
+    html.cursor-signal-visible.cursor-signal-interactive .cursor-signal {
+        --cursor-signal-ring-scale: 1;
     }
 
-    html.cursor-signal-interactive .cursor-signal__ring {
-        border-color: rgba(216, 90, 114, 0.86);
-        background: rgba(216, 90, 114, 0.06);
-        box-shadow: 0 0 0 1px rgba(8, 6, 7, 0.24), 0 0 1.3rem rgba(216, 90, 114, 0.18);
+    html.cursor-signal-visible.cursor-signal-interactive .cursor-signal__ring {
+        border-color: rgba(216, 90, 114, 0.7);
+        opacity: 0.58;
     }
 
-    html.cursor-signal-pressed .cursor-signal {
-        --cursor-signal-glow-scale: 0.72;
-        --cursor-signal-ring-scale: 0.7;
+    html.cursor-signal-visible.cursor-signal-pressed .cursor-signal {
+        --cursor-signal-ring-scale: 0.76;
+    }
+
+    .cursor-signal__pulse {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid rgba(216, 90, 114, 0.64);
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
     }
 
     .cursor-signal__trail-node {
-        width: 0.28rem;
-        height: 0.28rem;
+        width: 0.2rem;
+        height: 0.2rem;
         border-radius: 50%;
-        background: #d85a72;
-        box-shadow: 0 0 0.65rem rgba(216, 90, 114, 0.42);
+        background: var(--signal-light, #d85a72);
         opacity: 0;
-        transition: opacity 170ms ease;
+        transition: opacity 140ms ease;
     }
 
     html.cursor-signal-visible.cursor-signal-moving .cursor-signal__trail-node {
@@ -109,10 +103,17 @@
 }
 
 @media (forced-colors: active) {
-    body,
+    body {
+        cursor: auto !important;
+    }
+
     body :is(a, button, [role="button"], summary, label[for]),
     body :is(a, button, [role="button"], summary, label[for]) * {
-        cursor: auto !important;
+        cursor: pointer !important;
+    }
+
+    body :is(input:not([type]), input[type="text"], input[type="email"], input[type="search"], input[type="tel"], input[type="url"], input[type="password"], textarea, [contenteditable]:not([contenteditable="false"])) {
+        cursor: text !important;
     }
 
     .cursor-signal {

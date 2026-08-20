@@ -28,6 +28,12 @@
     --page-pad: clamp(1.25rem, 4vw, 4.75rem);
     --page-max: 1600px;
     --header-height: 4.75rem;
+    --notebook-rule: rgba(56, 47, 51, 0.06);
+    --notebook-margin: rgba(104, 14, 32, 0.14);
+    --notebook-step: 32px;
+    --notebook-margin-x: max(calc(var(--page-pad) - 0.7rem), calc((100vw - var(--page-max)) / 2 + var(--page-pad) - 0.7rem));
+    --technical-grid-line: rgba(255, 255, 255, 0.035);
+    --technical-grid-size: 24px;
     --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
     --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -57,14 +63,8 @@
     --dark-block-border-strong: rgba(244, 239, 241, 0.20);
     --signal-card-text: #f4eff1;
     --inverse-text: #080607;
-}
-
-:root[data-theme="dark"] body {
-    background-color: var(--paper);
-    background-image:
-        linear-gradient(to right, rgba(244, 239, 241, 0.022) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(244, 239, 241, 0.022) 1px, transparent 1px);
-    background-size: 24px 24px;
+    --notebook-rule: rgba(244, 239, 241, 0.042);
+    --notebook-margin: rgba(216, 90, 114, 0.11);
 }
 
 .theme-toggle {
@@ -120,9 +120,16 @@ body {
     color: var(--ink);
     background-color: var(--paper);
     background-image:
-        linear-gradient(to right, rgba(20, 15, 17, 0.026) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(20, 15, 17, 0.026) 1px, transparent 1px);
-    background-size: 24px 24px;
+        linear-gradient(to bottom, var(--notebook-rule) 1px, transparent 1px),
+        linear-gradient(
+            to right,
+            transparent var(--notebook-margin-x),
+            var(--notebook-margin) var(--notebook-margin-x),
+            var(--notebook-margin) calc(var(--notebook-margin-x) + 1px),
+            transparent calc(var(--notebook-margin-x) + 1px)
+        );
+    background-repeat: repeat, no-repeat;
+    background-size: 100% var(--notebook-step), 100% 100%;
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.5;
@@ -270,56 +277,49 @@ button {
 
 .wordmark-mark {
     position: relative;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.86rem;
+    height: 1rem;
     flex: 0 0 auto;
-    border: 1px solid currentColor;
-    border-radius: 50%;
     color: var(--signal);
-    background: transparent;
-    box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.08);
-    transition: box-shadow 220ms var(--ease-out), color 180ms var(--ease-out), transform 220ms var(--ease-spring);
+    transition: color 180ms var(--ease-out), transform 220ms var(--ease-spring);
 }
 
 .wordmark-mark::before,
 .wordmark-mark::after {
     position: absolute;
-    border-radius: 50%;
+    top: 50%;
+    width: 2px;
+    border-radius: 1px;
+    background: currentColor;
     content: "";
+    transform: translateY(-50%) rotate(16deg);
+    transition: height 220ms var(--ease-spring), opacity 180ms var(--ease-out), transform 220ms var(--ease-spring);
 }
 
 .wordmark-mark::before {
-    top: 50%;
-    left: 50%;
-    width: 0.3rem;
-    height: 0.3rem;
-    background: currentColor;
-    transform: translate(-50%, -50%);
-    transition: box-shadow 180ms var(--ease-out), transform 220ms var(--ease-spring);
+    left: 0.18rem;
+    height: 0.95rem;
 }
 
 .wordmark-mark::after {
-    inset: -0.34rem;
-    border: 1px solid currentColor;
-    opacity: 0;
-    transform: scale(0.58);
-    transition: opacity 180ms var(--ease-out), transform 260ms var(--ease-spring);
+    right: 0.16rem;
+    height: 0.68rem;
+    opacity: 0.62;
 }
 
 .wordmark:focus-visible .wordmark-mark {
     color: var(--signal-light);
-    box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.14), 0 0 1rem rgba(216, 90, 114, 0.16);
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 .wordmark:focus-visible .wordmark-mark::before {
-    box-shadow: 0 0 0.55rem rgba(216, 90, 114, 0.52);
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-0.08rem, -50%) rotate(16deg);
 }
 
 .wordmark:focus-visible .wordmark-mark::after {
-    opacity: 0.32;
-    transform: scale(1);
+    height: 0.82rem;
+    opacity: 1;
+    transform: translate(0.08rem, -50%) rotate(16deg);
 }
 
 .site-footer .wordmark-mark {
@@ -329,18 +329,17 @@ button {
 @media (hover: hover) and (pointer: fine) {
     .wordmark:hover .wordmark-mark {
         color: var(--signal-light);
-        box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.14), 0 0 1rem rgba(216, 90, 114, 0.16);
-        transform: scale(1.04);
+        transform: scale(1.05);
     }
 
     .wordmark:hover .wordmark-mark::before {
-        box-shadow: 0 0 0.55rem rgba(216, 90, 114, 0.52);
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-0.08rem, -50%) rotate(16deg);
     }
 
     .wordmark:hover .wordmark-mark::after {
-        opacity: 0.32;
-        transform: scale(1);
+        height: 0.82rem;
+        opacity: 1;
+        transform: translate(0.08rem, -50%) rotate(16deg);
     }
 }
 
@@ -350,13 +349,18 @@ button {
 
 @media (max-width: 420px) {
     .wordmark-mark {
-        width: 0.78rem;
-        height: 0.78rem;
+        width: 0.72rem;
+        height: 0.86rem;
     }
 
     .wordmark-mark::before {
-        width: 0.26rem;
-        height: 0.26rem;
+        left: 0.14rem;
+        height: 0.8rem;
+    }
+
+    .wordmark-mark::after {
+        right: 0.12rem;
+        height: 0.58rem;
     }
 }
 
@@ -679,9 +683,9 @@ button {
     color: #fcf8f4;
     background-color: #080607;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 24px 24px;
+        linear-gradient(to right, var(--technical-grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--technical-grid-line) 1px, transparent 1px);
+    background-size: var(--technical-grid-size) var(--technical-grid-size);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
@@ -1084,9 +1088,9 @@ button {
     color: #fcf8f4;
     background-color: #080607;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 24px 24px;
+        linear-gradient(to right, var(--technical-grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--technical-grid-line) 1px, transparent 1px);
+    background-size: var(--technical-grid-size) var(--technical-grid-size);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -1490,7 +1494,7 @@ button {
 .background {
     width: 100%;
     max-width: none;
-    background: var(--paper);
+    background: transparent;
 }
 
 .background > * {
@@ -1580,9 +1584,9 @@ button {
     color: #fcf8f4;
     background-color: #080607;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 24px 24px;
+        linear-gradient(to right, var(--technical-grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--technical-grid-line) 1px, transparent 1px);
+    background-size: var(--technical-grid-size) var(--technical-grid-size);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     overflow: hidden;
 }
@@ -1993,12 +1997,11 @@ button {
 }
 
 @media (max-width: 700px) {
-    :root {
+    :root,
+    :root[data-theme="dark"] {
         --page-pad: 1.25rem;
-    }
-
-    body {
-        background-size: 22px 22px;
+        --notebook-margin: transparent;
+        --notebook-step: 28px;
     }
 
     .wordmark > span:last-child {

@@ -20,20 +20,20 @@ function mountEffect() {
     const anchor = document.createElement("span");
     anchor.className = "cursor-signal__anchor";
 
-    const glow = document.createElement("span");
-    glow.className = "cursor-signal__glow";
-
     const ring = document.createElement("span");
     ring.className = "cursor-signal__ring";
 
-    anchor.append(glow, ring);
+    const pulse = document.createElement("span");
+    pulse.className = "cursor-signal__pulse";
+
+    anchor.append(ring, pulse);
     layer.append(anchor);
 
-    const trail = Array.from({ length: 7 }, (_, index) => {
+    const trail = Array.from({ length: 3 }, (_, index) => {
         const node = document.createElement("span");
         node.className = "cursor-signal__trail-node";
-        node.style.setProperty("--cursor-signal-trail-opacity", String(0.46 - index * 0.052));
-        node.style.setProperty("--cursor-signal-trail-scale", String(1 - index * 0.075));
+        node.style.setProperty("--cursor-signal-trail-opacity", String(0.2 - index * 0.065));
+        node.style.setProperty("--cursor-signal-trail-scale", String(1 - index * 0.18));
         layer.append(node);
         return {
             element: node,
@@ -50,6 +50,7 @@ function mountEffect() {
     let visible = false;
     let animationFrame = 0;
     let movementTimer = 0;
+    let pulseAnimation = null;
 
     const setInteractiveState = (target) => {
         const interactive = target instanceof Element && Boolean(target.closest(interactiveSelector));
@@ -63,7 +64,7 @@ function mountEffect() {
         let largestDelta = 0;
 
         trail.forEach((point, index) => {
-            const follow = 0.34 - index * 0.018;
+            const follow = 0.48 - index * 0.06;
             const deltaX = leaderX - point.x;
             const deltaY = leaderY - point.y;
             point.x += deltaX * follow;
@@ -103,6 +104,8 @@ function mountEffect() {
     const hideEffect = () => {
         visible = false;
         stopMovement();
+        pulseAnimation?.cancel();
+        pulseAnimation = null;
         root.classList.remove("cursor-signal-visible", "cursor-signal-interactive", "cursor-signal-pressed");
     };
 
@@ -132,7 +135,7 @@ function mountEffect() {
 
         root.classList.add("cursor-signal-moving");
         window.clearTimeout(movementTimer);
-        movementTimer = window.setTimeout(stopMovement, 110);
+        movementTimer = window.setTimeout(stopMovement, 90);
         scheduleTrail();
     };
 
@@ -149,8 +152,26 @@ function mountEffect() {
             hideEffect();
             return;
         }
+
+        if (event.button !== 0) return;
+
+        targetX = event.clientX;
+        targetY = event.clientY;
+        anchor.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+        visible = true;
+        root.classList.add("cursor-signal-visible");
         root.classList.add("cursor-signal-pressed");
         stopMovement();
+        pulseAnimation?.cancel();
+        pulseAnimation = typeof pulse.animate === "function"
+            ? pulse.animate(
+                [
+                    { opacity: 0.42, transform: "translate(-50%, -50%) scale(0.68)" },
+                    { opacity: 0, transform: "translate(-50%, -50%) scale(1.7)" },
+                ],
+                { duration: 260, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
+            )
+            : null;
     };
 
     const onPointerUp = (event) => {
