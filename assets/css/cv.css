@@ -138,33 +138,6 @@ button {
     background: var(--signal-dark);
 }
 
-@media (hover: hover) and (pointer: fine) {
-    body {
-        cursor: url("../icons/signal-cursor.svg") 14 14, crosshair;
-    }
-
-    :where(p, h1, h2, h3, h4, h5, h6, li, span, strong, small, time, dd, dt) {
-        cursor: text;
-    }
-
-    body :is(a, button, [role="button"], summary),
-    body :is(a, button, [role="button"], summary) * {
-        cursor: url("../icons/signal-cursor-active.svg") 5 3, pointer;
-    }
-
-    :where(input, textarea, [contenteditable="true"]) {
-        cursor: text;
-    }
-}
-
-@media (forced-colors: active) {
-    body,
-    body :is(a, button, [role="button"], summary),
-    body :is(a, button, [role="button"], summary) * {
-        cursor: auto;
-    }
-}
-
 :focus-visible {
     outline: 3px solid var(--blue);
     outline-offset: 4px;

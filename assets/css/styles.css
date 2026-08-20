@@ -269,15 +269,95 @@ button {
 }
 
 .wordmark-mark {
-    width: 0.74rem;
-    height: 0.74rem;
-    background: var(--signal);
-    transition: transform 220ms var(--ease-spring);
+    position: relative;
+    width: 0.9rem;
+    height: 0.9rem;
+    flex: 0 0 auto;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: var(--signal);
+    background: transparent;
+    box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.08);
+    transition: box-shadow 220ms var(--ease-out), color 180ms var(--ease-out), transform 220ms var(--ease-spring);
 }
 
-.wordmark:hover .wordmark-mark,
+.wordmark-mark::before,
+.wordmark-mark::after {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+}
+
+.wordmark-mark::before {
+    top: 50%;
+    left: 50%;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 180ms var(--ease-out), transform 220ms var(--ease-spring);
+}
+
+.wordmark-mark::after {
+    inset: -0.34rem;
+    border: 1px solid currentColor;
+    opacity: 0;
+    transform: scale(0.58);
+    transition: opacity 180ms var(--ease-out), transform 260ms var(--ease-spring);
+}
+
 .wordmark:focus-visible .wordmark-mark {
-    transform: rotate(45deg);
+    color: var(--signal-light);
+    box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.14), 0 0 1rem rgba(216, 90, 114, 0.16);
+    transform: scale(1.04);
+}
+
+.wordmark:focus-visible .wordmark-mark::before {
+    box-shadow: 0 0 0.55rem rgba(216, 90, 114, 0.52);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.wordmark:focus-visible .wordmark-mark::after {
+    opacity: 0.32;
+    transform: scale(1);
+}
+
+.site-footer .wordmark-mark {
+    color: var(--signal-light);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .wordmark:hover .wordmark-mark {
+        color: var(--signal-light);
+        box-shadow: 0 0 0 0.2rem rgba(216, 90, 114, 0.14), 0 0 1rem rgba(216, 90, 114, 0.16);
+        transform: scale(1.04);
+    }
+
+    .wordmark:hover .wordmark-mark::before {
+        box-shadow: 0 0 0.55rem rgba(216, 90, 114, 0.52);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .wordmark:hover .wordmark-mark::after {
+        opacity: 0.32;
+        transform: scale(1);
+    }
+}
+
+.wordmark:active .wordmark-mark {
+    transform: scale(0.9);
+}
+
+@media (max-width: 420px) {
+    .wordmark-mark {
+        width: 0.78rem;
+        height: 0.78rem;
+    }
+
+    .wordmark-mark::before {
+        width: 0.26rem;
+        height: 0.26rem;
+    }
 }
 
 .desktop-nav {
@@ -1788,7 +1868,12 @@ button {
     }
 
     .header-inner {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .wordmark {
+        min-width: 0;
+        max-width: 100%;
     }
 
     .desktop-nav {
@@ -1917,6 +2002,7 @@ button {
     }
 
     .wordmark > span:last-child {
+        min-width: 0;
         max-width: 11rem;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -2168,34 +2254,9 @@ button {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    body {
-        cursor: url("../icons/signal-cursor.svg") 14 14, crosshair;
-    }
-
-    :where(p, h1, h2, h3, h4, h5, h6, li, span, strong, small, time, dd, dt) {
-        cursor: text;
-    }
-
-    body :is(a, button, [role="button"], summary),
-    body :is(a, button, [role="button"], summary) * {
-        cursor: url("../icons/signal-cursor-active.svg") 5 3, pointer;
-    }
-
-    :where(input, textarea, [contenteditable="true"]) {
-        cursor: text;
-    }
-
     .practice-list article:hover {
         color: var(--signal-dark);
         transform: translateX(0.45rem);
-    }
-}
-
-@media (forced-colors: active) {
-    body,
-    body :is(a, button, [role="button"], summary),
-    body :is(a, button, [role="button"], summary) * {
-        cursor: auto;
     }
 }
 
