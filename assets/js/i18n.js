@@ -140,8 +140,6 @@ export const translations = Object.freeze({
         // Project 1: GhostCost
         ghostType: "FinOps / AIOps Bulut Maliyet Platformu",
         ghostSummary: "AWS harcama sinyallerini, kaynak bazlı israf önerilerini ve maliyet sıçramalarını tek akışta görünür kılan FinOps/AIOps platformu.",
-        ghostPreviewAlt: "GhostCost örnek veri kullanan canlı sandbox paneli",
-        ghostPreviewCaption: "Canlı sandbox ekranı · Mock Startup Co. örnek verileri.",
         ghostFlowLabel: "GhostCost teknik akışı",
         ghostFlowOne: "AWS maliyet verisi",
         ghostFlowTwo: "Salt okunur tarama",
@@ -444,8 +442,6 @@ export const translations = Object.freeze({
         // Project 1: GhostCost
         ghostType: "FinOps / AIOps Cloud Cost Platform",
         ghostSummary: "A FinOps/AIOps platform that brings AWS spend signals, resource-level waste recommendations, and cost spikes into one unified view.",
-        ghostPreviewAlt: "GhostCost live sandbox dashboard using sample data",
-        ghostPreviewCaption: "Live sandbox screen · Mock Startup Co. sample data.",
         ghostFlowLabel: "GhostCost technical flow",
         ghostFlowOne: "AWS cost data",
         ghostFlowTwo: "Read-only scan",

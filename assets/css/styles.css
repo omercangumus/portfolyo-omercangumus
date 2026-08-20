@@ -71,8 +71,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     padding: 0;
     border: 1px solid var(--line-strong);
     border-radius: 50%;
@@ -155,7 +155,7 @@ a {
 
 button,
 a {
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(216, 90, 114, 0.2);
 }
 
 button {
@@ -499,7 +499,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
-    min-height: 2.65rem;
+    min-height: 2.75rem;
     padding: 0.55rem 1.35rem;
     border: 1px solid var(--ink);
     border-radius: 999px;
@@ -510,7 +510,7 @@ button {
     font-weight: 600;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: all 180ms var(--ease-out);
+    transition: color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
 .primary-link:hover,
@@ -536,7 +536,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    min-height: 2.65rem;
+    min-height: 2.75rem;
     padding: 0.55rem 1.35rem;
     border: 1px solid var(--line-strong);
     border-radius: 999px;
@@ -547,7 +547,7 @@ button {
     font-weight: 600;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: all 180ms var(--ease-out);
+    transition: color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
 .text-link:hover,
@@ -570,6 +570,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    min-height: 2.75rem;
     padding: 0.4rem 0.9rem;
     border: 1px solid var(--line-strong);
     border-radius: 999px;
@@ -579,7 +580,7 @@ button {
     font-size: 0.7rem;
     font-weight: 600;
     text-decoration: none;
-    transition: all 160ms var(--ease-out);
+    transition: color 160ms var(--ease-out), background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
 .hero-social a:hover,
@@ -639,62 +640,73 @@ button {
     text-transform: uppercase;
 }
 
-.signal-path {
-    position: absolute;
-    top: 6.8rem;
-    bottom: 5.2rem;
-    left: 2.2rem;
-    width: 1px;
-}
-
-.signal-rail {
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.22);
-}
-
-.signal-pulse {
-    position: absolute;
-    top: 0;
-    left: -0.22rem;
-    width: 0.48rem;
-    height: 0.48rem;
-    background: var(--signal);
-}
-
-.career-signal:hover .signal-pulse,
-.career-signal:focus-within .signal-pulse {
-    animation: signal-travel 650ms var(--ease-out) both;
-}
-
-@keyframes signal-travel {
-    from { transform: translateY(0); }
-    to { transform: translateY(calc(100% + 5.5rem)); }
-}
-
 .signal-roles {
+    --signal-gutter: 2.7rem;
     position: relative;
     display: grid;
     gap: 2.35rem;
     margin: 2.15rem 0 2rem;
-    padding: 0 0 0 2.7rem;
+    padding: 0 0 0 var(--signal-gutter);
     list-style: none;
 }
 
+.signal-roles::before,
+.signal-roles::after {
+    position: absolute;
+    z-index: 0;
+    top: 0.48rem;
+    bottom: 0.48rem;
+    left: 0.29rem;
+    width: 1px;
+    border-radius: 999px;
+    content: "";
+    transform-origin: bottom;
+}
+
+.signal-roles::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.signal-roles::after {
+    background: linear-gradient(to top, rgba(216, 90, 114, 0.36), var(--signal-light));
+    transform: scaleY(1);
+}
+
+.motion-ok .career-signal .signal-roles::after {
+    transform: scaleY(0);
+}
+
+.motion-ok .career-signal.is-revealing .signal-roles::after {
+    animation: signal-line-reveal 850ms 180ms var(--ease-out) both;
+}
+
+@keyframes signal-line-reveal {
+    to { transform: scaleY(1); }
+}
+
 .signal-roles li {
+    position: relative;
+    z-index: 1;
     display: grid;
     gap: 0.35rem;
 }
 
 .signal-roles li::before {
     position: absolute;
-    left: -0.12rem;
-    width: 0.54rem;
-    height: 0.54rem;
-    margin-top: 0.25rem;
+    top: 0.19rem;
+    left: calc(var(--signal-gutter) * -1);
+    width: 0.58rem;
+    height: 0.58rem;
     border: 1px solid var(--signal-light);
+    border-radius: 50%;
     background: #080607;
+    box-shadow: 0 0 0 3px #080607;
     content: "";
+}
+
+.signal-roles .signal-role-latest::before {
+    background: var(--signal-light);
+    box-shadow: 0 0 0 3px #080607, 0 0 0 6px rgba(216, 90, 114, 0.18);
 }
 
 .signal-date {
@@ -719,7 +731,9 @@ button {
 .signal-link {
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    min-height: 2.75rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
     color: #ffffff;
@@ -1102,30 +1116,6 @@ button {
     line-height: 1.55;
 }
 
-.project-preview {
-    max-width: 64rem;
-    margin: 1.75rem 0 0;
-    overflow: hidden;
-    background: #07111c;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
-}
-
-.project-preview img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.project-preview figcaption {
-    padding: 0.75rem 1rem;
-    color: rgba(255, 253, 247, 0.68);
-    background: rgba(255, 255, 255, 0.04);
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.02em;
-}
-
 .project-flow {
     display: flex;
     flex-wrap: wrap;
@@ -1223,7 +1213,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    height: 2.35rem;
+    min-height: 2.75rem;
     padding: 0 1.15rem;
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 999px;
@@ -1235,7 +1225,7 @@ button {
     letter-spacing: 0.02em;
     text-decoration: none;
     backdrop-filter: blur(12px);
-    transition: all 180ms var(--ease-out);
+    transition: color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
 .project-link .link-icon {
@@ -1325,7 +1315,7 @@ button {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    height: 2.35rem;
+    min-height: 2.75rem;
     padding: 0 1.15rem;
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 999px;
@@ -1336,7 +1326,7 @@ button {
     font-weight: 550;
     letter-spacing: 0.02em;
     text-decoration: none;
-    transition: all 180ms var(--ease-out);
+    transition: color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
 .archive-link a .link-arrow {
@@ -1387,11 +1377,6 @@ button {
 
 .practice-list article:last-child {
     border-bottom: 1px solid var(--line);
-}
-
-.practice-list article:hover {
-    color: var(--signal-dark);
-    transform: translateX(0.45rem);
 }
 
 .practice-index {
@@ -1989,15 +1974,9 @@ button {
         text-align: left;
     }
 
-    .signal-path {
-        top: 8.7rem;
-        bottom: 5.1rem;
-        left: 1.68rem;
-    }
-
     .signal-roles {
+        --signal-gutter: 2rem;
         gap: 2rem;
-        padding-left: 2rem;
     }
 
     .chapter {
@@ -2153,13 +2132,17 @@ button {
         gap: 0.5rem;
     }
 
+    .header-actions {
+        gap: 0.4rem;
+    }
+
     .wordmark {
         gap: 0.5rem;
         font-size: 0.68rem;
     }
 
     .wordmark > span:last-child {
-        max-width: 7.2rem;
+        max-width: 6.4rem;
     }
 
     .language-switch {
@@ -2181,6 +2164,38 @@ button {
 
     .contact-email {
         font-size: 1rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: url("../icons/signal-cursor.svg") 14 14, crosshair;
+    }
+
+    :where(p, h1, h2, h3, h4, h5, h6, li, span, strong, small, time, dd, dt) {
+        cursor: text;
+    }
+
+    body :is(a, button, [role="button"], summary),
+    body :is(a, button, [role="button"], summary) * {
+        cursor: url("../icons/signal-cursor-active.svg") 5 3, pointer;
+    }
+
+    :where(input, textarea, [contenteditable="true"]) {
+        cursor: text;
+    }
+
+    .practice-list article:hover {
+        color: var(--signal-dark);
+        transform: translateX(0.45rem);
+    }
+}
+
+@media (forced-colors: active) {
+    body,
+    body :is(a, button, [role="button"], summary),
+    body :is(a, button, [role="button"], summary) * {
+        cursor: auto;
     }
 }
 
