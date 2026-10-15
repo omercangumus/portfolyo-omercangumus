@@ -4,6 +4,16 @@
   document.documentElement.classList.add('has-js');
   const translations = {
     tr: {
+      contactFormTitle: 'Mesajını hazırla', contactName: 'Adın', contactSubject: 'Konu',
+      contactNamePlaceholder: 'Ad Soyad', contactSubjectPlaceholder: 'Ne hakkında konuşalım?',
+      contactMessage: 'Mesajın', contactMessagePlaceholder: 'Kısaca kendinden ve konuşmak istediğin konudan bahsedebilirsin.',
+      contactOptional: '(isteğe bağlı)', contactSend: 'E-posta uygulamasında aç', contactCopyMessage: 'Mesajı kopyala',
+      contactFormNote: 'Yazdıkların e-posta uygulamanda açılır. Göndermeden önce düzenleyebilirsin.',
+      contactDefaultSubject: 'Web sitesinden iletişim',
+      contactPrepared: 'Mesajın hazır. E-posta uygulaman açılmazsa mesajı kopyalayabilirsin.',
+      contactMessageCopied: 'Mesaj kopyalandı. E-posta uygulamana yapıştırabilirsin.',
+      contactMessageSelected: 'Mesaj alanı seçildi. Kopyalayıp e-postana yapıştırabilirsin.',
+      contactNameRequired: 'Lütfen adını yaz.', contactMessageRequired: 'Lütfen en az 5 karakterlik bir mesaj yaz.',
       navEducation: 'Eğitim', cosmicOpen: 'Cosmic Pipeline projesini incele', aegisOpen: 'AegisOps projesini incele',
       cosmicDescription: 'Uydu telemetrisindeki bozulmaları kural, istatistik ve ML/DL katmanlarıyla tespit eden; işaretli noktaları onaran veri işleme hattı.',
       aegisDescription: 'Ekipman telemetrisini kurallar ve Isolation Forest ile inceleyip bakım ekiplerinin değerlendirebileceği olaylara dönüştüren MVP.',
@@ -74,6 +84,16 @@
       metaDescription: 'Ömer Can Gümüş — DevOps, MLOps ve bulut altyapısı. Beko deneyimi, seçili projeler ve açık kaynak katkıları.'
     },
     en: {
+      contactFormTitle: 'Write a message', contactName: 'Your name', contactSubject: 'Subject',
+      contactNamePlaceholder: 'Full name', contactSubjectPlaceholder: 'What would you like to discuss?',
+      contactMessage: 'Your message', contactMessagePlaceholder: 'Tell me a little about yourself and what you have in mind.',
+      contactOptional: '(optional)', contactSend: 'Open in email app', contactCopyMessage: 'Copy message',
+      contactFormNote: 'Your text opens in your email app. You can edit it before sending.',
+      contactDefaultSubject: 'Website contact',
+      contactPrepared: 'Your message is ready. If your email app does not open, you can copy the message.',
+      contactMessageCopied: 'Message copied. You can paste it into your email app.',
+      contactMessageSelected: 'Message text selected. You can copy and paste it into your email.',
+      contactNameRequired: 'Please enter your name.', contactMessageRequired: 'Please enter a message of at least 5 characters.',
       navEducation: 'Education', cosmicOpen: 'Explore the Cosmic Pipeline project', aegisOpen: 'Explore the AegisOps project',
       cosmicDescription: 'A processing pipeline that detects satellite telemetry faults using rules, statistics and ML/DL layers, then repairs flagged samples.',
       aegisDescription: 'A predictive maintenance MVP that turns equipment telemetry into reviewable events using rules and Isolation Forest.',
@@ -144,6 +164,18 @@
       metaDescription: 'Ömer Can Gümüş — DevOps, MLOps and cloud infrastructure. Experience at Beko, selected projects and open source contributions.'
     }
   };
+
+  function buildContactDraft(values, locale) {
+    const copy = translations[locale] || translations.tr;
+    const name = values.name.replace(/[\r\n]+/g, ' ').trim();
+    const subject = values.subject.replace(/[\r\n]+/g, ' ').trim() || copy.contactDefaultSubject;
+    const message = values.message.trim().replace(/\r\n|\r|\n/g, '\r\n');
+    const body = `${copy.contactName}: ${name}\r\n\r\n${message}`;
+    return {
+      uri: `mailto:omercangumus3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      copyText: `${copy.contactSubject}: ${subject}\r\n\r\n${body}`
+    };
+  }
 
   const projects = {
     starops: {
@@ -302,6 +334,9 @@
       const value = translations[next][element.dataset.i18nAria];
       if (value !== undefined) element.setAttribute('aria-label', value);
     });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+      element.placeholder = translations[next][element.dataset.i18nPlaceholder];
+    });
     document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === next)));
     document.title = translations[next].pageTitle;
     document.querySelector('meta[name="description"]').content = translations[next].metaDescription;
@@ -309,6 +344,8 @@
     document.querySelector('meta[property="og:description"]').content = translations[next].metaDescription;
     menuButton.setAttribute('aria-label', translations[next][nav.classList.contains('is-open') ? 'menuClose' : 'menuOpen']);
     document.querySelector('.copy-status').textContent = '';
+    document.getElementById('contact-form-status').textContent = '';
+    document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(field => field.setCustomValidity(''));
     updateCount();
     if (selectedProject) fillDialog(selectedProject);
     try {
@@ -389,6 +426,45 @@
       selection.removeAllRanges();
       selection.addRange(range);
       status.textContent = translations[language].copyFailed;
+    }
+  });
+
+  const contactForm = document.getElementById('contact-form');
+  const contactName = document.getElementById('contact-name');
+  const contactSubject = document.getElementById('contact-subject');
+  const contactMessage = document.getElementById('contact-message');
+  const contactStatus = document.getElementById('contact-form-status');
+
+  function prepareContactDraft() {
+    contactName.setCustomValidity(contactName.value.trim().length < 2 ? translations[language].contactNameRequired : '');
+    contactMessage.setCustomValidity(contactMessage.value.trim().length < 5 ? translations[language].contactMessageRequired : '');
+    if (!contactForm.reportValidity()) return null;
+    return buildContactDraft({ name: contactName.value, subject: contactSubject.value, message: contactMessage.value }, language);
+  }
+
+  contactForm.addEventListener('input', event => {
+    if (event.target.matches('input, textarea')) event.target.setCustomValidity('');
+    contactStatus.textContent = '';
+  });
+
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const draft = prepareContactDraft();
+    if (!draft) return;
+    contactStatus.textContent = translations[language].contactPrepared;
+    window.location.href = draft.uri;
+  });
+
+  document.getElementById('contact-copy-message').addEventListener('click', async () => {
+    const draft = prepareContactDraft();
+    if (!draft) return;
+    try {
+      await navigator.clipboard.writeText(draft.copyText);
+      contactStatus.textContent = translations[language].contactMessageCopied;
+    } catch {
+      contactMessage.focus();
+      contactMessage.select();
+      contactStatus.textContent = translations[language].contactMessageSelected;
     }
   });
 
