@@ -4,16 +4,17 @@
   document.documentElement.classList.add('has-js');
   const translations = {
     tr: {
-      contactFormTitle: 'Mesajını hazırla', contactName: 'Adın', contactSubject: 'Konu',
-      contactNamePlaceholder: 'Ad Soyad', contactSubjectPlaceholder: 'Ne hakkında konuşalım?',
+      contactFormLabel: 'Mesaj formuna geç', contactFormTitle: 'Bana yaz', contactName: 'Adın', contactEmail: 'E-posta adresin',
+      contactNamePlaceholder: 'Ad Soyad', contactEmailPlaceholder: 'ornek@eposta.com',
       contactMessage: 'Mesajın', contactMessagePlaceholder: 'Kısaca kendinden ve konuşmak istediğin konudan bahsedebilirsin.',
-      contactOptional: '(isteğe bağlı)', contactSend: 'E-posta uygulamasında aç', contactCopyMessage: 'Mesajı kopyala',
-      contactFormNote: 'Yazdıkların e-posta uygulamanda açılır. Göndermeden önce düzenleyebilirsin.',
-      contactDefaultSubject: 'Web sitesinden iletişim',
-      contactPrepared: 'Mesajın hazır. E-posta uygulaman açılmazsa mesajı kopyalayabilirsin.',
-      contactMessageCopied: 'Mesaj kopyalandı. E-posta uygulamana yapıştırabilirsin.',
-      contactMessageSelected: 'Mesaj alanı seçildi. Kopyalayıp e-postana yapıştırabilirsin.',
-      contactNameRequired: 'Lütfen adını yaz.', contactMessageRequired: 'Lütfen en az 5 karakterlik bir mesaj yaz.',
+      contactSend: 'Mesajı gönder', contactSending: 'Gönderiliyor…',
+      contactFormNote: 'Mesajını buradan gönderebilirsin. Yanıtım, yazdığın e-posta adresine gelecek.',
+      contactSent: 'Mesajın iletildi. Teşekkürler! En kısa zamanda dönüş yapacağım.',
+      contactFailed: 'Mesaj gönderilemedi. Yazdıkların burada duruyor; tekrar dene veya e-posta adresimden ulaş.',
+      contactUnconfirmed: 'Gönderim sonucu doğrulanamadı. Mesajını silmedim; bağlantını kontrol edebilir veya e-posta adresimden ulaşabilirsin.',
+      contactActivationRequired: 'İletişim formu henüz etkinleşmedi. Lütfen e-posta adresimden ulaş; mesajını buradan kopyalayabilirsin.',
+      contactNameRequired: 'Lütfen en az 2 karakterlik bir ad yaz.', contactEmailRequired: 'Lütfen geçerli bir e-posta adresi yaz.',
+      contactMessageRequired: 'Lütfen en az 5 karakterlik bir mesaj yaz.',
       navEducation: 'Eğitim', cosmicOpen: 'Cosmic Pipeline projesini incele', aegisOpen: 'AegisOps projesini incele',
       cosmicDescription: 'Uydu telemetrisindeki bozulmaları kural, istatistik ve ML/DL katmanlarıyla tespit eden; işaretli noktaları onaran veri işleme hattı.',
       aegisDescription: 'Ekipman telemetrisini kurallar ve Isolation Forest ile inceleyip bakım ekiplerinin değerlendirebileceği olaylara dönüştüren MVP.',
@@ -84,16 +85,17 @@
       metaDescription: 'Ömer Can Gümüş — DevOps, MLOps ve bulut altyapısı. Beko deneyimi, seçili projeler ve açık kaynak katkıları.'
     },
     en: {
-      contactFormTitle: 'Write a message', contactName: 'Your name', contactSubject: 'Subject',
-      contactNamePlaceholder: 'Full name', contactSubjectPlaceholder: 'What would you like to discuss?',
+      contactFormLabel: 'Go to the message form', contactFormTitle: 'Write to me', contactName: 'Your name', contactEmail: 'Your email',
+      contactNamePlaceholder: 'Full name', contactEmailPlaceholder: 'you@example.com',
       contactMessage: 'Your message', contactMessagePlaceholder: 'Tell me a little about yourself and what you have in mind.',
-      contactOptional: '(optional)', contactSend: 'Open in email app', contactCopyMessage: 'Copy message',
-      contactFormNote: 'Your text opens in your email app. You can edit it before sending.',
-      contactDefaultSubject: 'Website contact',
-      contactPrepared: 'Your message is ready. If your email app does not open, you can copy the message.',
-      contactMessageCopied: 'Message copied. You can paste it into your email app.',
-      contactMessageSelected: 'Message text selected. You can copy and paste it into your email.',
-      contactNameRequired: 'Please enter your name.', contactMessageRequired: 'Please enter a message of at least 5 characters.',
+      contactSend: 'Send message', contactSending: 'Sending…',
+      contactFormNote: 'Send your message here. I will reply to the email address you provide.',
+      contactSent: 'Your message was submitted. Thank you! I will get back to you soon.',
+      contactFailed: 'Your message could not be sent. Your text is still here; please try again or reach me by email.',
+      contactUnconfirmed: 'The submission could not be confirmed. Your text is still here; check your connection or reach me by email.',
+      contactActivationRequired: 'This contact form is not active yet. Please reach me by email; you can copy your message from this field.',
+      contactNameRequired: 'Please enter a name of at least 2 characters.', contactEmailRequired: 'Please enter a valid email address.',
+      contactMessageRequired: 'Please enter a message of at least 5 characters.',
       navEducation: 'Education', cosmicOpen: 'Explore the Cosmic Pipeline project', aegisOpen: 'Explore the AegisOps project',
       cosmicDescription: 'A processing pipeline that detects satellite telemetry faults using rules, statistics and ML/DL layers, then repairs flagged samples.',
       aegisDescription: 'A predictive maintenance MVP that turns equipment telemetry into reviewable events using rules and Isolation Forest.',
@@ -164,18 +166,6 @@
       metaDescription: 'Ömer Can Gümüş — DevOps, MLOps and cloud infrastructure. Experience at Beko, selected projects and open source contributions.'
     }
   };
-
-  function buildContactDraft(values, locale) {
-    const copy = translations[locale] || translations.tr;
-    const name = values.name.replace(/[\r\n]+/g, ' ').trim();
-    const subject = values.subject.replace(/[\r\n]+/g, ' ').trim() || copy.contactDefaultSubject;
-    const message = values.message.trim().replace(/\r\n|\r|\n/g, '\r\n');
-    const body = `${copy.contactName}: ${name}\r\n\r\n${message}`;
-    return {
-      uri: `mailto:omercangumus3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
-      copyText: `${copy.contactSubject}: ${subject}\r\n\r\n${body}`
-    };
-  }
 
   const projects = {
     starops: {
@@ -344,7 +334,7 @@
     document.querySelector('meta[property="og:description"]').content = translations[next].metaDescription;
     menuButton.setAttribute('aria-label', translations[next][nav.classList.contains('is-open') ? 'menuClose' : 'menuOpen']);
     document.querySelector('.copy-status').textContent = '';
-    document.getElementById('contact-form-status').textContent = '';
+    renderContactState();
     document.querySelectorAll('#contact-form input, #contact-form textarea').forEach(field => field.setCustomValidity(''));
     updateCount();
     if (selectedProject) fillDialog(selectedProject);
@@ -431,40 +421,85 @@
 
   const contactForm = document.getElementById('contact-form');
   const contactName = document.getElementById('contact-name');
-  const contactSubject = document.getElementById('contact-subject');
+  const contactEmail = document.getElementById('contact-email');
   const contactMessage = document.getElementById('contact-message');
+  const contactHoney = document.getElementById('contact-website');
   const contactStatus = document.getElementById('contact-form-status');
+  const contactSend = contactForm.querySelector('button[type="submit"]');
+  let contactSubmitting = false;
+  let contactState = '';
 
-  function prepareContactDraft() {
+  function renderContactState() {
+    contactStatus.textContent = contactState ? translations[language][contactState] : '';
+    contactStatus.dataset.state = contactState;
+    contactSend.querySelector('span').textContent = translations[language][contactSubmitting ? 'contactSending' : 'contactSend'];
+  }
+
+  function validateContactForm() {
+    contactEmail.value = contactEmail.value.trim();
+    contactEmail.setCustomValidity('');
     contactName.setCustomValidity(contactName.value.trim().length < 2 ? translations[language].contactNameRequired : '');
+    if (!contactEmail.validity.valid) contactEmail.setCustomValidity(translations[language].contactEmailRequired);
     contactMessage.setCustomValidity(contactMessage.value.trim().length < 5 ? translations[language].contactMessageRequired : '');
-    if (!contactForm.reportValidity()) return null;
-    return buildContactDraft({ name: contactName.value, subject: contactSubject.value, message: contactMessage.value }, language);
+    return contactForm.reportValidity();
   }
 
   contactForm.addEventListener('input', event => {
     if (event.target.matches('input, textarea')) event.target.setCustomValidity('');
-    contactStatus.textContent = '';
+    if (!contactSubmitting) {
+      contactState = '';
+      renderContactState();
+    }
   });
 
-  contactForm.addEventListener('submit', event => {
+  contactForm.addEventListener('submit', async event => {
     event.preventDefault();
-    const draft = prepareContactDraft();
-    if (!draft) return;
-    contactStatus.textContent = translations[language].contactPrepared;
-    window.location.href = draft.uri;
-  });
+    if (contactSubmitting || !validateContactForm()) return;
+    if (contactHoney.value) return;
 
-  document.getElementById('contact-copy-message').addEventListener('click', async () => {
-    const draft = prepareContactDraft();
-    if (!draft) return;
+    const payload = {
+      name: contactName.value.trim(),
+      email: contactEmail.value.trim(),
+      message: contactMessage.value.trim(),
+      _replyto: contactEmail.value.trim(),
+      _subject: 'omercangumus.com · Yeni iletişim mesajı / New message',
+      _template: 'table',
+      _url: 'https://www.omercangumus.com/',
+      _honey: ''
+    };
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    contactSubmitting = true;
+    contactState = 'contactSending';
+    contactForm.setAttribute('aria-busy', 'true');
+    [contactName, contactEmail, contactMessage, contactSend].forEach(field => { field.disabled = true; });
+    renderContactState();
+
     try {
-      await navigator.clipboard.writeText(draft.copyText);
-      contactStatus.textContent = translations[language].contactMessageCopied;
+      const response = await fetch(contactForm.action.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+        credentials: 'omit'
+      });
+      const result = await response.json();
+      // FormSubmit can return HTTP 200 with the string "false" on failure.
+      if (response.ok && (result.success === true || result.success === 'true')) {
+        contactForm.reset();
+        contactState = 'contactSent';
+      } else {
+        contactState = /activat|confirm your (?:form|email)/i.test(String(result.message || ''))
+          ? 'contactActivationRequired' : 'contactFailed';
+      }
     } catch {
-      contactMessage.focus();
-      contactMessage.select();
-      contactStatus.textContent = translations[language].contactMessageSelected;
+      contactState = 'contactUnconfirmed';
+    } finally {
+      clearTimeout(timeout);
+      contactSubmitting = false;
+      contactForm.removeAttribute('aria-busy');
+      [contactName, contactEmail, contactMessage, contactSend].forEach(field => { field.disabled = false; });
+      renderContactState();
     }
   });
 
